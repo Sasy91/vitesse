@@ -64,7 +64,7 @@
                                  data-x="682" 
                                  data-y="105" 
                                  data-speed="800" 
-                                 data-start="1700" 
+                                 data-start="1900" 
                                  data-easing="easeOutBack">
                                 <span>€ 99,- a night this summer</span></div>
                             <!-- Layer 3 -->
