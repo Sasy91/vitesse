@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="th-text pull-left">
-                    <div class="th-item"> <a href="#"><i class="fa fa-phone"></i> 05-460789986</a> </div>
-                    <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> MAIL@STARHOTEL.COM </a></div>
+                    <div class="th-item"> <a href="#"><i class="fa fa-phone"></i> +94 777 777 070</a> </div>
+                    <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> duwagroup@icloud.com</a></div>
                 </div>
             </div>
             <div class="col-xs-6">
