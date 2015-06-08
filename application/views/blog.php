@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Starhotel</title>
+        <title>Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <?php include_once './resoures/imports/base_imports.php'; ?>
     </head>
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="col-sm-11 col-xs-10 meta">
                                     <h2><a href="blog-post.html">This is a video post</a></h2>
-                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Starhotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
+                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Hotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
                                     <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed turpis neque. In auctor, odio eget luctus lobortis, sapien erat blandit felis, eget volutpat augue felis in purus. Aliquam ultricies est id ultricies facilisis. Maecenas tempus... </p>
                                     <a href="blog-post.html" class="btn btn-primary pull-right">Read More</a> </div>
                             </div>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="col-sm-11 col-xs-10 meta">
                                     <h2><a href="blog-post.html">An image post</a></h2>
-                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Starhotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
+                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Hotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
                                     <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed turpis neque. In auctor, odio eget luctus lobortis, sapien erat blandit felis, eget volutpat augue felis in purus. Aliquam ultricies est id ultricies facilisis. Maecenas tempus... </p>
                                     <a href="blog-post.html" class="btn btn-primary pull-right">Read More</a> </div>
                             </div>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-sm-11 col-xs-10 meta">
                                     <h2><a href="blog-post.html">Audio included post</a></h2>
-                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Starhotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
+                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Hotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
                                     <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed turpis neque. In auctor, odio eget luctus lobortis, sapien erat blandit felis, eget volutpat augue felis in purus. Aliquam ultricies est id ultricies facilisis. Maecenas tempus... </p>
                                     <a href="blog-post.html" class="btn btn-primary pull-right">Read More</a> </div>
                             </div>
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="col-md-11 col-xs-10 meta">
                                     <h2><a href="blog-post.html">And this is a slider post</a></h2>
-                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Starhotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
+                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Hotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span>
                                     <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed turpis neque. In auctor, odio eget luctus lobortis, sapien erat blandit felis, eget volutpat augue felis in purus. Aliquam ultricies est id ultricies facilisis. Maecenas tempus... </p>
                                     <a href="blog-post.html" class="btn btn-primary pull-right">Read More</a> </div>
                             </div>

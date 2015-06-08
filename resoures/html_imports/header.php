@@ -18,7 +18,7 @@
                                 <li> <a href="#">FRANCE</a> </li>
                                 <li> <a href="#">GERMAN</a> </li>
                                 <li> <a href="#">SPANISH</a> </li>
-                                <li> <a href="#">LATHIN ONE TWO</a> </li>
+                                <li> <a href="#">LATHIN</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                 <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <a href="index.html" class="navbar-brand">         
                     <!-- Logo -->
-                    <div id="logo"> <img id="default-logo" src="<?php echo base_url(); ?>/resoures/images/logo.png" alt="Starhotel" style="height:44px;"> <img id="retina-logo" src="<?php echo base_url(); ?>/resoures/images/logo-retina.png" alt="Starhotel" style="height:44px;"> </div>
+                    <div id="logo"> <img id="default-logo" src="<?php echo base_url(); ?>/resoures/images/logo.png" alt="Hotel" style="height:44px;"> <img id="retina-logo" src="<?php echo base_url(); ?>/resoures/images/logo-retina.png" alt="Hotel" style="height:44px;"> </div>
                 </a> </div>
             <div id="navbar-collapse-grid" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

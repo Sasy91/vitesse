@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Starhotel</title>
+        <title>Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <?php include_once './resoures/imports/base_imports.php'; ?>
     </head>
@@ -322,8 +322,8 @@
                 <div class="color-overlay fadeIn appear" data-start="600">
                     <div class="container">
                         <div class="content">
-                            <h3 class="text-center"><i class="fa fa fa-star-o"></i> STARHOTEL</h3>
-                            <p class="text-center">An Exceptional Hotel Template!
+                            <h3 class="text-center"><i class="fa fa fa-star-o"></i> HOTEL</h3>
+                            <p class="text-center">An Exceptional Hotel!
                                 <br>
                                 <a href="room-list.html" class="btn btn-default btn-lg mt30">See rooms</a></p>
                         </div>

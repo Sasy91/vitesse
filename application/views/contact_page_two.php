@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Starhotel</title>
+        <title>Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <?php include_once './resoures/imports/base_imports.php'; ?>
     </head>
@@ -45,7 +45,7 @@
                         <!-- Panel -->
                         <div class="panel panel-default text-center">
                             <div class="panel-heading">
-                                <div class="panel-title"><i class="fa fa-star"></i> <strong>Starhotel</strong></div>
+                                <div class="panel-title"><i class="fa fa-star"></i> <strong>Hotel</strong></div>
                             </div>
                             <div class="panel-body">
                                 <address>

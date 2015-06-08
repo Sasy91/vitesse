@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Starhotel</title>
+        <title>Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <?php include_once './resoures/imports/base_imports.php'; ?>
     </head>
@@ -65,7 +65,7 @@
                         <h2 class="lined-heading"><span>Address</span></h2>
                         <a href="<?php echo base_url(); ?>/resoures/images/contact/948x632.gif" data-rel="prettyPhoto"><img src="<?php echo base_url(); ?>/resoures/images/contact/361x235.gif" alt="Image 1" class="img-thumbnail img-responsive"></a>
                         <address class="mt50">
-                            <strong>Starhotel</strong><br>
+                            <strong>Hotel</strong><br>
                             795 Las Palmas<br>
                             Spain, CA 94107<br>
                             <abbr title="Phone">P:</abbr> <a href="#">(123) 456-7890</a><br>

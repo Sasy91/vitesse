@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Starhotel</title>
+        <title>Hotel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <?php include_once './resoures/imports/base_imports.php'; ?>
     </head>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-sm-11 col-xs-10 meta">
                                     <h2>This is a video post</h2>
-                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Starhotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span> </div>
+                                    <span class="meta-author"><i class="fa fa-user"></i><a href="#">Hotel</a></span> <span class="meta-category"><i class="fa fa-pencil"></i><a href="#">Hotel business</a></span> <span class="meta-comments"><i class="fa fa-comment"></i><a href="#">3 Comments</a></span> </div>
                                 <div class="col-md-12">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed turpis neque. In auctor, odio eget luctus lobortis, sapien erat blandit felis, eget volutpat augue felis in purus. Aliquam ultricies est id ultricies facilisis. Maecenas tempus... </p>
                                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat tristique mauris, vitae ultrices mauris ultricies eu. In viverra ut sem eget venenatis. Sed nec ligula non eros ultrices euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget arcu imperdiet, semper dolor in, lacinia augue. Mauris hendrerit vestibulum lorem, non auctor felis dignissim vel. Sed arcu est, posuere pulvinar arcu non, porttitor consequat ligula. Curabitur ac volutpat mauris. Duis pretium commodo accumsan. Nullam ut facilisis velit. </p>
