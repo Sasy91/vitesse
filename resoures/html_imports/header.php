@@ -18,7 +18,7 @@
                                 <li> <a href="#">FRANCE</a> </li>
                                 <li> <a href="#">GERMAN</a> </li>
                                 <li> <a href="#">SPANISH</a> </li>
-                                <li> <a href="#">LATHIN</a> </li>
+                                <li> <a href="#">LATHIN ONE</a> </li>
                             </ul>
                         </div>
                     </div>
