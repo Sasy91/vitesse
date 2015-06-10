@@ -55,15 +55,33 @@
 }
 #reservation-form input:focus, input:active {
   outline: none;
-}
-input[type="text"], input[type="email"] {
-  border: none;
-  border-bottom: solid 2px #000000;
+      border: solid 0px #fff;
 }
 
-#reservation-form input[type="submit"]:active,input[type="submit"]:hover {
-  color: white;
-  background: #000000;
+
+#reservation-form input[type="text"], #reservation-form input[type="email"] {
+  border: none;
+  border: solid 0px #fff;
+  border-bottom: solid 2px #000000;
+  border-radius: 0px;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    color: #000;
+    
+}
+#reservation-form select{
+  border: none;
+  border: solid 0px #fff;
+  border-bottom: solid 2px #000000;
+  border-radius: 0px;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+
 }
 
 #reservation-form button{
