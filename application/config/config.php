@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/duwa_villas1.0/';
+$config['base_url'] = 'http://localhost/camp_poe_version1.0/';
 
 /*
 |--------------------------------------------------------------------------
