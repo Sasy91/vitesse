@@ -286,15 +286,9 @@ label {
   color: #bfbfbf;
 }
 #fotter-img {
-    background: url(../../img/fotter-img.jpg) no-repeat center center fixed;
-  //background-image: url(../../img/fotter-img.jpg);
-  /*  background-position: center;
-    background-repeat: no-repeat;
-  */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../../img/fotter-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 #fotter-img h1 {
   text-align: center;
