@@ -84,12 +84,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="row">
                       <div class="col-sm-6" id="room-1">
                           <a href="">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, neque optio iure eum est, nihil incidunt officiis architecto cupiditate at! Pariatur repellat, consequuntur quaerat deserunt asperiores velit obcaecati debitis aperiam?
+                             <h4>SUITE 1</h4>
+                            
                           </a>
                       </div>
-                      <div class="col-sm-6"  id="room-1">
-                          <a href=""></a>
+                      <div class="col-sm-6"  id="room-2">
+                          <a href="">
+                               <h4>SUITE 2</h4> 
+                              
+                          </a>
                       </div>
+                  </div>
+              </div>
+               
+           </section><!--first-two--->
+                      <section id="second-room">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-sm-12" id="room-3">
+                          <a href="">
+                             <h4>SUITE 3</h4>
+                            
+                          </a>
+                      </div>
+  
                   </div>
               </div>
                
