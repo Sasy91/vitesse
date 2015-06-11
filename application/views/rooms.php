@@ -98,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
                
            </section><!--first-two--->
-                      <section id="second-room">
+          <section id="second-room">
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-sm-12" id="room-3">
@@ -111,7 +111,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
               </div>
                
-           </section><!--first-two--->
+           </section><!--second-room--->
+              <section id="thrd-room">
+              <div class="container-fluid">
+                  <div class="row">
+                  <div class="col-sm-4" id="room-4">
+                          <a href="">
+                             <h4>SUITE 1</h4>
+                            
+                          </a>
+                      </div>
+                      <div class="col-sm-8"  id="room-5">
+                          <a href="">
+                               <h4>SUITE 2</h4> 
+                              
+                          </a>
+                      </div>
+                      </div>
+              </div>
+               
+           </section><!--thrd-room--->
+            
+            <section id="fourth-room">
+              <div class="container-fluid">
+                 <div class="row">
+                  <div class="col-sm-6" id="room-6">
+                          <a href="">
+                             <h4>SUITE 1</h4>
+                            
+                          </a>
+                      </div>
+                      <div class="col-sm-6"  id="room-7">
+                          <a href="">
+                               <h4>SUITE 2</h4> 
+                              
+                          </a>
+                      </div>
+              </div>
+               </div>
+           </section><!--fourth-room--->
         </div><!--main-->
         
         

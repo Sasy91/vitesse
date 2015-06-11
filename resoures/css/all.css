@@ -22,3 +22,27 @@ body {
   height: 500px;
   min-height: 500px;
 }
+.main #thrd-room #room-4 {
+  background: url(../img/rooms/1.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  min-height: 500px;
+}
+.main #thrd-room #room-5 {
+  background: url(../img/rooms/2.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  min-height: 500px;
+}
+.main #fourth-room #room-6 {
+  background: url(../img/rooms/7.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  min-height: 500px;
+}
+.main #fourth-room #room-7 {
+  background: url(../img/rooms/8.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  min-height: 500px;
+}
