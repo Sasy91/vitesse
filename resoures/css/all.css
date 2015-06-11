@@ -1,0 +1,13 @@
+h1 {
+  font-size: 5em;
+}
+body {
+  position: relative;
+  padding-top: 0px;
+}
+.main #first-room #room-1 {
+  background-image: url();
+}
+.main #first-room #room-2 {
+  background-image: url();
+}
