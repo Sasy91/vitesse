@@ -6,8 +6,8 @@ body {
   padding-top: 0px;
 }
 .main #first-room #room-1 {
-  background-image: url();
+  background-image: url(../img/rooms/5.jpg);
 }
 .main #first-room #room-2 {
-  background-image: url();
+  background-image: url(../img/rooms/6.jpg);
 }

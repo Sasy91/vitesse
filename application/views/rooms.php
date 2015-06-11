@@ -83,7 +83,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-sm-6" id="room-1">
-                          <a href=""></a>
+                          <a href="">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, neque optio iure eum est, nihil incidunt officiis architecto cupiditate at! Pariatur repellat, consequuntur quaerat deserunt asperiores velit obcaecati debitis aperiam?
+                          </a>
                       </div>
                       <div class="col-sm-6"  id="room-1">
                           <a href=""></a>
