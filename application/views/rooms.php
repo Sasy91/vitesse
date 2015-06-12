@@ -82,16 +82,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            <section id="first-room">
               <div class="container-fluid">
                   <div class="row">
-                      <div class="col-sm-6" id="room-1">
-                          <a href="">
+                      <div class="col-sm-6" >
+                         <a href="">
+                         <div id="room-1">   
                              <h4>SUITE 1</h4>
-                            
+                             <div class="info">
+                                 <h5>SUITE 1</h5>
+                                 <span>
+                                     Lorem ipsum dolor sit amet,</br>
+                                     consectetur adipisicing elit. </br>
+                                     Tenetur officia soluta veniam</br>
+                                     non doloribus doloremque,<a href="">See More</a>
+                                 </span>
+                             </div>                        
+                         </div>
                           </a>
                       </div>
-                      <div class="col-sm-6"  id="room-2">
-                          <a href="">
+                      <div class="col-sm-6">
+                              <a href="">
+                              <div id="room-2">
                                <h4>SUITE 2</h4> 
-                              
+                                <div class="info">
+                                 <h5>SUITE 2</h5>
+                                 <span>
+                                     Lorem ipsum dolor sit amet,</br>
+                                     consectetur adipisicing elit. </br>
+                                     Tenetur officia soluta veniam</br>
+                                     non doloribus doloremque,<a href="">See More</a>
+                                 </span>
+                             </div>                            
+                          </div>
                           </a>
                       </div>
                   </div>
@@ -101,55 +121,109 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <section id="second-room">
               <div class="container-fluid">
                   <div class="row">
-                      <div class="col-sm-12" id="room-3">
-                          <a href="">
-                             <h4>SUITE 3</h4>
-                            
-                          </a>
+                      <div class="col-sm-12" >
+                        <a href="">
+                             <div id="room-3">
+                                   <h4>SUITE 3</h4> 
+                                <div class="info">
+                                 <h5>SUITE 3</h5>
+                                 <span>
+                                     Lorem ipsum dolor sit amet,</br>
+                                     consectetur adipisicing elit. </br>
+                                     Tenetur officia soluta veniam</br>
+                                     non doloribus doloremque,<a href="">See More</a>
+                                 </span>
+                             </div> 
+                         </div>
+                        </a>
                       </div>
   
                   </div>
               </div>
                
            </section><!--second-room--->
-              <section id="thrd-room">
-              <div class="container-fluid">
-                  <div class="row">
-                  <div class="col-sm-4" id="room-4">
-                          <a href="">
-                             <h4>SUITE 1</h4>
+            
+                <section id="thrd-room">
+                    <div class="container-fluid">
+                       <div class="row">
+                           <div class="col-sm-4" >
+                            <a href="">
+                              <div id="room-4">
+                               <h4>SUITE 4</h4> 
+                                <div class="info">
+                                 <h5>SUITE 4</h5>
+                                 <span>
+                                     Lorem ipsum dolor sit amet,</br>
+                                     consectetur adipisicing elit. </br>
+                                     Tenetur officia soluta veniam</br>
+                                     non doloribus doloremque,<a href="">See More</a>
+                                 </span>
+                             </div> 
+                              </div>
+                            </a>
+                           </div>
+                     
+                <div class="col-sm-8">
+                     <a href="">
+                         <div id="room-5">
+                                <h4>SUITE 5</h4> 
+                                <div class="info">
+                                 <h5>SUITE 5</h5>
+                                 <span>
+                                     Lorem ipsum dolor sit amet,</br>
+                                     consectetur adipisicing elit. </br>
+                                     Tenetur officia soluta veniam</br>
+                                     non doloribus doloremque,<a href="">See More</a>
+                                 </span>
+                             </div>     
                             
+                           </div>
                           </a>
-                      </div>
-                      <div class="col-sm-8"  id="room-5">
-                          <a href="">
-                               <h4>SUITE 2</h4> 
-                              
-                          </a>
-                      </div>
-                      </div>
-              </div>
-               
+                         </div>
+                       </div>
+                  </div>           
            </section><!--thrd-room--->
             
-            <section id="fourth-room">
-              <div class="container-fluid">
-                 <div class="row">
-                  <div class="col-sm-6" id="room-6">
-                          <a href="">
-                             <h4>SUITE 1</h4>
-                            
-                          </a>
-                      </div>
-                      <div class="col-sm-6"  id="room-7">
-                          <a href="">
-                               <h4>SUITE 2</h4> 
-                              
-                          </a>
-                      </div>
-              </div>
-               </div>
-           </section><!--fourth-room--->
+                    <section id="fourth-room">
+                      <div class="container-fluid">
+                         <div class="row">
+                          <div class="col-sm-6" >
+                                <a href="">
+                                 <div id="room-6">
+                                      <h4>SUITE 6</h4> 
+                                        <div class="info">
+                                        <h5>SUITE 6</h5>
+                                         <span>
+                                             Lorem ipsum dolor sit amet,</br>
+                                             consectetur adipisicing elit. </br>
+                                             Tenetur officia soluta veniam</br>
+                                             non doloribus doloremque,<a href="">See More</a>
+                                         </span>
+                                       </div>                            
+                                  
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="col-sm-6">
+                                <a href="">
+                                 <div id="room-7">
+                                          <h4>SUITE 7</h4> 
+                                        <div class="info">
+                                        <h5>SUITE 7</h5>
+                                         <span>
+                                             Lorem ipsum dolor sit amet,</br>
+                                             consectetur adipisicing elit. </br>
+                                             Tenetur officia soluta veniam</br>
+                                             non doloribus doloremque,<a href="">See More</a>
+                                         </span>
+                                       </div>                                
+                                 </div>
+                                  </a>
+                              </div>
+                          </div>
+                       </div>
+                   </section><!--fourth-room--->
+           
         </div><!--main-->
         
         
