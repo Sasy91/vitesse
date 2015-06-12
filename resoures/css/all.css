@@ -1,78 +1,78 @@
 h1 {
-  font-size: 5em;
+    font-size: 5em;
 }
 body {
-  position: relative;
-  padding-top: 0px;
+    position: relative;
+    padding-top: 0px;
 }
 .main #first-room {
-  position: relative;
-  padding-bottom: 25px;
+    position: relative;
+    padding-bottom: 25px;
 }
 .main #first-room a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 .main #first-room #room-1 {
-  background: url(../img/rooms/5.jpg) no-repeat center center;
-  background-size: cover;
-  height: 500px;
-  min-height: 500px;
+    background: url(../img/rooms/5.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    min-height: 500px;
 }
 .main #first-room #room-2 {
-  background: url(../img/rooms/6.jpg) no-repeat center center;
-  background-size: cover;
-  min-height: 500px;
+    background: url(../img/rooms/6.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 500px;
 }
 .main #second-room {
-  position: relative;
-  padding-bottom: 25px;
+    position: relative;
+    padding-bottom: 25px;
 }
 .main #second-room a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 .main #second-room #room-3 {
-  background: url(../img/rooms/4.jpg) no-repeat center center;
-  background-size: cover;
-  height: 500px;
-  min-height: 500px;
+    background: url(../img/rooms/4.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    min-height: 500px;
 }
 .main #thrd-room {
-  position: relative;
-  padding-bottom: 25px;
+    position: relative;
+    padding-bottom: 25px;
 }
 .main #thrd-room #room-4 {
-  background: url(../img/rooms/1.jpg) no-repeat center center;
-  background-size: cover;
-  height: 500px;
-  min-height: 500px;
+    background: url(../img/rooms/1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    min-height: 500px;
 }
 .main #thrd-room #room-5 {
-  background: url(../img/rooms/2.jpg) no-repeat center center;
-  background-size: cover;
-  height: 500px;
-  min-height: 500px;
+    background: url(../img/rooms/2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    min-height: 500px;
 }
 .main #fourth-room {
-  position: relative;
-  padding-bottom: 25px;
+    position: relative;
+    padding-bottom: 25px;
 }
 .main #fourth-room a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 .main #fourth-room #room-6 {
-  background: url(../img/rooms/7.jpg) no-repeat center center;
-  background-size: cover;
-  height: 500px;
-  min-height: 500px;
+    background: url(../img/rooms/7.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    min-height: 500px;
 }
 .main #fourth-room #room-7 {
-  background: url(../img/rooms/8.jpg) no-repeat center center;
-  background-size: cover;
-  height: 500px;
-  min-height: 500px;
+    background: url(../img/rooms/8.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    min-height: 500px;
 }
 .main #room-1 h4,
 .main #room-2 h4,
@@ -81,14 +81,14 @@ body {
 .main #room-5 h4,
 .main #room-6 h4,
 .main #room-7 h4 {
-  margin-top: 360px;
-  margin-left: 50px;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: #303030;
-  padding: 40px 20px 0 20px;
-  font-size: 1em;
+    margin-top: 360px;
+    margin-left: 50px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #303030;
+    padding: 40px 20px 0 20px;
+    font-size: 1em;
 }
 .main #room-1 .info,
 .main #room-2 .info,
@@ -97,8 +97,8 @@ body {
 .main #room-5 .info,
 .main #room-6 .info,
 .main #room-7 .info {
-  display: none;
-  border: 1px solid #fff;
+    display: none;
+    border: 1px solid #fff;
 }
 .main #room-1 .info h5,
 .main #room-2 .info h5,
@@ -107,7 +107,7 @@ body {
 .main #room-5 .info h5,
 .main #room-6 .info h5,
 .main #room-7 .info h5 {
-  border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 .main #room-1:hover,
 .main #room-2:hover,
@@ -116,7 +116,7 @@ body {
 .main #room-5:hover,
 .main #room-6:hover,
 .main #room-7:hover {
-  background: red;
+    background: red;
 }
 .main #room-1:hover .info,
 .main #room-2:hover .info,
@@ -125,7 +125,7 @@ body {
 .main #room-5:hover .info,
 .main #room-6:hover .info,
 .main #room-7:hover .info {
-  display: inline-block;
+    display: inline-block;
 }
 .main #room-1:hover h4,
 .main #room-2:hover h4,
@@ -134,5 +134,5 @@ body {
 .main #room-5:hover h4,
 .main #room-6:hover h4,
 .main #room-7:hover h4 {
-  display: none;
+    display: none;
 }
