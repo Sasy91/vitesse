@@ -6,5 +6,8 @@ class Base extends CI_Controller {
     public function index() {
         $this->load->view('index');
     }
+      public function rooms() {
+        $this->load->view('rooms');
+    }
 
 }
