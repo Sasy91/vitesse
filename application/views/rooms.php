@@ -28,205 +28,204 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     navigation
         =================================================--------->
         <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Brand</a>
-            </div>
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-               
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Suite 1</a></li>
-                    <li><a href="#">Suite 2</a></li>
-                    <li><a href="#">Suite 3</a></li>
-                     <li><a href="#">Suite 4</a></li>
-                     <li><a href="#">Suite 5</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Studios</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Poolside Bungalows</a></li>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
 
-                  </ul>
-                </li>
-                    <li><a href="#">HOTEL</a></li>
-                    <li><a href="#">PRIVATE EVENTS</a></li>
-                    <li><a href="#">PHOTOS</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">BOOK NOW</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Suite 1</a></li>
+                                <li><a href="#">Suite 2</a></li>
+                                <li><a href="#">Suite 3</a></li>
+                                <li><a href="#">Suite 4</a></li>
+                                <li><a href="#">Suite 5</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Studios</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Poolside Bungalows</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">HOTEL</a></li>
+                        <li><a href="#">PRIVATE EVENTS</a></li>
+                        <li><a href="#">PHOTOS</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">BOOK NOW</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </nav>
 
         <!----=====================================================
                   end navigation
         =================================================--------->
-        
-         <!----=====================================================
-                first tow rooms
-        =================================================--------->
+
+        <!----=====================================================
+               first tow rooms
+       =================================================--------->
         <div class="main">
-               
-           <section id="first-room">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-sm-6" >
-                         <a href="">
-                         <div id="room-1">   
-                             <h4>SUITE 1</h4>
-                             <div class="info">
-                                 <h5>SUITE 1</h5>
-                                 <span>
-                                     Lorem ipsum dolor sit amet,</br>
-                                     consectetur adipisicing elit. </br>
-                                     Tenetur officia soluta veniam</br>
-                                     non doloribus doloremque,<a href="">See More</a>
-                                 </span>
-                             </div>                        
-                         </div>
-                          </a>
-                      </div>
-                      <div class="col-sm-6">
-                              <a href="">
-                              <div id="room-2">
-                               <h4>SUITE 2</h4> 
-                                <div class="info">
-                                 <h5>SUITE 2</h5>
-                                 <span>
-                                     Lorem ipsum dolor sit amet,</br>
-                                     consectetur adipisicing elit. </br>
-                                     Tenetur officia soluta veniam</br>
-                                     non doloribus doloremque,<a href="">See More</a>
-                                 </span>
-                             </div>                            
-                          </div>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-               
-           </section><!--first-two--->
-          <section id="second-room">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-sm-12" >
-                        <a href="">
-                             <div id="room-3">
-                                   <h4>SUITE 3</h4> 
-                                <div class="info">
-                                 <h5>SUITE 3</h5>
-                                 <span>
-                                     Lorem ipsum dolor sit amet,</br>
-                                     consectetur adipisicing elit. </br>
-                                     Tenetur officia soluta veniam</br>
-                                     non doloribus doloremque,<a href="">See More</a>
-                                 </span>
-                             </div> 
-                         </div>
-                        </a>
-                      </div>
-  
-                  </div>
-              </div>
-               
-           </section><!--second-room--->
-            
-                <section id="thrd-room">
-                    <div class="container-fluid">
-                       <div class="row">
-                           <div class="col-sm-4" >
+
+            <section id="first-room">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6" >
                             <a href="">
-                              <div id="room-4">
-                               <h4>SUITE 4</h4> 
-                                <div class="info">
-                                 <h5>SUITE 4</h5>
-                                 <span>
-                                     Lorem ipsum dolor sit amet,</br>
-                                     consectetur adipisicing elit. </br>
-                                     Tenetur officia soluta veniam</br>
-                                     non doloribus doloremque,<a href="">See More</a>
-                                 </span>
-                             </div> 
-                              </div>
+                                <div id="room-1">   
+                                    <h4>SUITE 1</h4>
+                                    <div class="info">
+                                        <h5>SUITE 1</h5>
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div>                        
+                                </div>
                             </a>
-                           </div>
-                     
-                <div class="col-sm-8">
-                     <a href="">
-                         <div id="room-5">
-                                <h4>SUITE 5</h4> 
-                                <div class="info">
-                                 <h5>SUITE 5</h5>
-                                 <span>
-                                     Lorem ipsum dolor sit amet,</br>
-                                     consectetur adipisicing elit. </br>
-                                     Tenetur officia soluta veniam</br>
-                                     non doloribus doloremque,<a href="">See More</a>
-                                 </span>
-                             </div>     
-                            
-                           </div>
-                          </a>
-                         </div>
-                       </div>
-                  </div>           
-           </section><!--thrd-room--->
-            
-                    <section id="fourth-room">
-                      <div class="container-fluid">
-                         <div class="row">
-                          <div class="col-sm-6" >
-                                <a href="">
-                                 <div id="room-6">
-                                      <h4>SUITE 6</h4> 
-                                        <div class="info">
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="">
+                                <div id="room-2">
+                                    <h4>SUITE 2</h4> 
+                                    <div class="info">
+                                        <h5>SUITE 2</h5>
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div>                            
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section><!--first-two--->
+            <section id="second-room">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="">
+                                <div id="room-3">
+                                    <h4>SUITE 3</h4> 
+                                    <div class="info">
+                                        <h5>SUITE 3</h5>
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div> 
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section><!--second-room--->
+
+            <section id="thrd-room">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4" >
+                            <a href="">
+                                <div id="room-4">
+                                    <h4>SUITE 4</h4> 
+                                    <div class="info">
+                                        <h5>SUITE 4</h5>
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div> 
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <a href="">
+                                <div id="room-5">
+                                    <h4>SUITE 5</h4> 
+                                    <div class="info">
+                                        <h5>SUITE 5</h5>
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div>     
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>           
+            </section><!--thrd-room--->
+
+            <section id="fourth-room">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6" >
+                            <a href="">
+                                <div id="room-6">
+                                    <h4>SUITE 6</h4> 
+                                    <div class="info">
                                         <h5>SUITE 6</h5>
-                                         <span>
-                                             Lorem ipsum dolor sit amet,</br>
-                                             consectetur adipisicing elit. </br>
-                                             Tenetur officia soluta veniam</br>
-                                             non doloribus doloremque,<a href="">See More</a>
-                                         </span>
-                                       </div>                            
-                                  
-                                    </div>
-                                 </a>
-                              </div>
-                              <div class="col-sm-6">
-                                <a href="">
-                                 <div id="room-7">
-                                          <h4>SUITE 7</h4> 
-                                        <div class="info">
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div>                            
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="">
+                                <div id="room-7">
+                                    <h4>SUITE 7</h4> 
+                                    <div class="info">
                                         <h5>SUITE 7</h5>
-                                         <span>
-                                             Lorem ipsum dolor sit amet,</br>
-                                             consectetur adipisicing elit. </br>
-                                             Tenetur officia soluta veniam</br>
-                                             non doloribus doloremque,<a href="">See More</a>
-                                         </span>
-                                       </div>                                
-                                 </div>
-                                  </a>
-                              </div>
-                          </div>
-                       </div>
-                   </section><!--fourth-room--->
-           
+                                        <span>
+                                            Lorem ipsum dolor sit amet,</br>
+                                            consectetur adipisicing elit. </br>
+                                            Tenetur officia soluta veniam</br>
+                                            non doloribus doloremque,<a href="">See More</a>
+                                        </span>
+                                    </div>                                
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section><!--fourth-room--->
+
         </div><!--main-->
-        
-        
+
+
         <!----=====================================================
                 first tow rooms end
         =================================================--------->
