@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2015 at 06:24 AM
+-- Generation Time: Jun 14, 2015 at 06:42 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -60,6 +60,31 @@ CREATE TABLE IF NOT EXISTS `customer_details` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `home_sider`
+--
+
+CREATE TABLE IF NOT EXISTS `home_sider` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(500) NOT NULL,
+  `uploaded_by` varchar(100) NOT NULL,
+  `date` timestamp NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `home_sider`
+--
+
+INSERT INTO `home_sider` (`id`, `url`, `uploaded_by`, `date`) VALUES
+(1, '/resoures/img/1.png', '', '2015-06-12 10:33:01'),
+(2, '/resoures/img/2.png', '', '2015-06-12 10:33:01'),
+(3, '/resoures/img/3.png', '', '2015-06-12 10:33:01'),
+(4, '/resoures/img/4.png', '', '2015-06-12 10:33:01'),
+(11, '/resoures/img/Share2015-04-11-5172d009bc8efb89cd66309a53eb876215857b37cd907ad0aa7449e73b58c71f-Picture.jpg', 'Mark William', '2015-06-13 15:59:38');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rooms`
 --
 
@@ -102,8 +127,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_login` datetime NOT NULL,
   `registerd_date` datetime NOT NULL,
   `audit` varchar(50) NOT NULL,
+  `name` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `user_id`, `password`, `role`, `last_login`, `registerd_date`, `audit`, `name`) VALUES
+(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-06-13 18:46:50', '2015-06-12 00:00:00', '::1', 'Mark William');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
