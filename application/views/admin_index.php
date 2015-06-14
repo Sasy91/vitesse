@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>AdminLTE 2 | Dashboard</title>
-         <?php include_once './resoures/admin/imports/admin_index_header.php'; ?>
+        <?php include_once './resoures/admin/imports/admin_index_header.php'; ?>
 
     </head>
     <body class="skin-blue sidebar-mini">
@@ -142,7 +142,7 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="<?php echo base_url(); ?>resoures/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                                    <span class="hidden-xs"><?php echo $this->session->userdata['loginData']['name'];  ?></span>
+                                    <span class="hidden-xs"><?php echo $this->session->userdata['loginData']['name']; ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
@@ -195,7 +195,7 @@
                             <img src="<?php echo base_url(); ?>resoures/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p><?php echo $this->session->userdata['loginData']['name'];  ?></p>
+                            <p><?php echo $this->session->userdata['loginData']['name']; ?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -225,7 +225,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Home Page</a></li>
+                                <li><a href="<?php echo base_url(); ?>/index.php/image"><i class="fa fa-circle-o"></i> Home Page</a></li>
                                 <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Rooms</a></li>
                             </ul>
                         </li>
