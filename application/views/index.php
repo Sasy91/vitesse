@@ -1,272 +1,274 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html class="no-js">
+<!doctype html>
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang="en" ><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10 ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="description" content="CAMP POE SRI LANKA HOTELS ">
-        <meta name="author" content="CAMP POE SRI LANKA">
-        <title>CAMP POE</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home - Villa Camp Poe</title>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>resoures/home/home_css/app.css" />
+        <script src="<?php echo base_url(); ?>resoures/home/home_js/modernizr.js"></script>
+        <script>
+            var template_url = '';
+        </script>
 
-        <!-- Mobile Specific Meta
-        ================================================== -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Favicon -->
-        <!--		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />-->
+        <!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.4 - https://yoast.com/wordpress/plugins/seo/ -->
+        <link rel="canonical" href="" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Home - Villa Camp Poe" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Home - Villa Camp Poe" />
 
-        <!-- CSS
-        ================================================== -->
-        <!-- Fontawesome Icon font -->
-        <?php include_once './resoures/imports/baseimports.php'; ?>
+        <!-- / Yoast WordPress SEO plugin. -->
+
+        <link rel="alternate" type="application/rss+xml" title="Home - Villa Camp Poe &raquo; Home Comments Feed" href="" />
+
+        <style type="text/css">
+            img.wp-smiley,
+            img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 .07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+        </style>
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="" />
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="" /> 
+        <link rel='shortlink' href='' />
 
     </head>
+    <body class="home page page-id-611 page-template-default">
 
-    <body id="body">
+        <div class="bg-anim"><div></div><div></div><div></div><div></div></div>
 
-        <!----=====================================================
-                    navigation
-        =================================================--------->
+        <div class="el-anim"><img src="<?php echo base_url(); ?>resoures/home/home_images/saint-cecilia-ko.png"></div><div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">CAMP POE </a>
+
+                <aside class="left-off-canvas-menu">
+                    <a class="exit-off-canvas">Close</a>
+                    <div>
+                        <ul>
+                            <li ><a href="">Rooms</a></li>
+
+                            <li ><a href="">The Camp</a></li>
+                            <li ><a href="">Team Poe</a></li>
+                            <li ><a href="">Shop</a></li>
+                            <li ><a href="">Photos</a></li>
+                            <li ><a href="">Contact</a></li>
+                            <!-- <li ><a href="member-login.php">Member Login</a></li> -->
+
+                            <li><a href="" target="_blank">Book Now</a></li>
+                        </ul>		<hr />
+                        <ul class="social">
+
+                            <li><a class="icon-facebook" href="" target="_blank"><span>facebook</span></a></li>
+
+                            <li><a class="icon-twitter" href="" target="_blank"><span>twitter</span></a></li>
+
+                            <li><a class="icon-instagram" href="" target="_blank"><span>instagram</span></a></li>
+
+                            <li><a class="icon-spotify" href="" target="_blank"><span>spotify</span></a></li>
+
+                        </ul>	</div>
+                </aside>
+
+                <div id="header-container" class="overlay">
+                    <header>
+                        <div class="row">
+                            <a class="left-off-canvas-toggle" href="">Menu</a>
+                            <div class="logo"><a href="">Logo</a></div>
+                            <div class="nav-links">
+
+                                <nav id="primary" role="navigation">
+                                    <ul>
+                                        <li ><a href="<?php echo base_url(); ?>index.php/room">Rooms</a></li>
+                                        <li ><a href="">The Camp</a></li>
+                                        <li ><a href="">Team Poe</a></li>
+                                        <li ><a href="">Shop</a></li>
+                                        <li ><a href="">Photos</a></li>
+                                        <li ><a href="">Contact</a></li>
+                                        <!-- <li ><a href="member-login.php">Member Login</a></li> -->
+                                        <li><a href="" target="_blank">Book Now</a></li>
+                                    </ul>			</nav>
+
+                            </div>
+                        </div>
+                    </header>
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">ROOMS</a></li>
-                        <li><a href="#">HOTEL</a></li>
-                        <li><a href="#">PRIVATE EVENTS</a></li>
-                        <li><a href="#">PHOTOS</a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">BOOK NOW</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
 
-
-        <!----=====================================================
-                  end navigation
-        =================================================--------->
-
-
-
-        <!----=====================================================
-              home page   slider
-       =================================================--------->
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner fullheight" role="listbox">
-                <div class="item active">
-                    <img src="<?php echo base_url(); ?>/resoures/img/1.png" alt="CAMP POE HOTEL">
-                    <div class="carousel-caption">
-                        ...
+                <div id="top-wrapper">
+                    <div id="maximage" class="full-screen">
+                        <div><img src="<?php echo base_url(); ?>resoures/home/home_images/Home-PB10.jpg" alt="" /></div>
+                        <div><img src="<?php echo base_url(); ?>resoures/home/home_images/Home-lounge.jpg" alt="" /></div>
+                        <div><img src="<?php echo base_url(); ?>resoures/home/home_images/NCS_4152.jpg" alt="" /></div>
+                        <div><img src="<?php echo base_url(); ?>resoures/home/home_images/Hotel-Office-1-sm.jpg" alt="" /></div>
                     </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/resoures/img/2.png" alt="CAMP POE HOTEL">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/resoures/img/3.png" alt="CAMP POE HOTEL">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/resoures/img/4.png" alt="CAMP POE HOTEL">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-            </div>
+                    <div id="slide-nav"><ul></ul></div>
 
-            <!--             Controls 
-                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>-->
-        </div>
+                    <a href="#" id="arrow_left"></a>
+                    <a href="#" id="arrow_right"></a>
+                </div>
+
+                <div id="booking-container" class="full">
+                    <div class="row">
+
+                        <form id="checkinform" method="GET" action="">
+                            <input type="hidden" id="hotel" name="hotel" value="26160" />
+                            <input type="hidden" id="chain" name="chain" value="10198" />
+                            <input type="hidden" id="template" name="template" value="GCF" />
+                            <input type="hidden" id="shell" name="shell" value="HSC" />
+
+                            <input type="hidden" id="start" name="start" value="availresults" />
+
+                            <div class="form-field wide">
+                                <input type="text" id="checkin" class="dark" placeholder="Check in" name="arrive" class="required" readonly="true"  style="background:url(<?php echo base_url(); ?>resoures/home/home_images/calendar.png) no-repeat 140px;cursor:pointer;font-size:14px;"   />
+                            </div>
+
+                            <div class="form-field wide">
+                                <input type="text" id="checkout" class="dark" placeholder="Check out" name="depart" class="required" readonly="true"  style="background:url(<?php echo base_url(); ?>resoures/home/home_images/calendar.png) no-repeat 140px; cursor:pointer;font-size:14px;"  />
+                            </div>
+
+                            <div class="form-field custom-select">
+
+                                <select id="adult" name="adult"  style=" font-size:14px;">
 
 
-        <!----=====================================================
-              home page   slider  end
-       =================================================--------->
+                                    <option disabled selected>Adults </option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
 
-        <!----=====================================================
-              availability checking
-       =================================================--------->
-        <!-- Reservation form -->
-        <section id="reservation-form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">         
-                        <form class="form-inline reservation-horizontal clearfix" role="form" method="post" action="php/reservation.php" name="reservationform" id="reservationform">
-                            <!-- Error message -->
-                            <div id="message"></div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <!--                <label for="email" accesskey="E">E-mail</label>-->
-                                        <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <!--                <label for="room">Room Type</label>-->
-                                        <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                        <select class="form-control" name="room" id="room">
-                                            <option selected="selected" disabled="disabled">Select a room</option>
-                                            <option value="Single">Single room</option>
-                                            <option value="Double">Double Room</option>
-                                            <option value="Deluxe">Deluxe room</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <!--                <label for="checkin">Check-in</label>-->
-                                        <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                        <i class="fa fa-calendar infield"></i>
-                                        <input name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <!--                <label for="checkout">Check-out</label>-->
-                                        <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                        <i class="fa fa-calendar infield"></i>
-                                        <input name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
-                                    </div>
-                                </div>
-                                <div class="col-sm-1">
-                                    <div class="">
-                                        <div class="guests-select">
-                                            <!--                  <label>Guests</label>-->
-                                            <i class="fa fa-user infield"></i>
-                                            <div class="total form-control" id="test">1</div>
-                                            <div class="guests">
-                                                <div class="form-group adults">
-                                                    <label for="adults">Adults</label>
-                                                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="+18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                                    <select name="adults" id="adults" class="form-control">
-                                                        <option value="1">1 adult</option>
-                                                        <option value="2">2 adults</option>
-                                                        <option value="3">3 adults</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group children">
-                                                    <!--                      <label for="children">Children</label>-->
-                                                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                                    <select name="children" id="children" class="form-control">
-                                                        <option value="0">0 children</option>
-                                                        <option value="1">1 child</option>
-                                                        <option value="2">2 children</option>
-                                                        <option value="3">3 children</option>
-                                                    </select>
-                                                </div>
-                                                <button type="button" class="btn btn-default button-save btn-block">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+
+                                </select>
+                            </div>
+                            <div class="form-field custom-select">
+                                <select id="child" name="child"  style=" font-size:14px;">
+                                    <option disabled selected>Children</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="btn-wrapper">
+                                <input type="submit" class="submit-btn" value="Check Availability">
+                            </div>
+                        </form>      </div>
+                </div>
+
+                <div id="bottom-wrapper">
+                    <h1>Saints have no moderation, nor do poets, just exuberance. <span>- Anne Sexton</span></h1>
+                    <img src="<?php echo base_url(); ?>resoures/home/home_images/saint-adjusted-white-1.jpg" alt="Saints have no moderation, nor do poets, just exuberance. <span>- Anne Sexton</span>" />
+                </div>
+                <footer>
+                    <div id="footer-container">
+                        <div class="row">
+                            <div>
+                                <ul id="menu-footer" class="links"><li id="menu-item-1055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1055"><a href="">Sitemap</a></li>
+                                    <li id="menu-item-1054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1054"><a href="">Mailing List</a></li>
+                                    <li id="menu-item-1056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1056"><a href="">Contact</a></li>
+                                    <li id="menu-item-1057" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1057"><a href="">BUNKHOUSE</a></li>
+
+                                    <li id="menu-item-1277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1277"><a href="">Jobs</a></li>
+                                </ul>		  	 
+
+                                <div style="width:260px; height:45px; margin-top:0px; float:right; margin-right:-15px;">
+                                    <div class="social_1"><a href="" class="" target="_blank" style=" text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+                                    <div class="social_2"><a href="" class="" target="_blank" style=" text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+                                    <div class="social_3"><a href="" class="" target="_blank" style=" text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+                                    <div class="social_4"><a href="" class="" target="_blank" style=" text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
             </div>
-        </section><!--reservation-form-->
+        </footer>
+
+    </div>
+</div>
+<div id="myModal" class="reveal-modal" data-reveal></div>
 
 
-        <!----=====================================================
-              availability checking end
-       =================================================--------->
-
-        <!----=====================================================
-             footer image
-      =================================================--------->
-
-        <section id="fotter-img" class="fullheight">
-            <div class="container">
-                <div class="row">
-                    <h1 style="color: white;">Saints have no moderation, nor do poets, just exuberance. <span style="color: olive;">- Anne Sexton</span></h1>
-                </div>  <!--row-->                              
-            </div>      <!--container-->                    
-        </section><!--fotter-img-->
-
-        <!----=====================================================
-              footer image end
-      =================================================--------->
-
-        <!----=====================================================
-                fotter
-        =================================================--------->
-
-        <section id="fotter">
-            <div id="container">
-                <div class="row">
-
-                </div><!--row-->
-            </div><!--container-->
-        </section><!--fotter-->
 
 
-        <!----=====================================================
-                end fotter
-         =================================================--------->
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/jquery.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/foundation.min.js?ver=1'></script>
 
-        <!----==============================
-                  script
-        ----------------------------------> 
-        <!-- jquery-->
-        <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
-        <!-- bootstrap-->
-        <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
-        <!-- jquery sticky-->
-        <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
-        <!-- jquery ui-->
-        <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
-        <!-- allscript-->
-        <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
-        <!-- home script-->
-        <script src="<?php echo base_url(); ?>/resoures/js/homescript.js"></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/plugins-ck.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/app-ck.js'></script>
 
-        <!----==============================
-              end      script
-          ----------------------------------> 
-    </body>
 
+<script type='text/javascript'>
+            $(function () {
+                $('#maximage').maximage({
+                    cycleOptions: {
+                        fx: 'fade',
+                        timeout: 6000,
+                        speed: 1000,
+                        prev: '#arrow_left',
+                        next: '#arrow_right',
+                        autostop: 1,
+                        pause: 1,
+                        pager: '#slide-nav ul',
+                        pagerAnchorBuilder: function (idx, slide) {
+                            return '<li><a href=\"#\"></a></li>';
+                        },
+                        before: function (currSlideElement, nextSlideElement, options, forwardFlag) {
+                            $('#slide-caption .vid-btn').attr('data-id', $(nextSlideElement).find('.holding-caption span').html());
+                        },
+                        after: function (last, current) {
+                            $('#slide-caption').fadeIn();
+                        }
+                    },
+                    onFirstImageLoaded: function () {
+                        jQuery('#maximage').fadeIn('fast');
+                    }
+                });
+                $("#top-wrapper").swipe({
+                    swipeLeft: function () {
+                        $('#arrow_left').trigger('click');
+                    },
+                    swipeRight: function () {
+                        $('#arrow_right').trigger('click');
+                    },
+                });
+            });
+</script>
+
+
+</body>
 </html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
 
+Page Caching using disk: enhanced
+Database Caching 10/67 queries in 0.031 seconds using disk
+Object Caching 1464/1649 objects using disk
 
-
+ Served from: hotelsaintcecilia.com @ 2015-06-09 11:07:37 by W3 Total Cache -->
