@@ -26,7 +26,7 @@ class Image extends CI_Controller {
 
     function upload() {
 
-        $config['upload_path'] = 'C:/wamp/www/duwa/resoures/img/';
+        $config['upload_path'] = 'C:/wamp/www/duwa/vitesse/resoures/img/';
         $config['allowed_types'] = 'png|jpg|gif';
         $config['max_size'] = '7000';
         $config['max_width'] = '6000'; /* max width of the image file */
@@ -53,8 +53,7 @@ class Image extends CI_Controller {
         }
     }
 
-    public function delete() {
-        $id = $this->input->get('img_id');
+    public function delete($id) {
         $this->imagemodel->deleteImg($id);
         $data['result'] = $this->imagemodel->getHomeImages();
         $this->load->view('admin_upload_img', $data);

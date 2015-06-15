@@ -289,10 +289,9 @@
                                 if (!empty($result)) {
                                     foreach ($result as $home) {
                                         echo "<div class='col-lg-3 col-md-4 col-xs-6 thumb'>";
-                                        echo "<a class='thumbnail' href='" . base_url() . "/index.php/image/delete?img_id=" . $home->id . "'>";
-                                        echo "<img class='img-responsive' src='" . base_url() . $home->url . "'' alt=''>";
-                                        echo "</a>";
-                                        echo "</div>";
+                                        echo "<img class='img-responsive' src='" . base_url() . $home->url . "' alt=''><br>";
+                                        echo "<center><a href='" . base_url() . "/index.php/image/delete/" . $home->id . "'><button type='button' class='btn btn-default'><i class='fa fa-trash'></i></button></a></center>";
+                                        echo "<br></div>";
                                     }
                                 }
                                 ?>
