@@ -12,18 +12,75 @@ h6 {
   letter-spacing: 2px;
   font-size: 1.2em;
 }
+h1,
+h2 {
+  font-size: 4em;
+  letter-spacing: 3px;
+  padding-bottom: 15px;
+}
+p {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+/*============================================================
+	For Small Desktop
+==============================================================*/
+@media (min-width: 980px) and (max-width: 1150px) {
+  .container {
+    margin: 0 2%;
+  }
+  h2 {
+    font-size: 4em;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 0.8em;
+  }
+}
+/*============================================================
+//	Tablet (Portrait) Design for a width of 768px
+==============================================================*/
+@media (min-width: 768px) and (max-width: 979px) {
+  .container {
+    margin: 0 2%;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;
+  }
+}
+/*============================================================
+	Mobile (Portrait) Design for a width of 320px
+==============================================================*/
+@media only screen and (max-width: 767px) {
+  .container {
+    margin: 0 2%;
+  }
+  h2 {
+    font-size: 3.5em;
+  }
+}
+/*============================================================
+	Mobile (Landscape) Design for a width of 480px
+==============================================================*/
+@media only screen and (min-width: 180px) and (max-width: 767px) {
+  .container {
+    margin: 0 2%;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+}
 body {
   position: relative;
   padding-top: 0px;
 }
 .navbar {
   background-color: #1dc3f7;
-  padding: 1%;
+  padding: 0.5%;
 }
 .navbar-default .navbar-nav > li > a {
   color: #1E405B;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .main #rooms_cover {
   background: url(../img/covers/1.png) no-repeat center center;
@@ -179,4 +236,110 @@ body {
 .main #room-6:hover h4,
 .main #room-7:hover h4 {
   display: none;
+}
+#hotel #hotel_cover {
+  background: url(../img/covers/2.png) no-repeat center center;
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#hotel #histry {
+  padding: 80px 0;
+  text-align: center;
+}
+#hotel #histry .smooth-midle li {
+  list-style: none;
+  display: inline-block;
+}
+#hotel #histry .smooth-midle li a {
+  text-decoration: none;
+}
+#camp_poe .hotel_baner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+#camp_poe #intro {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#camp_poe #ground {
+  padding: 20px 10px;
+}
+#camp_poe #ground .ground-info {
+  background-color: #1dc3f7;
+}
+#camp_poe #ground .img-rounded {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+}
+#camp_poe #hotel-map {
+  padding: 20px 10px;
+}
+#camp_poe #hotel-map .img-rounded {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+}
+#camp_poe #lobby {
+  padding: 20px 10px;
+}
+#camp_poe #lobby .ground-lobby {
+  background-color: #1dc3f7;
+}
+#camp_poe #lobby .img-rounded {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+}
+#camp_poe #lobby-2 {
+  padding: 20px 10px;
+}
+#camp_poe #lobby-2 .img-rounded {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+}
+#camp_poe #pool-and-arbor {
+  padding: 20px 10px;
+}
+#camp_poe #pool-and-arbor .fool-info {
+  background-color: #1dc3f7;
+}
+#camp_poe #pool-and-arbor .img-rounded {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+}
+#camp_poe #pool-and-arbor-two {
+  padding: 20px 10px;
+}
+#camp_poe #pool-and-arbor-two .img-rounded {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
 }

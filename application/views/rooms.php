@@ -58,10 +58,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <li><a href="#">Poolside Bungalows</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">HOTEL</a></li>
-                        <li><a href="#">PRIVATE EVENTS</a></li>
+                        <li><a href="#">THE CAMP</a></li>
+                        <li><a href="#">TEAM POE</a></li>
+                         <li><a href="#">SHOP</a></li>
                         <li><a href="#">PHOTOS</a></li>
-                        <li><a href="#">SHOP</a></li>
                         <li><a href="#">CONTACT</a></li>
                         <li><a href="#">BOOK NOW</a></li>
                     </ul>

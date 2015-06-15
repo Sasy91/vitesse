@@ -218,11 +218,11 @@
 
 
 
-<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/jquery.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/foundation.min.js?ver=1'></script>
+    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/jquery.min.js'></script>
+    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/foundation.min.js?ver=1'></script>
 
-<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/plugins-ck.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/app-ck.js'></script>
+    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/plugins-ck.js'></script>
+    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/app-ck.js'></script>
 
 
 <script type='text/javascript'>
