@@ -92,7 +92,7 @@
                                 <nav id="primary" role="navigation">
                                     <ul>
                                         <li ><a href="<?php echo base_url(); ?>index.php/room">Rooms</a></li>
-                                        <li ><a href="">The Camp</a></li>
+                                        <li ><a href="<?php echo base_url(); ?>index.php/camppoe">The Camp</a></li>
                                         <li ><a href="">Team Poe</a></li>
                                         <li ><a href="">Shop</a></li>
                                         <li ><a href="">Photos</a></li>
