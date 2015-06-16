@@ -53,6 +53,27 @@ class Image extends CI_Controller {
         }
     }
 
+//Ranas Code
+//    public function upload() {
+//
+//        $config['upload_path'] = 'images/';
+//        $config['allowed_types'] = 'gif|jpg|png';
+//        $title = $this->input->post('title');
+//        $this->load->library('upload', $config);
+//
+//        if (!$this->upload->do_upload()) {
+//            $error = array('error' => $this->upload->display_errors());
+//            $this->load->view('cmsview', $error);
+//        } else {
+//            $file_data = $this->upload->data();
+//            $data['img'] = base_url() . '/images/' . $file_data['file_name'];
+//            $data['title'] = $title;
+//            $this->load->model('file');
+//            $this->file->insert($data['img'], $data['title']);
+//            $this->load->view('show', $data);
+//        }
+//    }
+
     public function delete($id) {
         $this->imagemodel->deleteImg($id);
         $data['result'] = $this->imagemodel->getHomeImages();
