@@ -242,7 +242,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="pages/calendar.html">
+                            <a href="<?php echo base_url(); ?>/index.php/calender">
                                 <i class="fa fa-calendar"></i> <span>Booking Calendar</span>
                                 <small class="label pull-right bg-red">3</small>
                             </a>
