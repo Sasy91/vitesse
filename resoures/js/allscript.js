@@ -48,11 +48,6 @@ jQuery(function ($) {
 /*	hotel img Sections
 /* ========================================================================= */
 
-        $('#main_info .ground-img img').each(function() {
-        var imgSrc = $(this).attr('src');
-        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
-        $(this).remove();
-      });
 
 
   

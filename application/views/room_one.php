@@ -145,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                        </div>
                                        <div class="col-sm-6">
                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="datepicker_1" placeholder="CHECK IN">
+                                                <input type="text" class="form-control" id="datepicker_2" placeholder="CHECK IN">
                                             </div>
                                         <select class="form-control">
                                             <option value="0"> CHILDREN</option>

@@ -27,40 +27,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!----=====================================================
                     navigation
         =================================================--------->
-    <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-            <div class="container">
+
+            <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <!-- responsive nav button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-					<!-- /responsive nav button -->
-					
-					<!-- logo -->
-					<h1 class="navbar-brand">
-						<a href="#body">Blue</a>
-					</h1>
-					<!-- /logo -->
+                    <a class="navbar-brand" href="#">Brand</a>
                 </div>
 
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#body">Home</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#portfolio">portfolio</a></li>
-                        <li><a href="#testimonials">Testimonial</a></li>
-                        <li><a href="#price">price</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Suite 1</a></li>
+                                <li><a href="#">Suite 2</a></li>
+                                <li><a href="#">Suite 3</a></li>
+                                <li><a href="#">Suite 4</a></li>
+                                <li><a href="#">Suite 5</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Studios</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Poolside Bungalows</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">THE CAMP</a></li>
+                        <li><a href="#">TEAM POE</a></li>
+                         <li><a href="#">SHOP</a></li>
+                        <li><a href="#">PHOTOS</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">BOOK NOW</a></li>
                     </ul>
-                </nav>
-				<!-- /main nav -->
-				
-            </div>
-        </header>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
 
         <!----=====================================================
                   end navigation
@@ -282,10 +291,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
         <!-- jquery sticky-->
         <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
+         <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
         <!-- jquery sticky-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
-                <!-- jquery sticky-->
-        <script src="<?php echo base_url(); ?>/resoures/js/jquery.singlePageNav.min"></script>
         <!-- jquery ui-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
         <!-- allscript-->
