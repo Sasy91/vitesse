@@ -6,5 +6,9 @@ class Room extends CI_Controller {
     public function index() {
         $this->load->view('rooms');
     }
+    
+    public function room_one() {
+        $this->load->view('room_one');
+    }
 
 }
