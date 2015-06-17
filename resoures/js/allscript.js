@@ -13,7 +13,14 @@ jQuery(function ($) {
 		zindex: 9999,
 		cursorborder: 0,
 	});
-    
+//    	var nice = $(".room-info").niceScroll({
+//		cursorborderradius: 0,
+//		cursorwidth: "18px",
+//		cursorfixedheight: 150,
+//		cursorcolor: "#000",
+//		zindex: 9999,
+//		cursorborder: 10,
+//	});
     
    /* ========================================================================= */
 	/*	cover full size
@@ -41,7 +48,7 @@ jQuery(function ($) {
 /*	hotel img Sections
 /* ========================================================================= */
 
-        $('#main_infoe .ground-img img').each(function() {
+        $('#main_info .ground-img img').each(function() {
         var imgSrc = $(this).attr('src');
         $(this).parent().css({'background-image': 'url('+imgSrc+')'});
         $(this).remove();
@@ -51,6 +58,22 @@ jQuery(function ($) {
   
 /* ========================================================================= */
 /**	hotel img Sections end
+/* ========================================================================= */
+
+/* ========================================================================= */
+/*	set the full cover size for the rooms pages
+/* ========================================================================= */
+
+        $('#room_one .room_baner img').each(function() {
+        var imgSrc = $(this).attr('src');
+        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(this).remove();
+      });
+
+
+  
+/* ========================================================================= */
+/**	set the full cover size for the rooms pages end
 /* ========================================================================= */
 
 
@@ -68,7 +91,12 @@ jQuery(function ($) {
 /* ========================================================================= */
 /*	Parallax Sections
 /* ========================================================================= */
-
+ $(function() {
+    $( "#datepicker_1" ).datepicker();
+  });
+$(function() {
+    $( "#datepicker_2" ).datepicker();
+  });
 
 "use strict";
 

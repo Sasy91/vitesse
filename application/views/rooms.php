@@ -281,12 +281,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
         <!-- jquery sticky-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
+           <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
         <!-- jquery ui-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
         <!-- allscript-->
         <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
-        <!-- home script-->
-        <script src="<?php echo base_url(); ?>/resoures/js/homescript.js"></script>
+
           
          <script>
                 wow = new WOW({

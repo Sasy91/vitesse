@@ -27,30 +27,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!----=====================================================
                     navigation
         =================================================--------->
-<header>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#featured"><h1><span class="subhead"></span></h1></a>
-      </div><!-- navbar-header -->
-      <div class="collapse navbar-collapse" id="collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#featured">Home</a></li>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#staff">Staff</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-        </ul>        
-      </div><!-- collapse navbar-collapse -->
-    </div><!-- container -->
-  </nav>
-</header>
+    <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+                    </button>
+					<!-- /responsive nav button -->
+					
+					<!-- logo -->
+					<h1 class="navbar-brand">
+						<a href="#body">Blue</a>
+					</h1>
+					<!-- /logo -->
+                </div>
+
+				<!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li><a href="#body">Home</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#testimonials">Testimonial</a></li>
+                        <li><a href="#price">price</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+				<!-- /main nav -->
+				
+            </div>
+        </header>
 
         <!----=====================================================
                   end navigation
@@ -68,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
            
         <section id="main_info">
-               <div class="container">
+               <div class="container-fluid">
                    <div class="row">
                          <div id="intro">
                                      <div class="col-sm-6">
@@ -90,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            
            
            <section id="ground">
-               <div class="container">
+               <div class="container-fluid">
                    <div class="row">
                        <div class="col-sm-6">
                            <div class="ground-info">
@@ -118,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            </section><!--main_info-->
             
             <section id="hotel-map">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="ground-logo">
@@ -135,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </section><!--hotel-map-->
             
             <section id="lobby">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
                              <div class="ground-map">
@@ -167,7 +177,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </section><!--lobby-->
               
               <section id="lobby-2">
-                  <div class="container">
+                  <div class="container-fluid">
                       <div class="row">
                                  <div class="col-sm-8">
                             <div class="ground-logo">
@@ -184,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </section><!--lobby-2-->
               
               <div id="pool-and-arbor">
-                  <div class="container">
+                  <div class="container-fluid">
                       <div class="row">
                                <div class="col-sm-6">
                                   <div class="fool-info">
@@ -210,7 +220,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div><!--pool-and-arbor-->
               
               <section id="pool-and-arbor-two">
-                  <div class="container">
+                  <div class="container-fluid">
                       <div class="row">
                           <div class="col-sm-4">
                             <div class="ground-logo">
@@ -274,12 +284,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
         <!-- jquery sticky-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
+                <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.singlePageNav.min"></script>
         <!-- jquery ui-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
         <!-- allscript-->
         <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
         <!-- home script-->
-        <script src="<?php echo base_url(); ?>/resoures/js/homescript.js"></script>
           
          <script>
                 wow = new WOW({
