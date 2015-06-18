@@ -36,6 +36,12 @@ jQuery(function ($) {
         $(this).parent().css({'background-image': 'url('+imgSrc+')'});
         $(this).remove();
       });
+    
+        $('#rooms_cover .hotel_baner img').each(function() {
+        var imgSrc = $(this).attr('src');
+        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(this).remove();
+      });
    
     $(window).resize(function() {
      wheight = $(window).height(); //get the height of the window
@@ -80,7 +86,7 @@ jQuery(function ($) {
 /**	navigation hide
 /* ========================================================================= */
   jQuery(window).scroll(function () {
-        if (jQuery(window).scrollTop() > 600) {
+        if (jQuery(window).scrollTop() > 550) {
             jQuery("#navigation").css("background-color","#00C7FC");
             jQuery("#navigation").addClass("animated-nav");
         } else {
