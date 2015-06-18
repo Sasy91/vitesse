@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!----=====================================================
                     navigation
         =================================================--------->
-        header id="navigation" class="navbar-fixed-top">
+        <header id="navigation" class="navbar-fixed-top">
         <div class="container">
 
             <div class="navbar-header">
