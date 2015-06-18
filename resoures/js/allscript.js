@@ -119,6 +119,7 @@ $(function() {
 
 function parallaxInit() {
 	$('#hotel_cover').parallax("50%", 0.3);
+//    $('#footer').parallax("50%", 0.1);
 
 }
 

@@ -180,18 +180,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!----=====================================================
                 fotter
         =================================================--------->
+        
+              <?php include_once './resoures/imports/footer.php'; ?>
 
-        <section id="fotter">
-            <div id="container">
-                <video   preload="auto" autoplay loop muted="muted" volume="0"> 
-                    <source src="videos/splash4.mp4" type="video/mp4">
-                    </div>
-                    </section>
-
-
-                    <!----=====================================================
-                            end fotter
-                     =================================================--------->
+        <!----=====================================================
+           end fotter
+        =================================================--------->
 
                     <!----==============================
                               script
