@@ -29,7 +29,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div id="room_one">
             <div class="room_baner fullheight">
-                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_1.jpg" alt="">
+
+                <?php
+                if (!empty($details)) {
+                    foreach ($details as $room_details) {
+                        echo "<img  class='img-rounded' src='" . base_url() . $room_details->rm_cover_img . "' alt=''>";
+                    }
+                }
+                ?>
             </div>
 
 
@@ -47,32 +54,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="first-img">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_2.jpg" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "3A") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="second-img">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_3.jpg" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "3B") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="room-info">
-                                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Molestiae ratione dolores labore maiores est, nihil, ducimus
-                                    magnam earum ad quod odit delectus dolorem quidem voluptates 
-                                    natus odio nostrum vero? Fugit.lorem
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Molestiae ratione dolores labore maiores est, nihil, ducimus
-                                    magnam earum ad quod odit delectus dolorem quidem voluptates 
-                                    natus odio nostrum vero? Fugit.lore
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Molestiae ratione dolores labore maiores est, nihil, ducimus
-                                    magnam earum ad quod odit delectus dolorem quidem voluptates 
-                                    natus odio nostrum vero? Fugit.lorem
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Molestiae ratione dolores labore maiores est, nihil, ducimus
-                                    magnam earum ad quod odit delectus dolorem quidem voluptates 
-                                    natus odio nostrum vero? Fugit.lore</P>
+
+                                <?php
+                                if (!empty($details)) {
+                                    foreach ($details as $room_details) {
+                                        echo"<h3>" . $room_details->rm_name . "</h3><br>";
+                                        echo "<p>" . $room_details->rm_detail . "</p>";
+                                    }
+                                }
+                                ?>
                             </div><br>
                             <div class="row">
                                 <form action="">
@@ -132,17 +148,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="first-thrd">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_4.jpg" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "6C") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="first-fourth">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_5.png" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "3D") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="first-fifth">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_6.jpg" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "3E") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -161,12 +201,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="first-six">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_7.jpg" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "4F") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div> 
                         </div>
                         <div class="col-sm-8">
                             <div class="first-six">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/room_one/room_one_8.jpg" alt="">
+                                <?php
+                                if (!empty($images)) {
+                                    foreach ($images as $room_imgs) {
+                                        if ($room_imgs->style_col == "8G") {
+                                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt=''>";
+                                        }
+                                    }
+                                }
+                                ?>
                             </div> 
                         </div>
                     </div><!--row-->
@@ -180,49 +236,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!----=====================================================
                 fotter
         =================================================--------->
-        
-              <?php include_once './resoures/imports/footer.php'; ?>
+
+        <?php include_once './resoures/imports/footer.php'; ?>
 
         <!----=====================================================
            end fotter
         =================================================--------->
 
-                    <!----==============================
-                              script
-                    ----------------------------------> 
-                    <!-- jquery-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
-                    <!-- bootstrap-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
-                    <!-- jquery sticky-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
-                    <!-- jquery sticky-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
-                    <!-- jquery sticky-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
-                    <!-- jquery sticky-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
-                    <!-- jquery ui-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
-                    <!-- allscript-->
-                    <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
+        <!----==============================
+                  script
+        ----------------------------------> 
+        <!-- jquery-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
+        <!-- bootstrap-->
+        <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
+        <!-- jquery ui-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <!-- allscript-->
+        <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
 
-                    <script>
-                        wow = new WOW({
-                            animateClass: 'animated',
-                            offset: 120
-                        });
-                        wow.init();
+        <script>
+            wow = new WOW({
+                animateClass: 'animated',
+                offset: 120
+            });
+            wow.init();
 
-                    </script>
+        </script>
 
 
-                    <!----==============================
-                          end      script
-                      ----------------------------------> 
-                    </body>
+        <!----==============================
+              end      script
+          ----------------------------------> 
+    </body>
 
-                    </html>
+</html>
 
 
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2015 at 06:42 AM
+-- Generation Time: Jun 19, 2015 at 05:02 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `home_sider` (
   `uploaded_by` varchar(100) NOT NULL,
   `date` timestamp NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `home_sider`
@@ -79,8 +79,7 @@ INSERT INTO `home_sider` (`id`, `url`, `uploaded_by`, `date`) VALUES
 (1, '/resoures/img/1.png', '', '2015-06-12 10:33:01'),
 (2, '/resoures/img/2.png', '', '2015-06-12 10:33:01'),
 (3, '/resoures/img/3.png', '', '2015-06-12 10:33:01'),
-(4, '/resoures/img/4.png', '', '2015-06-12 10:33:01'),
-(11, '/resoures/img/Share2015-04-11-5172d009bc8efb89cd66309a53eb876215857b37cd907ad0aa7449e73b58c71f-Picture.jpg', 'Mark William', '2015-06-13 15:59:38');
+(4, '/resoures/img/4.png', '', '2015-06-12 10:33:01');
 
 -- --------------------------------------------------------
 
@@ -98,7 +97,14 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `rm_detail` varchar(1000) NOT NULL,
   `rm_amount` double(5,2) NOT NULL,
   PRIMARY KEY (`rm_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `rooms`
+--
+
+INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `rm_title`, `rm_detail`, `rm_amount`) VALUES
+(1, 'SUITE 3', '', '/resoures/img/room_one/room_one_1.jpg', 0, '', 'Suite Two offers a sitting room and large bedroom with King HÃ¤stens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suiteâ€™s amenities is available here.', 0.00);
 
 -- --------------------------------------------------------
 
@@ -110,8 +116,22 @@ CREATE TABLE IF NOT EXISTS `room_img_urls` (
   `ril_id` int(11) NOT NULL AUTO_INCREMENT,
   `rm_id` int(11) NOT NULL,
   `ril_img_url` varchar(500) NOT NULL,
+  `style_col` varchar(11) NOT NULL,
   PRIMARY KEY (`ril_id`,`rm_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `room_img_urls`
+--
+
+INSERT INTO `room_img_urls` (`ril_id`, `rm_id`, `ril_img_url`, `style_col`) VALUES
+(1, 1, '/resoures/img/room_one/room_one_2.jpg', '3A'),
+(2, 1, '/resoures/img/room_one/room_one_3.jpg', '3B'),
+(3, 1, '/resoures/img/room_one/room_one_4.jpg', '6C'),
+(4, 1, '/resoures/img/room_one/room_one_5.png', '3D'),
+(5, 1, '/resoures/img/room_one/room_one_6.jpg', '3E'),
+(6, 1, '/resoures/img/room_one/room_one_7.jpg', '4F'),
+(7, 1, '/resoures/img/room_one/room_one_8.jpg', '8G');
 
 -- --------------------------------------------------------
 
@@ -136,7 +156,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `user_id`, `password`, `role`, `last_login`, `registerd_date`, `audit`, `name`) VALUES
-(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-06-13 18:46:50', '2015-06-12 00:00:00', '::1', 'Mark William');
+(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-06-17 22:21:59', '2015-06-12 00:00:00', '::1', 'Mark William');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

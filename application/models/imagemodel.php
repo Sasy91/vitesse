@@ -10,6 +10,20 @@ class imagemodel extends CI_Model {
         return $query->result();
     }
 
+    function getRoomImages($roomId) {
+        $query = $this->db->get_where('room_img_urls', array('rm_id' => $roomId));
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+
+    function getRoomDetails($roomId) {
+        $query = $this->db->get_where('rooms', array('rm_id' => $roomId));
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+
     function saveImage($data) {
         if ($this->db->insert('home_sider', $data)) {
             return TRUE;
