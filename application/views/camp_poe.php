@@ -19,10 +19,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         ================================================== -->
         <!-- Fontawesome Icon font -->
         <?php include_once './resoures/imports/baseimports.php'; ?>
+
     </head>
 
     <body id="body">
-        <!--Header Import-->
         <?php include_once './resoures/imports/temp_header.php'; ?>
         <div  id="camp_poe">
 
@@ -201,33 +201,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!----=====================================================
                 fotter
         =================================================--------->
-
-        <section id="fotter">
-            <div id="container">
-                <div class="row">
-
-                </div><!--row-->
-            </div><!--container-->
-        </section><!--fotter-->
-
-
-        <!----=====================================================
-                end fotter
-         =================================================--------->
-
-        <!----=====================================================
-              hotel info
-       =================================================--------->
+        <?php include_once './resoures/imports/temp_footer.php'; ?>
 
 
 
-        <!----=====================================================
-             hotel info end  
-       =================================================--------->
-
-        <!----==============================
-                  script
-        ----------------------------------> 
         <!-- jquery-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
         <!-- bootstrap-->

@@ -50,7 +50,8 @@
 
         <div class="bg-anim"><div></div><div></div><div></div><div></div></div>
 
-        <div class="el-anim"><img src="<?php echo base_url(); ?>resoures/home/home_images/saint-cecilia-ko.png"></div><div class="off-canvas-wrap" data-offcanvas>
+        <div class="el-anim"><img src="<?php echo base_url(); ?>resoures/home/home_images/saint-cecilia-ko.png"></div>
+        <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
 
 
@@ -79,7 +80,8 @@
 
                             <li><a class="icon-spotify" href="" target="_blank"><span>spotify</span></a></li>
 
-                        </ul>	</div>
+                        </ul>	
+                    </div>
                 </aside>
 
                 <div id="header-container" class="overlay">
@@ -218,11 +220,11 @@
 
 
 
-    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/jquery.min.js'></script>
-    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/foundation.min.js?ver=1'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/jquery.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/foundation.min.js?ver=1'></script>
 
-    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/plugins-ck.js'></script>
-    <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/app-ck.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/plugins-ck.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/app-ck.js'></script>
 
 
 <script type='text/javascript'>

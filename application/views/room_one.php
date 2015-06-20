@@ -25,8 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body id="body">
 
         <!--Header Import-->
-        <?php include_once './resoures/imports/temp_header.php'; ?>
 
+        <?php include_once './resoures/imports/temp_header.php'; ?>
         <div id="room_one">
             <div class="room_baner fullheight">
 
@@ -233,19 +233,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             =================================================--------->
         </div><!--room_one-->
 
-        <!----=====================================================
-                fotter
-        =================================================--------->
+        <?php include_once './resoures/imports/temp_footer.php'; ?>
 
-        <?php include_once './resoures/imports/footer.php'; ?>
-
-        <!----=====================================================
-           end fotter
-        =================================================--------->
-
-        <!----==============================
-                  script
-        ----------------------------------> 
         <!-- jquery-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
         <!-- bootstrap-->
