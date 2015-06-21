@@ -125,7 +125,7 @@
                 <div id="booking-container" class="full">
                     <div class="row">
 
-                        <form id="checkinform" method="GET" action="">
+                        <form id="checkinform" method="POST" action="<?php echo base_url(); ?>index.php/room/checkAvailablilty">
                             <input type="hidden" id="hotel" name="hotel" value="26160" />
                             <input type="hidden" id="chain" name="chain" value="10198" />
                             <input type="hidden" id="template" name="template" value="GCF" />
@@ -134,31 +134,26 @@
                             <input type="hidden" id="start" name="start" value="availresults" />
 
                             <div class="form-field wide">
-                                <input type="text" id="checkin" class="dark" placeholder="Check in" name="arrive" class="required" readonly="true"  style="background:url(<?php echo base_url(); ?>resoures/home/home_images/calendar.png) no-repeat 140px;cursor:pointer;font-size:14px;"   />
+                                <input type="text" id="checkin" class="dark" placeholder="Check in" name="arrive" class="required" readonly="true" />
                             </div>
 
                             <div class="form-field wide">
-                                <input type="text" id="checkout" class="dark" placeholder="Check out" name="depart" class="required" readonly="true"  style="background:url(<?php echo base_url(); ?>resoures/home/home_images/calendar.png) no-repeat 140px; cursor:pointer;font-size:14px;"  />
+                                <input type="text" id="checkout" class="dark" placeholder="Check out" name="depart" class="required" readonly="true"/>
                             </div>
 
                             <div class="form-field custom-select">
-
                                 <select id="adult" name="adult"  style=" font-size:14px;">
-
-
                                     <option disabled selected>Adults </option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
-
                                 </select>
                             </div>
                             <div class="form-field custom-select">
@@ -166,14 +161,12 @@
                                     <option disabled selected>Children</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-
                                     <option value="3">3</option>
                                     <option value="4">4</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                     <option value="8">8</option>
-
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
@@ -181,7 +174,8 @@
                             <div class="btn-wrapper">
                                 <input type="submit" class="submit-btn" value="Check Availability">
                             </div>
-                        </form>      </div>
+                        </form>      
+                    </div>
                 </div>
 
                 <div id="bottom-wrapper">

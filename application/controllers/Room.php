@@ -16,5 +16,13 @@ class Room extends CI_Controller {
         $room['details'] = $this->imagemodel->getRoomDetails("1");
         $this->load->view('room_one', $room);
     }
+    
+    public function checkAvailablilty(){
+        $this->input->post("arrive");
+        $this->input->post("depart");
+        $this->input->post("adult");
+        $this->input->post("child");
+        $this->load->view('available_rooms');
+    } 
 
 }
