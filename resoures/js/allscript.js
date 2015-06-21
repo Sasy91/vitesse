@@ -51,8 +51,51 @@ jQuery(function ($) {
 
   
 /* ========================================================================= */
-/*	hotel img Sections
+/*	caom poe image resizing 
 /* ========================================================================= */
+      
+//ground
+
+	var slideHeight = $('#ground, .ground-info').height();
+	
+	$('#ground, .ground-info').css('height',slideHeight);
+
+	$(window).resize(function(){'use strict',
+		
+        $('#ground,  .ground-img .img-rounded').css('height',slideHeight);
+                                
+                                
+                                
+	});
+
+//lobby
+
+	var slideHeight = $('#lobby, .ground-lobby').height();
+	
+	$('#lobby, .ground-lobby').css('height',slideHeight);
+
+	$(window).resize(function(){'use strict',
+		
+                                
+    $('#lobby,  .lobby-img .img-rounded').css('height',slideHeight);
+                                
+                                
+	});
+
+//pool-and-arbor
+
+	var slideHeight = $('#pool-and-arbor, .fool-info').height();
+	
+	$('#pool-and-arbor, .fool-info').css('height',slideHeight);
+
+	$(window).resize(function(){'use strict',
+		
+                                
+    $('#lobby,  .fool-img .img-rounded').css('height',slideHeight);
+                                
+                                
+	});
+
 
 
 
@@ -71,11 +114,14 @@ jQuery(function ($) {
         $(this).remove();
       });
 
-   $('#camp_poe .ground-info img').each(function() {
+   $('#camp_poe .img-rounded img').each(function() {
         var imgSrc = $(this).attr('src');
         $(this).parent().css({'background-image': 'url('+imgSrc+')'});
         $(this).remove();
       });
+
+
+
 
 
   

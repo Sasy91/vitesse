@@ -81,10 +81,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <section id="ground">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
-                               <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/one.jpg" alt="">
+                            <div class="col-sm-6 ">
                                 <div class="ground-info">
-                                    
+   
                                     <h3>GROUNDS</h3>
                                     <p>
                                         Each of the five suites, six poolside bungalows,
@@ -98,22 +97,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </p>
                                 </div><!--ground-info-->
                             </div>
-                            <div class="col-sm-6">
-                                <div class="ground-img">
+                            <div class="col-sm-6 hidden-xs">
+                                <div class="ground-img ">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-ground.jpg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section><!--GROUNDS-->
-            </section><!--main_info-->
+                
+                        
+            
 
             <section id="hotel-map">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="ground-logo">
-                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-logo.jpg" alt="">
+                           <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-logo.jpg" alt="">
+
                             </div>
                         </div>
                         <div class="col-sm-8">
@@ -125,11 +127,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </section><!--hotel-map-->
 
+
             <section id="lobby">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="ground-map">
+                            <div class="lobby-img ">
                                 <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-lobby.jpg" alt="">
                             </div>
                         </div>
@@ -191,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         </div>
                         <div class="col-sm-6">
-                            <div class="ground-map">
+                            <div class="fool-img ">
                                 <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-map-pool.jpg" alt="">
                             </div>
                         </div>
@@ -216,6 +219,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </section><!--pool-and-arbor-->
+            
+         
+    
 
 
         </div><!--camp_poe-->
