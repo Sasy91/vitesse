@@ -31,33 +31,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <img src="<?php echo base_url(); ?>/resoures/img/covers/1.png" alt="...">
             </div>
 
-            <section id="main_info">
-                <div class="container-fluid">
+            <section id="main_info"> 
+                <div class="container">
                     <div class="row">
                         <div id="intro">
-                            <div class="col-sm-6">
-                                <h3>PROPERTY</h3>
-                                <p>Created in honor of the patron saint of music and poetry,
-                                    the Saint Cecilia takes inspiration from the great era of
-                                    the late 1960’s and early 1970’s when a revolution of
-                                    rock and roll and beat poetry overran the hallowed 
-                                    halls of established convention. We pay tribute to 
-                                    the great creative legacy of our revolutionary idols
-                                    and to the spirit of the artist that lies within us all.</p>
+<!--                            <div class="col-sm-6">-->
+                                <div class="discrip">
+                                <h3>Inspired by the arts of surfing and yoga,
+                                  our unique Sri Lankan retreat aims to capture
+                                  this poetry of movement in a single word <span>"Poe"</span></h3>
+                                  
+                                <p>Located on the Southern Coast of the island with consistent swells running 
+                                 throughout the year, Poe resides in the sleepy village of Madiha, 
+                                 a surfing haven with a perfect left and a long mellow right hander 
+                                 peeling on your doorstep. As well as this, there are several long 
+                                 beach breaks close by, providing ideal learning conditions. A short 
+                                 ride north will take to you to the more renowned  breaks such as Lazy
+                                 Lefts, Rams Right and Sticks, giving you options to surf 
+                                 a different break each day. </p>
+                                 
+                                   <p>Located on the Southern Coast of the island with consistent swells running 
+                                 throughout the year, Poe resides in the sleepy village of Madiha, 
+                                 a surfing haven with a perfect left and a long mellow right hander 
+                                 peeling on your doorstep. As well as this, there are several long 
+                                 beach breaks close by, providing ideal learning conditions. A short 
+                                 ride north will take to you to the more renowned  breaks such as Lazy
+                                 Lefts, Rams Right and Sticks, giving you options to surf 
+                                 a different break each day. </p>
+                                 
+                                 <h2>so surf and live life free, 
+                                        smile and be happy, 
+                                        let nature be, 
+                                         <span>poe</span> is the key...............
+                                        </h2>
+                                </div>
                             </div>
+<!--
                             <div class="col-sm-6">
+                                  <div class="word">
                                 <h4>“NOTHING BEHIND ME, EVERYTHING AHEAD OF ME, AS IS EVER SO ON THE ROAD.” ― JACK KEROUAC</h4>
-                            </div>
+                                </div>
+                             </div>
+-->
                         </div>
                     </div>
-                </div>
+                </section>
 
 
                 <section id="ground">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
+                               <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/one.jpg" alt="">
                                 <div class="ground-info">
+                                    
                                     <h3>GROUNDS</h3>
                                     <p>
                                         Each of the five suites, six poolside bungalows,

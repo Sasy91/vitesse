@@ -79,6 +79,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <div class="col-sm-6">
+                             <div class="booking">
+                                    
                             <div class="room-info">
 
                                 <?php
@@ -91,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
                             </div><br>
                             <div class="row">
-                                <form action="">
+                                <form action="" class="form_start">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="datepicker_1" placeholder="CHECK IN">
@@ -101,11 +103,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <option value="1">1 adult</option>
                                             <option value="2">2 adults</option>
                                             <option value="3">3 adults</option>
-                                            <option value="1">4 adult</option>
+                                            <option value="1">4 adults</option>
                                             <option value="2">5 adults</option>
                                             <option value="3">6 adults</option>
                                             <option value="3">7 adults</option>
-                                            <option value="1">8 adult</option>
+                                            <option value="1">8 adults</option>
                                             <option value="2">9 adults</option>
                                             <option value="3">10 adults</option>
                                         </select>
@@ -131,6 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>                                      
                                 </form><!--form-->
                             </div>
+                             </div>
                         </div>
                     </div><!--row-->
                 </div><!--container-fluid-->

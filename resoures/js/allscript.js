@@ -71,6 +71,12 @@ jQuery(function ($) {
         $(this).remove();
       });
 
+   $('#camp_poe .ground-info img').each(function() {
+        var imgSrc = $(this).attr('src');
+        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(this).remove();
+      });
+
 
   
 /* ========================================================================= */
@@ -83,11 +89,11 @@ jQuery(function ($) {
 /* ========================================================================= */
 
 /* ========================================================================= */
-/**	navigation hide
+/**	navigation hide background-color: rgba(62, 202, 255, 0.4);
 /* ========================================================================= */
   jQuery(window).scroll(function () {
         if (jQuery(window).scrollTop() > 550) {
-            jQuery("#navigation").css("background-color","#00C7FC");
+            jQuery("#navigation").css("background-color","rgba(62, 202, 255, 0.4)");
             jQuery("#navigation").addClass("animated-nav");
         } else {
             jQuery("#navigation").css("background-color","transparent");
@@ -119,7 +125,7 @@ $(function() {
 
 function parallaxInit() {
 	$('#hotel_cover').parallax("50%", 0.3);
-//    $('#footer').parallax("50%", 0.1);
+    $('.hotel_baner').parallax("50%", 0.3);
 
 }
 

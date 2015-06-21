@@ -333,6 +333,7 @@ body {
   text-decoration: none;
 }
 #camp_poe .hotel_baner {
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -340,14 +341,33 @@ body {
   height: 100%;
 }
 #camp_poe #intro {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  color: #4A2B0F;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#camp_poe #intro .discrip p {
+  font-size: 1.1em;
+}
+#camp_poe #intro .discrip h3 {
+  color: #c5670a;
+  margin-bottom: 30px;
+  font-size: 1.6em;
+}
+#camp_poe #intro .discrip h3 span {
+  color: #00C7FC;
+  font-size: 1.6em;
+}
+#camp_poe #intro .discrip h2 {
+  font-size: 1.5em;
+  padding: 20px;
+  text-transform: uppercase;
+}
+#camp_poe #intro .discrip h2 span {
+  color: #00C7FC;
 }
 #camp_poe #ground {
   padding: 20px 10px;
-}
-#camp_poe #ground .ground-info {
-  background-color: #1dc3f7;
 }
 #camp_poe #ground .img-rounded {
   background-size: cover;
@@ -436,11 +456,65 @@ body {
   height: 80%;
   border-radius: 0px;
 }
-#room_one #room_one_first .room-info,
-#room_one #room_one_thrd .room-info,
-#room_one #room_one_second .room-info {
-  height: 250px;
+#room_one #room_one_first .booking,
+#room_one #room_one_thrd .booking,
+#room_one #room_one_second .booking {
+  background: url(../img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 80%;
+  border-radius: 0px;
+  border: 1px solid #000;
+}
+#room_one #room_one_first .booking .room-info,
+#room_one #room_one_thrd .booking .room-info,
+#room_one #room_one_second .booking .room-info {
+  height: 230px;
   overflow-y: scroll;
+}
+#room_one #room_one_first .booking .form_start,
+#room_one #room_one_thrd .booking .form_start,
+#room_one #room_one_second .booking .form_start {
+  padding: 5%;
+}
+#room_one #room_one_first .booking .form_start input,
+#room_one #room_one_thrd .booking .form_start input,
+#room_one #room_one_second .booking .form_start input,
+#room_one #room_one_first .booking .form_start select,
+#room_one #room_one_thrd .booking .form_start select,
+#room_one #room_one_second .booking .form_start select {
+  border: 1px solid #000;
+  border-radius: 0px ;
+  background-color: transparent;
+}
+#room_one #room_one_first .booking .form_start select,
+#room_one #room_one_thrd .booking .form_start select,
+#room_one #room_one_second .booking .form_start select {
+  margin-bottom: 20%;
+}
+#room_one #room_one_first .booking .room-info,
+#room_one #room_one_thrd .booking .room-info,
+#room_one #room_one_second .booking .room-info {
+  color: #95A5A6;
+}
+#room_one #room_one_first .booking .room-info h3,
+#room_one #room_one_thrd .booking .room-info h3,
+#room_one #room_one_second .booking .room-info h3 {
+  font-size: 2em;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+#room_one #room_one_first .booking .room-info p,
+#room_one #room_one_thrd .booking .room-info p,
+#room_one #room_one_second .booking .room-info p {
+  padding: 0 5%;
+}
+#room_one #room_one_first .booking,
+#room_one #room_one_thrd .booking,
+#room_one #room_one_second .booking {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #footer {
   margin-top: 40px;

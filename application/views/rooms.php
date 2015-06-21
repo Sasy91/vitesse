@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
             }
         </style>
-        <script type='text/javascript' src='<?php echo base_url(); ?>resoures/home/home_js/jquery.min.js'></script>
+
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#home').hide();
@@ -95,14 +95,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div id="home" class="main">
 
-            <section id="rooms_cover">
-                <div class="container">
-                    <div class="row">
-                        <h1>Best Rooms in Sri Lanka</h1>
-                    </div>
-                </div>
+                   <div class="room_cover fullheight">
 
-            </section><!--rooms cover-->
+                <?php
+                if (!empty($details)) {
+                    foreach ($details as $room_details) {
+                        echo "<img  class='img-rounded' src='" . base_url() . $room_details->rm_cover_img . "' alt=''>";
+                    }
+                }
+                ?>
+            </div>
 
             <section id="first-room">
                 <div class="container-fluid">

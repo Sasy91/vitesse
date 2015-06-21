@@ -27,8 +27,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!--Header Import-->
 
         <?php include_once './resoures/imports/temp_header.php'; ?>
-        <div class="container" style="margin-top: 100px;">
-            <h2>Available Rooms</h2>
+                  
+                  <div id="availability">
+                     <div class="container">
+                         <div class="row">
+                             <div class="col-sm-3">
+                                 
+                             </div>
+                             <div class="col-sm-9">
+                                  <h2>Available Rooms</h2>
 
             <div class="media">
                 <a class="pull-left" href="#">
@@ -78,8 +85,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
 
-
-        </div>
+                             </div>
+                         </div>
+                     </div>
+                      
+                  </div><!--availability-->
+                  
         <?php include_once './resoures/imports/temp_footer.php'; ?>
 
         <!-- jquery-->
