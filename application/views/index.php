@@ -125,7 +125,7 @@
                 <div id="booking-container" class="full">
                     <div class="row">
 
-                        <form id="checkinform" method="POST" action="<?php echo base_url(); ?>index.php/room/checkAvailablilty">
+                        <form id="checkinform" method="POST" action="<?php echo base_url(); ?>index.php/room/availabe_rooms">
                             <input type="hidden" id="hotel" name="hotel" value="26160" />
                             <input type="hidden" id="chain" name="chain" value="10198" />
                             <input type="hidden" id="template" name="template" value="GCF" />
