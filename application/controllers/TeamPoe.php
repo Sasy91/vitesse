@@ -15,7 +15,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class TeamPoe extends CI_Controller {
     
-    function index(){
+     function index(){
         $this->load->view('team_poe');
+    }
+    
+    function team_members(){
+        $this->load->view('team_members');
     }
 }

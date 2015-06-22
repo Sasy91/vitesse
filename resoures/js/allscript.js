@@ -42,6 +42,12 @@ jQuery(function ($) {
         $(this).parent().css({'background-image': 'url('+imgSrc+')'});
         $(this).remove();
       });
+    
+     $('#team_poe .team_baner img').each(function() {
+        var imgSrc = $(this).attr('src');
+        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(this).remove();
+      });
    
     $(window).resize(function() {
      wheight = $(window).height(); //get the height of the window
@@ -172,6 +178,9 @@ $(function() {
 function parallaxInit() {
 	$('#hotel_cover').parallax("50%", 0.3);
     $('.hotel_baner').parallax("50%", 0.3);
+    $('.team_baner').parallax("50%", 0.3);
+
+    
 
 }
 
