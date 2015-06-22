@@ -22,4 +22,8 @@ class TeamPoe extends CI_Controller {
     function team_members(){
         $this->load->view('team_members');
     }
+    
+     function loader(){
+        $this->load->view('loader');
+    }
 }

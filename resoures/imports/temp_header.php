@@ -1,4 +1,4 @@
-<header id="navigation" class="navbar-fixed-top">
+<section id="navigation" class="navbar-fixed-top">
     <div class="container">
 
         <div class="navbar-header">
@@ -51,4 +51,4 @@
     </div>
 
 </div>
-</header>
+</section>
