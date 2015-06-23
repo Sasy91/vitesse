@@ -32,7 +32,7 @@
 				<div class="ip-loader">
 				         <div class="container">
 					    <div class="row " style=" text-align: center;">
-					       <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/IMG_1089.svg" alt=""> 
+					       <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/logo.png" alt=""> 
 					    </div>
 					</div>
 					<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">

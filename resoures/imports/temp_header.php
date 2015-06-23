@@ -14,7 +14,7 @@
             <!-- logo -->
             <span class="navbar-brand">
                 <a href="#body">
-                    <img src="<?php echo base_url(); ?>resoures/img/hotel/saint-cecilia.png" alt="Kasper Logo">
+                    <img src="<?php echo base_url(); ?>resoures/img/logo_head.png" alt="camp poe logo">
                 </a>
             </span>
             <!-- /logo -->
