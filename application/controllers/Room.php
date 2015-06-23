@@ -7,16 +7,18 @@ class Room extends CI_Controller {
     //private static $room_one = 1;
 
     public function index() {
-        $room['details'] = $this->imagemodel->getRoomParameters();
-        $this->load->view('rooms', $room);
+        //$this->load->model('imagemodel');
+        //$room['details'] = $this->imagemodel->getRoomParameters();
+        $this->load->view('rooms');
     }
 
-    public function room_one() {
-
-        $room['images'] = $this->imagemodel->getRoomImages("1");
-        $room['details'] = $this->imagemodel->getRoomDetails("1");
+    public function room_id($id) {
+        $this->load->model('imagemodel');
+        $room['images'] = $this->imagemodel->getRoomImages($id);
+        $room['details'] = $this->imagemodel->getRoomDetails($id);
         $this->load->view('room_one', $room);
     }
+    
 
     public function check_availablilty() {
         $booking_data = array(

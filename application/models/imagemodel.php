@@ -17,6 +17,11 @@ class imagemodel extends CI_Model {
         }
     }
 
+    function getRoomParameters() {
+        $query = $this->db->get('room_parameters');
+        return $query->result();
+    }
+
     function getRoomDetails($roomId) {
         $query = $this->db->get_where('rooms', array('rm_id' => $roomId));
         if ($query->num_rows() > 0) {

@@ -35,86 +35,86 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="container">
                     <div class="row">
                         <div id="intro">
-<!--                            <div class="col-sm-6">-->
-                                <div class="discrip">
+                            <!--                            <div class="col-sm-6">-->
+                            <div class="discrip">
                                 <h3>Inspired by the arts of surfing and yoga,
-                                  our unique Sri Lankan retreat aims to capture
-                                  this poetry of movement in a single word <span>"Poe"</span></h3>
-                                  
+                                    our unique Sri Lankan retreat aims to capture
+                                    this poetry of movement in a single word <span>"Poe"</span></h3>
+
                                 <p>Located on the Southern Coast of the island with consistent swells running 
-                                 throughout the year, Poe resides in the sleepy village of Madiha, 
-                                 a surfing haven with a perfect left and a long mellow right hander 
-                                 peeling on your doorstep. As well as this, there are several long 
-                                 beach breaks close by, providing ideal learning conditions. A short 
-                                 ride north will take to you to the more renowned  breaks such as Lazy
-                                 Lefts, Rams Right and Sticks, giving you options to surf 
-                                 a different break each day. </p>
-                                 
-                                   <p>Located on the Southern Coast of the island with consistent swells running 
-                                 throughout the year, Poe resides in the sleepy village of Madiha, 
-                                 a surfing haven with a perfect left and a long mellow right hander 
-                                 peeling on your doorstep. As well as this, there are several long 
-                                 beach breaks close by, providing ideal learning conditions. A short 
-                                 ride north will take to you to the more renowned  breaks such as Lazy
-                                 Lefts, Rams Right and Sticks, giving you options to surf 
-                                 a different break each day. </p>
-                                 
-                                 <h2>so surf and live life free, 
-                                        smile and be happy, 
-                                        let nature be, 
-                                         <span>poe</span> is the key...............
-                                        </h2>
-                                </div>
-                            </div>
-<!--
-                            <div class="col-sm-6">
-                                  <div class="word">
-                                <h4>“NOTHING BEHIND ME, EVERYTHING AHEAD OF ME, AS IS EVER SO ON THE ROAD.” ― JACK KEROUAC</h4>
-                                </div>
-                             </div>
--->
-                        </div>
-                    </div>
-                </section>
+                                    throughout the year, Poe resides in the sleepy village of Madiha, 
+                                    a surfing haven with a perfect left and a long mellow right hander 
+                                    peeling on your doorstep. As well as this, there are several long 
+                                    beach breaks close by, providing ideal learning conditions. A short 
+                                    ride north will take to you to the more renowned  breaks such as Lazy
+                                    Lefts, Rams Right and Sticks, giving you options to surf 
+                                    a different break each day. </p>
 
+                                <p>Located on the Southern Coast of the island with consistent swells running 
+                                    throughout the year, Poe resides in the sleepy village of Madiha, 
+                                    a surfing haven with a perfect left and a long mellow right hander 
+                                    peeling on your doorstep. As well as this, there are several long 
+                                    beach breaks close by, providing ideal learning conditions. A short 
+                                    ride north will take to you to the more renowned  breaks such as Lazy
+                                    Lefts, Rams Right and Sticks, giving you options to surf 
+                                    a different break each day. </p>
 
-                <section id="ground">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6 ">
-                                <div class="ground-info">
-   
-                                    <h3>GROUNDS</h3>
-                                    <p>
-                                        Each of the five suites, six poolside bungalows,
-                                        and three studios embodies an equal love for the
-                                        elegance of old world luxury and the irreverence
-                                        of our muses – The Stones, Bill Burroughs, Anne Sexton,
-                                        Hunter S. Thompson among them. The secluded property 
-                                        and lush grounds are open only to hotel guests, thereby
-                                        offering a unique sense of privacy situated steps
-                                        away from the heart of South Austin.
-                                    </p>
-                                </div><!--ground-info-->
-                            </div>
-                            <div class="col-sm-6 hidden-xs">
-                                <div class="ground-img ">
-                                    <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-ground.jpg" alt="">
-                                </div>
+                                <h2>so surf and live life free, 
+                                    smile and be happy, 
+                                    let nature be, 
+                                    <span>poe</span> is the key...............
+                                </h2>
                             </div>
                         </div>
+                        <!--
+                                                    <div class="col-sm-6">
+                                                          <div class="word">
+                                                        <h4>“NOTHING BEHIND ME, EVERYTHING AHEAD OF ME, AS IS EVER SO ON THE ROAD.” ― JACK KEROUAC</h4>
+                                                        </div>
+                                                     </div>
+                        -->
                     </div>
-                </section><!--GROUNDS-->
-                
-                        
-            
+                </div>
+            </section>
+
+
+            <section id="ground">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 ">
+                            <div class="ground-info">
+
+                                <h3>GROUNDS</h3>
+                                <p>
+                                    Each of the five suites, six poolside bungalows,
+                                    and three studios embodies an equal love for the
+                                    elegance of old world luxury and the irreverence
+                                    of our muses – The Stones, Bill Burroughs, Anne Sexton,
+                                    Hunter S. Thompson among them. The secluded property 
+                                    and lush grounds are open only to hotel guests, thereby
+                                    offering a unique sense of privacy situated steps
+                                    away from the heart of South Austin.
+                                </p>
+                            </div><!--ground-info-->
+                        </div>
+                        <div class="col-sm-6 hidden-xs">
+                            <div class="ground-img ">
+                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-ground.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!--GROUNDS-->
+
+
+
 
             <section id="hotel-map">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="ground-logo">
-                           <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-logo.jpg" alt="">
+                                <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-logo.jpg" alt="">
 
                             </div>
                         </div>
@@ -219,9 +219,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </section><!--pool-and-arbor-->
-            
-         
-    
+
+
+
 
 
         </div><!--camp_poe-->

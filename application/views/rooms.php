@@ -19,92 +19,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         ================================================== -->
         <!-- Fontawesome Icon font -->
         <?php include_once './resoures/imports/baseimports.php'; ?>
-        <style>
-            .spinner {
-                margin: 100px auto 0;
-                width: 70px;
-                text-align: center;
-            }
-
-            .spinner > div {
-                width: 18px;
-                height: 18px;
-                background-color: #333;
-
-                border-radius: 100%;
-                display: inline-block;
-                -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
-                animation: bouncedelay 1.4s infinite ease-in-out;
-                /* Prevent first frame from flickering when animation starts */
-                -webkit-animation-fill-mode: both;
-                animation-fill-mode: both;
-            }
-
-            .spinner .bounce1 {
-                -webkit-animation-delay: -0.32s;
-                animation-delay: -0.32s;
-            }
-
-            .spinner .bounce2 {
-                -webkit-animation-delay: -0.16s;
-                animation-delay: -0.16s;
-            }
-
-            @-webkit-keyframes bouncedelay {
-                0%, 80%, 100% { -webkit-transform: scale(0.0) }
-                40% { -webkit-transform: scale(1.0) }
-            }
-
-            @keyframes bouncedelay {
-                0%, 80%, 100% { 
-                    transform: scale(0.0);
-                    -webkit-transform: scale(0.0);
-                } 40% { 
-                    transform: scale(1.0);
-                    -webkit-transform: scale(1.0);
-                }
-            }
-        </style>
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#home').hide();
-                $('#navigation').hide();
-                setTimeout(function () {
-                    $('#preloader').fadeOut('fast');
-                }, 3000); // <-- time in milliseconds
-                setTimeout(function () {
-                    $('#home').fadeIn('fast');
-                }, 3100); // <-- time in milliseconds
-                //$('#home').fadeIn(4000);
-            });
-        </script>
     </head>
 
     <body id="body">
-        <div class="spinner" id="preloader">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
 
         <!--Header Import-->
 
         <?php include_once './resoures/imports/temp_header.php'; ?>
 
 
-        <div id="home" class="main">
-
-                   <div class="room_cover fullheight">
-
-                <?php
-                if (!empty($details)) {
-                    foreach ($details as $room_details) {
-                        echo "<img  class='img-rounded' src='" . base_url() . $room_details->rm_cover_img . "' alt=''>";
-                    }
-                }
-                ?>
-            </div>
+        <div class="main">
 
             <section id="first-room">
                 <div class="container-fluid">

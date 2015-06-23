@@ -491,6 +491,7 @@ body {
 }
 #room_one img {
   border-radius: 0px;
+  background-repeat: no-repeat;
 }
 #room_one #room_one_first,
 #room_one #room_one_thrd,
@@ -522,8 +523,7 @@ body {
 #room_one #room_one_first .booking .room-info,
 #room_one #room_one_thrd .booking .room-info,
 #room_one #room_one_second .booking .room-info {
-  height: 230px;
-  overflow-y: scroll;
+  height: 635px;
 }
 #room_one #room_one_first .booking .form_start,
 #room_one #room_one_thrd .booking .form_start,

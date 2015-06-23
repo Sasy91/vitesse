@@ -28,12 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <?php include_once './resoures/imports/temp_header.php'; ?>
         <div id="room_one">
-            <div class="room_baner fullheight">
+            <div class="room_baner fullheight" style="margin: 20px;">
 
                 <?php
-                if (!empty($details)) {
-                    foreach ($details as $room_details) {
-                        echo "<img  class='img-rounded' src='" . base_url() . $room_details->rm_cover_img . "' alt=''>";
+                if (!empty($images)) {
+                    foreach ($images as $room_imgs) {
+                        if ($room_imgs->img_type == "cover") {
+                            echo "<img  class='img-rounded' src='" . base_url() . $room_imgs->ril_img_url . "' alt='' >";
+                        }
                     }
                 }
                 ?>
@@ -78,62 +80,74 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
                             </div>
                         </div>
+                        <style>
+                            .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+                                color: #33a6cc;
+                                border-color: #33a6cc;
+                            }
+                            .btn-primary.outline:active, .btn-primary.outline.active {
+                                border-color: #007299;
+                                color: #007299;
+                                box-shadow: none;
+                            }
+                        </style>
                         <div class="col-sm-6">
-                             <div class="booking">
-                                    
-                            <div class="room-info">
+                            <div class="booking">
 
-                                <?php
-                                if (!empty($details)) {
-                                    foreach ($details as $room_details) {
-                                        echo"<h3>" . $room_details->rm_name . "</h3><br>";
-                                        echo "<p>" . $room_details->rm_detail . "</p>";
+                                <div class="room-info">
+
+                                    <?php
+                                    if (!empty($details)) {
+                                        foreach ($details as $room_details) {
+                                            echo"<h3 style='margin-left: 25px; color:white;'>" . $room_details->rm_name . "</h3><br>";
+                                            echo "<p style='color:white;'>" . $room_details->rm_detail . "</p>";
+                                        }
                                     }
-                                }
-                                ?>
-                            </div><br>
-                            <div class="row">
-                                <form action="" class="form_start">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="datepicker_1" placeholder="CHECK IN">
-                                        </div>
-                                        <select class="form-control">
-                                            <option value="0">ADULTS</option>
-                                            <option value="1">1 adult</option>
-                                            <option value="2">2 adults</option>
-                                            <option value="3">3 adults</option>
-                                            <option value="1">4 adults</option>
-                                            <option value="2">5 adults</option>
-                                            <option value="3">6 adults</option>
-                                            <option value="3">7 adults</option>
-                                            <option value="1">8 adults</option>
-                                            <option value="2">9 adults</option>
-                                            <option value="3">10 adults</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="datepicker_2" placeholder="CHECK IN">
-                                        </div>
-                                        <select class="form-control">
-                                            <option value="0"> CHILDREN</option>
-                                            <option value="1">1 CHILD</option>
-                                            <option value="2">2  CHILDREN</option>
-                                            <option value="3">3  CHILDREN</option>
-                                            <option value="1">4  CHILDREN</option>
-                                            <option value="2">5  CHILDREN</option>
-                                            <option value="3">6  CHILDREN</option>
-                                            <option value="3">7  CHILDREN</option>
-                                            <option value="1">8  CHILDREN</option>
-                                            <option value="2">9  CHILDREN</option>
-                                            <option value="3">10  CHILDREN</option>
+                                    ?>
+                                    <hr style="margin: 50px;">
+                                    <div class="row">
+                                        <form action="" class="form_start">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="datepicker_1" style="color:white;" placeholder="CHECK IN">
+                                                </div>
+                                                <select class="form-control" style="color:white;">
+                                                    <option value="0">ADULTS</option>
+                                                    <option value="1">1 adult</option>
+                                                    <option value="2">2 adults</option>
+                                                    <option value="3">3 adults</option>
+                                                    <option value="1">4 adults</option>
+                                                    <option value="2">5 adults</option>
+                                                    <option value="3">6 adults</option>
+                                                    <option value="3">7 adults</option>
+                                                    <option value="1">8 adults</option>
+                                                    <option value="2">9 adults</option>
+                                                    <option value="3">10 adults</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="datepicker_2" style="color:white;" placeholder="CHECK IN">
+                                                </div>
+                                                <select class="form-control" style="color:white;">
+                                                    <option value="0"> CHILDREN</option>
+                                                    <option value="1">1 CHILD</option>
+                                                    <option value="2">2  CHILDREN</option>
+                                                    <option value="3">3  CHILDREN</option>
+                                                    <option value="1">4  CHILDREN</option>
+                                                    <option value="2">5  CHILDREN</option>
+                                                    <option value="3">6  CHILDREN</option>
+                                                    <option value="3">7  CHILDREN</option>
+                                                    <option value="1">8  CHILDREN</option>
+                                                    <option value="2">9  CHILDREN</option>
+                                                    <option value="3">10  CHILDREN</option>
 
-                                        </select>                                     
-                                    </div>                                      
-                                </form><!--form-->
+                                                </select>                                     
+                                            </div>                                      
+                                        </form><!--form-->
+                                    </div>
+                                </div>
                             </div>
-                             </div>
                         </div>
                     </div><!--row-->
                 </div><!--container-fluid-->
