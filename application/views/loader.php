@@ -9,16 +9,18 @@
 		<meta name="keywords" content="page loading, effect, initial, logo, sliding, web design, css animation, transform" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resoures/loader/css/effect2.css" />
 		<script src="<?php echo base_url(); ?>resoures/loader/js/modernizr.custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resoures/loader/css/effect2.css" />
+		
 		
 		<?php include_once './resoures/imports/baseimports.php'; ?>
 	</head>
 	
-	<body class="demo-2">
+	<body>
 		<div id="ip-container" class="ip-container">
 			<!-- initial header -->
 			<header class="ip-header">
+<!--
 				<h1 class="ip-logo">
 					<div class="container">
 					    <div class="row " style=" text-align: center;">
@@ -26,7 +28,13 @@
 					    </div>
 					</div>
 				</h1>
+-->
 				<div class="ip-loader">
+				         <div class="container">
+					    <div class="row " style=" text-align: center;">
+					       <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/IMG_1089.svg" alt=""> 
+					    </div>
+					</div>
 					<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
 						<path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
 						<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>

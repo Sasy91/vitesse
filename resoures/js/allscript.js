@@ -176,9 +176,9 @@ $(function() {
 "use strict";
 
 function parallaxInit() {
-	$('#hotel_cover').parallax("50%", 0.3);
-    $('.hotel_baner').parallax("50%", 0.3);
-    $('.team_baner').parallax("50%", 0.3);
+	$('#hotel_cover').parallax("50%", 0);
+    $('.hotel_baner').parallax("50%", 0);
+    $('.team_baner').parallax("50%", 0);
 
     
 

@@ -48,8 +48,11 @@
 				interval = setInterval( function() {
 					progress = Math.min( progress + Math.random() * 0.1, 1 );
 
-					instance.setProgress( progress );
-
+					  instance.setProgress( progress );
+                    
+                      $('#navigation').delay(1000).queue(function(){
+                     jQuery("#navigation").addClass("navbar-fixed-top");
+                          
 					// reached the end
 					if( progress === 1 ) {
 						classie.remove( container, 'loading' );
@@ -73,7 +76,9 @@
 							onEndHeaderAnimation();
 						}
 					}
-				}, 80 );
+				}, 300 );
+            
+    });
 		};
 
 		loader.setProgressFn( simulationFn );
