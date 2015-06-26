@@ -46,9 +46,17 @@ class Admin extends CI_Controller {
     }
 
     public function manage_images() {
-
+        $this->load->model('imagemodel');
         $data['result'] = $this->imagemodel->getHomeImages();
         $this->load->view('admin_upload_img', $data);
+    }
+    
+    public function room_images() {
+        $this->load->model('imagemodel');
+        $room['images'] = $this->imagemodel->getAllRoomImages();
+        $room['details'] = $this->imagemodel->getAllRoomDetails();
+        //$data['result'] = $this->imagemodel->getHomeImages();
+        $this->load->view('admin_room_img', $room);
     }
 
     public function logoutuser() {
@@ -78,6 +86,7 @@ class Admin extends CI_Controller {
             );
             $saved = $this->imagemodel->saveImage($imag_data);
             if ($saved) {
+                $this->load->model('imagemodel');
                 $data['success_msg'] = '<div class="alert alert-success text-center">Your Image <strong>' . $upload_data['file_name'] . '</strong> was successfully uploaded!</div>';
                 $data['result'] = $this->imagemodel->getHomeImages();
                 $this->load->view('admin_upload_img', $data);

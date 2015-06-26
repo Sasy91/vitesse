@@ -37,8 +37,8 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="<?php echo base_url(); ?>/index.php/admin/manage_images"><i class="fa fa-circle-o"></i> Home Page</a></li>
-                    <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Rooms</a></li>
+                    <li class="active"><a href="<?php echo base_url(); ?>index.php/admin/manage_images"><i class="fa fa-circle-o"></i> Home Page</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/admin/room_images"><i class="fa fa-circle-o"></i> Rooms</a></li>
                 </ul>
             </li>
             <li class="treeview">

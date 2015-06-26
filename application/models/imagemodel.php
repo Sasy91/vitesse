@@ -16,6 +16,12 @@ class imagemodel extends CI_Model {
             return $query->result();
         }
     }
+    function getAllRoomImages() {
+        $query = $this->db->get('room_img_urls');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
 
     function getRoomParameters() {
         $query = $this->db->get('room_parameters');
@@ -24,6 +30,12 @@ class imagemodel extends CI_Model {
 
     function getRoomDetails($roomId) {
         $query = $this->db->get_where('rooms', array('rm_id' => $roomId));
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+    function getAllRoomDetails() {
+        $query = $this->db->get('rooms');
         if ($query->num_rows() > 0) {
             return $query->result();
         }

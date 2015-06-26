@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url(); ?>/index.php/camppoe">THE CAMP</a></li>
-                <li><a href="#">TEAM POE</a></li>
+                <li><a href="<?php echo base_url(); ?>/index.php/teampoe">TEAM POE</a></li>
                 <li><a href="#">SHOP</a></li>
                 <li><a href="#">PHOTOS</a></li>
                 <li><a href="#">CONTACT</a></li>

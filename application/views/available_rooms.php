@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div id="availability">
             <div class="container">
-                <div style="margin-top: 120px;">
+                <div style="margin-top: 50px;">
                     <div class="row bs-wizard" style="border-bottom:0;">
                         <div class="col-xs-3 bs-wizard-step complete">
                             <div class="text-center bs-wizard-stepnum">Step 1</div>
@@ -72,14 +72,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="bs-wizard-info text-center">Select Dates</div>
                         </div>
 
-                        <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+                        <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
                             <div class="text-center bs-wizard-stepnum">Step 2</div>
                             <div class="progress"><div class="progress-bar"></div></div>
                             <a href="#" class="bs-wizard-dot"></a>
                             <div class="bs-wizard-info text-center">Rooms and Rates</div>
                         </div>
 
-                        <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+                        <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
                             <div class="text-center bs-wizard-stepnum">Step 3</div>
                             <div class="progress"><div class="progress-bar"></div></div>
                             <a href="#" class="bs-wizard-dot"></a>
@@ -234,6 +234,86 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default"  data-dismiss="modal">Close</button>
                         <a href="hotel_categories.php#sigiriya"><button type="button" class="btn btn-primary" onclick="">Book Now!</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style=" border: 1px #e4e4e4 solid; border-radius: 10px;">
+            <div class="row">
+                <form class="form-inline col-lg-5" role="form" style="font-family: sans-serif; margin: 20px;">
+                    <hr style="margin: 10px;">
+                    <div class="well well-sm"><strong>Registered User Information Retrieval</strong></div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input style="margin-left: 32px;" type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group" style="margin-top: 5px;">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div><br><br>
+                    <button type="submit" class="btn btn-default">Submit</button>&nbsp;&nbsp;
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                </form>
+
+                <form role="form" style="font-family: sans-serif; margin: 20px;" >
+                    <div class="col-lg-6">
+                        <hr style="margin: 10px;">
+                        <div class="well well-sm"><strong>User Registration</strong></div>
+                        <div class="navbar navbar-inverse navbar-static-top" style="height: 10px;">
+                            <p class="navbar-brand" style="color: white"><span class="fa fa-user"></span>&nbsp;&nbsp;Personal Information</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail">Title</label>
+                            <div class="input-group">
+                                <select id="suffix_type" class="form-control" name="suffix_type">
+                                    <option>Not Available</option>
+                                    <option>Sr</option>
+                                    <option>Jr</option>
+                                    <option>II</option>
+                                    <option>III</option>                                            
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">First Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">Last Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">Email Address</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">Confirm Email</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="navbar navbar-inverse navbar-static-top" style="height: 10px;">
+                            <p class="navbar-brand" style="color: white"><span class="fa fa-dollar"></span>&nbsp;&nbsp;Payment Information</p>
+                        </div>
+                        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                    </div>
+                </form>
+                <div class="col-lg-5 col-md-push-1" style="font-family: sans-serif;">
+                    <div class="col-md-12">
+                        <div class="alert alert-success">
+                            <strong><span class="glyphicon glyphicon-ok"></span> Success! Message sent.</strong>
+                        </div>
+                        <div class="alert alert-danger">
+                            <span class="glyphicon glyphicon-remove"></span><strong> Error! Please check all page inputs.</strong>
+                        </div>
                     </div>
                 </div>
             </div>

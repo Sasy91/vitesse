@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE 2 | Dashboard</title>
+        <title>Camp Poe | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <link href="<?php echo base_url(); ?>resoures/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        General Form Elements
+                        Camp Poe Rooms Image Manipulate
                         <small>Preview</small>
                     </h1>
                     <ol class="breadcrumb">
@@ -31,91 +31,44 @@
                         <li class="active">General Elements</li>
                     </ol>
                 </section>
-
-                <!-- Main content -->
-                <section class="content">
-                    <div class="row">
-                        <!-- left column -->
-                        <div class="col-md-12">
-                            <!-- general form elements -->
-                            <div class="box box-primary">
-                                <div class="box-header">
-                                    <h3 class="box-title">Current Images in Home Slider</h3>
-                                </div><!-- /.box-header -->
-                                <?php
-                                if (!empty($result)) {
-                                    foreach ($result as $home) {
-                                        echo "<div class='col-lg-3 col-md-4 col-xs-6 thumb'>";
-                                        echo "<img class='img-responsive' src='" . base_url() . $home->url . "' alt=''><br>";
-                                        echo "<center><a href='" . base_url() . "/index.php/image/delete/" . $home->id . "'><button type='button' class='btn btn-default'><i class='fa fa-trash'></i></button></a></center>";
-                                        echo "<br></div>";
-                                    }
+                <?php
+                if (!empty($details)) {
+                    $image_no = 0;
+                    foreach ($details as $room_detail) {
+                        $image_no++;
+                        echo "<section class='content'><div class='row'><div class='col-md-12'><div class='box box-primary'><div class='box-header'>";
+                        echo "<h2 class='box-title'>Current Images in : " . $room_detail->rm_name . "</h2></div>";
+                        if (!empty($images)) {
+                            foreach ($images as $home) {
+                                if ($home->rm_id == $image_no) {
+                                    echo "<div class='col-lg-2 col-md-4 col-xs-6 thumb'>";
+                                    echo "<img class='img-responsive' src='" . base_url() . $home->ril_img_url . "' alt=''><br>";
+                                    echo "<center><a href='" . base_url() . "/index.php/image/delete/" . $home->ril_id . "'><button type='button' class='btn btn-default'><i class='fa fa-trash'></i></button></a></center>";
+                                    echo "<br></div>";
                                 }
-                                ?>
-                                <!-- form start -->
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-3 well">
-                                            <legend>Upload New Images</legend>
-                                            <?php echo form_open_multipart('image/upload'); ?>
-
-                                            <fieldset>
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <label for="filename" class="control-label">Select Image to Upload</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <input type="file" name="filename" size="20" />
-                                                            <span class="text-danger"><?php
-                                                                if (isset($error)) {
-                                                                    echo $error;
-                                                                }
-                                                                ?></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <input type="submit" value="Upload File" class="btn btn-primary"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-
-                                            <?php echo form_close(); ?>
-                                            <?php
-                                            if (isset($success_msg)) {
-                                                echo $success_msg;
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.box -->
-
-                            <!DOCTYPE html>
-
-
-
-
-
-                            <!-- Input addon -->
-
-                        </div><!--/.col (left) -->
-                        <!-- right column -->
-
-                    </div>   <!-- /.row -->
-                </section><!-- /.content -->
+                            }
+                        }
+                        echo "<div class='container'><div class='row'><div class='col-md-6 col-md-offset-3 well'>";
+                        echo "<legend>Upload New Images</legend>" . form_open_multipart('image/upload');
+                        echo "<fieldset><div class='form-group'><div class='row'><div class='col-md-12'><label for='filename' class='control-label'>Select Image to Upload</label></div></div></div>";
+                        echo "<div class = 'form-group'><div class = 'row'><div class = 'col-md-12'>";
+                        echo "<input type = 'file' name = 'filename' size = '20' />";
+                        echo "<span class = 'text-danger'>";
+                        if (isset($error)) {
+                            echo $error;
+                        }
+                        echo "</span></div></div></div>";
+                        echo "<div class='form-group'><div class='row'><div class='col-md-12'><input type='submit' value='Upload File' class='btn btn-primary'/></div></div></div></fieldset>";
+                        form_close();
+                        if (isset($success_msg)) {
+                            echo $success_msg;
+                        }
+                        echo "</div></div></div></div></div></div></section>";
+                    }
+                }
+                ?>
             </div><!-- /.content-wrapper -->
-            <?php include_once './resoures/admin/imports/admin_temp_footer.php'; ?>
+                <?php include_once './resoures/admin/imports/admin_temp_footer.php'; ?>
 
             <!-- Control Sidebar -->      
             <aside class="control-sidebar control-sidebar-dark">                

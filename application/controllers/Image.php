@@ -11,6 +11,7 @@ class Image extends CI_Controller {
 
     public function index() {
         if ($this->session->userdata('loginData')) {
+            $this->load->model('imagemodel');
             $data['result'] = $this->imagemodel->getHomeImages();
             $this->load->view('admin_upload_img', $data);
         } else {

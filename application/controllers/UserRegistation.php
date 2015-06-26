@@ -13,11 +13,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author Sameera
  */
-class TeamPoe extends CI_Controller {
-    
-     function index(){
-         $this->load->view('team_members');
+class UserRegistation extends CI_Controller {
+
+    function index() {
+        $this->load->view('user_registation');
     }
-    
-    
+
 }
