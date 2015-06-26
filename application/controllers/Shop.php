@@ -1,34 +1,15 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- * Description of Shop
- *
- * @author Sameera
- */
 class Shop extends CI_Controller {
 
-    function index() {
-        $data['items'] = $this->shopmodel->getAllItems();
-        $this->load->view('items');
+    public function index() {
+        $this->load->view('cart');
     }
-
-    function addToCart() {
-        
-    }
-
-    function removeFromCart() {
-        
-    }
-
-    function placeOrder() {
-        
+    
+      public function view_item() {
+        $this->load->view('view_item');
     }
 
 }

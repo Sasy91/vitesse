@@ -31,7 +31,7 @@ jQuery(function ($) {
          //adjust height of .fullheight elements on window resize
     
         //replace IMG inside carousels with a background image
-       $('#camp_poe .hotel_baner img').each(function() {
+       $('#camp_poe .camp_baner img').each(function() {
         var imgSrc = $(this).attr('src');
         $(this).parent().css({'background-image': 'url('+imgSrc+')'});
         $(this).remove();
@@ -49,6 +49,18 @@ jQuery(function ($) {
         $(this).remove();
       });
    
+    $('#Shop_content .cart_baner img').each(function() {
+        var imgSrc = $(this).attr('src');
+        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(this).remove();
+      });
+    
+       $('#Shop_content .room_baner img').each(function() {
+        var imgSrc = $(this).attr('src');
+        $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(this).remove();
+      });
+   
     $(window).resize(function() {
      wheight = $(window).height(); //get the height of the window
      $('.fullheight').css('height', wheight); //set to window tallness  
@@ -57,7 +69,7 @@ jQuery(function ($) {
 
   
 /* ========================================================================= */
-/*	caom poe image resizing 
+/*	camp poe image resizing 
 /* ========================================================================= */
       
 //ground
@@ -127,17 +139,65 @@ jQuery(function ($) {
       });
 
 
-
-
-
-  
 /* ========================================================================= */
-/**	set the full cover size for the rooms pages end
+/**	item viwe
 /* ========================================================================= */
 
 
 /* ========================================================================= */
-/**	adding inbody class
+/**	owl slider
+/* ========================================================================= */
+
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+  });
+ 
+});
+
+/* ========================================================================= */
+/**	owl slider end
+/* ========================================================================= */
+
+
+
+
+
+
+    //team 
+  jQuery(document).ready(function($) {
+ 
+        $('#myCarousel').carousel({
+                interval: 5000
+        });
+ 
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#myCarousel').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
+        }
+    });
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+                 var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+});
+
+/* ========================================================================= */
+/**	item viwe end
 /* ========================================================================= */
 
 /* ========================================================================= */
@@ -159,12 +219,7 @@ jQuery(function ($) {
 /* ========================================================================= */
 
 /* ========================================================================= */
-/**	adding inbody class end
-/* ========================================================================= */
-
-
-/* ========================================================================= */
-/*	Parallax Sections
+/**	data pickers
 /* ========================================================================= */
  $(function() {
     $( "#datepicker_1" ).datepicker();
@@ -173,12 +228,18 @@ $(function() {
     $( "#datepicker_2" ).datepicker();
   });
 
+/* ========================================================================= */
+/*	data pickers end
+/* ========================================================================= */
+
+
 "use strict";
 
 function parallaxInit() {
 	$('#hotel_cover').parallax("50%", 0);
     $('.hotel_baner').parallax("50%", 0);
     $('.team_baner').parallax("50%", 0);
+   $('.room_baner').parallax("50%", 0);
 
     
 

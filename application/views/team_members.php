@@ -251,7 +251,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!----=====================================================
                    camp poe info end
            =================================================--------->
-
+               </div><!--ip-container-->
             <!----=====================================================
                     fotter
             =================================================--------->
@@ -286,7 +286,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             </script>
 
-        </div>
+        
         <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>

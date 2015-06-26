@@ -36,7 +36,7 @@
             <div  id="camp_poe">
 
 
-                <div class="hotel_baner fullheight">
+                <div class="camp_baner fullheight">
                     <img src="<?php echo base_url(); ?>/resoures/img/covers/camp.jpg" alt="...">
                 </div>
 

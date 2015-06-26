@@ -247,6 +247,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             last two images end
                 =================================================--------->
             </div><!--room_one-->
+        </div><!--ip container-->
 
             <?php include_once './resoures/imports/temp_footer.php'; ?>
 
@@ -276,7 +277,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             </script>
 
-        </div>
+        
         <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>
