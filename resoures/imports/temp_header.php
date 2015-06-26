@@ -1,4 +1,4 @@
-<section id="navigation">
+<section id="navigation" class="navbar-fixed-top wow fadeInUp" data-wow-duration="500ms" data-wow-delay="4000ms">
     <div class="container">
 
         <div class="navbar-header">
@@ -41,7 +41,7 @@
                 </li>
                 <li><a href="<?php echo base_url(); ?>/index.php/camppoe">THE CAMP</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/teampoe">TEAM POE</a></li>
-                <li><a href="#">SHOP</a></li>
+                <li><a href="?php echo base_url(); ?>/index.php/shop">SHOP</a></li>
                 <li><a href="#">PHOTOS</a></li>
                 <li><a href="#">CONTACT</a></li>
                 <li><a href="#">BOOK NOW</a></li>

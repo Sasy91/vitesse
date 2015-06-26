@@ -1,4 +1,4 @@
-<footer style="margin: 20px;">
+<footer>
     <section id="footer">
         <div class="container">
             <div class="row">

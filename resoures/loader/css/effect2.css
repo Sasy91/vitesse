@@ -27,6 +27,7 @@
 	top: 0;
 	height: 100%;
 	-webkit-transform: translate3d(0,25%,0);
+    	-moz-transform: translate3d(0,25%,0);
 	transform: translate3d(0,25%,0);
 }
 
@@ -64,6 +65,7 @@
 
 .ip-header .ip-loader svg path.ip-loader-circle {
 	-webkit-transition: stroke-dashoffset 0.2s;
+    -moz-transition: stroke-dashoffset 0.2s;
 	transition: stroke-dashoffset 0.2s;
 	stroke: #1c9ccd;
 }
@@ -154,6 +156,7 @@
 
 .loading .ip-logo {
 	-webkit-animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
+    -moz-animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
 	animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
 }
 
@@ -175,7 +178,10 @@
 }
 
 @keyframes animInitialLoader {
-	from { opacity: 0; -webkit-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); }
+	from { opacity: 0; -webkit-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); 
+                     -moz-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); 
+    
+    }
 }
 
 /* Header elements when loading finishes */
