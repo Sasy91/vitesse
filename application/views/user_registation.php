@@ -3,25 +3,136 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html class="no-js">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+       
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <meta name="description" content="CAMP POE SRI LANKA HOTELS ">
-        <meta name="author" content="CAMP POE SRI LANKA">
-        <title>CAMP POE | Room One</title>
+       
+         <meta name="author" content="CAMP POE SRI LANKA">
+       
+         <title>CAMP POE | Room One</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <?php include_once './resoures/imports/baseimports.php'; ?>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>resoures/css/booking_guide.css">
+
 
     </head>
 
-    <body id="body" style="background-color: #A1DBB2;">
+    <body id="body" style="background-color: #2d2d2d;">
         <!--Header Import-->
         <?php include_once './resoures/imports/temp_header.php'; ?>
 
-        <div class="container" style=" height: 1000px; border: 1px #e4e4e4 solid; border-radius: 10px; background-color: white;">
+       
+                      
+             <div id="registration">
+                      <div class="container">
+                            <h3>Registration Now</h3>
+                          <div class="row">
+                    <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                  
+                     <div id="genaral">
+                            <h4><i class="fa fa-user-plus fa-lg"></i> Personal Information</h4>  
+                            <hr>
+                           <div class="col-sm-5 col-sm-offset-1 pad">
+                           
+                            <div class="form-group">
+                            <label>Tital *</label>
+                                <select id="suffix_type" class="form-control" name="suffix_type">
+                                    <option>Not Available</option>
+                                    <option>Sr</option>
+                                    <option>Jr</option>
+                                    <option>II</option>
+                                    <option>III</option>                                            
+                                </select>
+                           </div>
+                        <div class="form-group">
+                            <label>First Name *</label>
+                             <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>ID Number  *</label>
+                              <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <select id="suffix_type" class="form-control" name="suffix_type">
+                                    <option>NIC</option>
+                                    <option>Passport</option>
+                                    <option>Driver's License</option>                                            
+                                </select>
+                        </div>
+                                              
+                    </div>
+                    <div class="col-sm-5 pad">
+                      
+                      <div class="form-group">
+                            <label>Country</label>
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>  
+                        <div class="form-group">
+                            <label>Second Name  *</label>
+                             <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                              <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>  
+                        <div class="form-group">
+                            <label>Telephone *</label>
+                               <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>                      
+<!--
+                        <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+                        </div>
+-->
+                    </div>
+                     </div>  <!--genaral--> 
+                            
+                             
+                             <div id="login-info">
+                              
+                             <div class="col-sm-6 col-sm-offset-3 pad">
+                                      <h4> <i class="fa fa-lock fa-lg"></i> Login Information</h4>
+                                      <hr>
+                                     <div class="form-group">
+                            <label>Username *</label>
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                            <div class="form-group">
+                            <label>Password *</label>
+                                   <input type="password" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                             </div> 
+                        <div class="form-group">
+                            <label>Conform Password *</label>
+                                <input type="password" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                        </div>  
+                         <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Info</button>
+                        </div>
+                             </div>
+                       </div><!--login-info-->
+                  </form> 
+                          </div>
+                      </div>
+             </div> <!--registation-> 
+           
+            
+             
+              
+               
+                
+                 
+                  
+                   
+                    
+                     
+                      
+                       
+                        
+                         
+                          
+         <div class="container" style=" height: 1000px; border: 1px #e4e4e4 solid; border-radius: 10px; background-color: white;">
             <div class="row">
                 <form role="form" style="font-family: sans-serif; margin: 20px;" >
                     <div class="col-lg-6">
@@ -42,18 +153,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </select>
                             </div>
                         </div>
+<!--
                         <div class="form-group">
                             <label for="InputMessage">First Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">Last Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">ID Type</label>
                             <div class="input-group">
@@ -64,30 +180,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </select>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">ID Number</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">Email</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">Country</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">Telephone</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="navbar navbar-inverse navbar-static-top" style="height: 10px; border-radius: 20px;">
                             <p class="navbar-brand" style="color: white"><span class="fa fa-lock"></span>&nbsp;&nbsp;Login Information</p>
                         </div>
@@ -97,22 +223,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">Password</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <div class="form-group">
                             <label for="InputMessage">Confirm Password</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
+-->
+<!--
                         <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-left">
                     </div>
                 </form>
-                <form class="form-inline col-lg-5" role="form" style="font-family: sans-serif;">
+-------------------------------------------------------------------------------------------------------------------------------------->
+             
+                   
+                      
+<!--
+                            <form class="form-inline col-lg-5" role="form" style="font-family: sans-serif;">
                     <hr style="margin: 10px;">
                     <div class="well well-sm"><strong>Registered User Information Retrieval</strong></div>
                     <div class="form-group">
@@ -140,6 +277,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
+-->
 
         <?php include_once './resoures/imports/temp_footer.php'; ?>
 
