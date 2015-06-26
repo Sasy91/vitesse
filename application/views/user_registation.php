@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
+                        <div class="form-group">
                             <label for="InputMessage">First Name</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
@@ -54,14 +54,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <label for="InputMessage">Email Address</label>
+                        <div class="form-group">
+                            <label for="InputMessage">ID Type</label>
+                            <div class="input-group">
+                                <select id="suffix_type" class="form-control" name="suffix_type">
+                                    <option>NIC</option>
+                                    <option>Passport</option>
+                                    <option>Driver's License</option>                                            
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">ID Number</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="InputMessage">Confirm Email</label>
+                            <label for="InputMessage">Email</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">Country</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputMessage">Telephone</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
                             </div>
