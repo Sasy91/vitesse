@@ -19,7 +19,7 @@ class registrationmodel extends CI_Model {
 
     function registerUser($userData) {
         if ($this->db->insert($this->table, $userData)) {
-            $current_txn_id = mysql_insert_id();
+            $current_txn_id = $this->db->insert_id();
             if (!empty($current_txn_id)) {
                 return TRUE;
             } else {
@@ -31,14 +31,16 @@ class registrationmodel extends CI_Model {
     }
 
     function validateUser($email) {
-        $this->db->select('id');
-        $this->db->where('email', $email);
-        $query = $this->db->get($this->table);
-        if ($query->num_rows > 0) {
-            return TRUE;
-        } else {
-            return FALSE;
-        }
+        // $query = $this->db->get($this->table);
+        //$query = $this->db->get_where('registerd_users', array('email' => $email));
+//        if ($query->num_rows > 0) {
+//            return "1";
+//        } else {
+//            return "0";
+//        }
+        $query = $this->db->query('SELECT * FROM registerd_users WHERE email = ' . $email);
+        $result = $this->db->get($query);
+        return $email;
     }
 
 }
