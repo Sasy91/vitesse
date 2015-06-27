@@ -39,9 +39,9 @@
                         <li><a href="#">Poolside Bungalows</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo base_url(); ?>/index.php/camppoe">THE CAMP</a></li>
-                <li><a href="<?php echo base_url(); ?>/index.php/teampoe">TEAM POE</a></li>
-                <li><a href="?php echo base_url(); ?>/index.php/shop">SHOP</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/camppoe">THE CAMP</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/teampoe">TEAM POE</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/shop">SHOP</a></li>
                 <li><a href="#">PHOTOS</a></li>
                 <li><a href="#">CONTACT</a></li>
                 <li><a href="#">BOOK NOW</a></li>

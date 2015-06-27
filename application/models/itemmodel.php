@@ -19,6 +19,23 @@ class itemmodel extends CI_Model {
         $query = $this->db->get('items');
         return $query->result();
     }
+    
+    function getAllItemImages() {
+        $query = $this->db->get('item_images');
+        return $query->result();
+    }
+    function getOneItemImages($id) {
+        $query = $this->db->get_where('item_images', array('item_id' => $id));
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
+    function getItemDetail($id) {
+        $query = $this->db->get_where('items', array('id' => $id));
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+    }
 
     function addItem($itemData) {
         if ($this->db->insert('items', $itemData)) {

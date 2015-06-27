@@ -78,17 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     ?>
                                 </div>
                             </div>
-                            <style>
-                                .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
-                                    color: #33a6cc;
-                                    border-color: #33a6cc;
-                                }
-                                .btn-primary.outline:active, .btn-primary.outline.active {
-                                    border-color: #007299;
-                                    color: #007299;
-                                    box-shadow: none;
-                                }
-                            </style>
                             <div class="col-sm-6">
                                 <div class="booking">
 
