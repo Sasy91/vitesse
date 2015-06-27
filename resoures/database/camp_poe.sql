@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2015 at 07:42 AM
+-- Generation Time: Jun 27, 2015 at 05:18 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -25,8 +25,6 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `booking`
 --
-
-CREATE DATABASE camp_poe;
 
 CREATE TABLE IF NOT EXISTS `booking` (
   `b_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -89,10 +87,10 @@ CREATE TABLE IF NOT EXISTS `home_sider` (
 --
 
 INSERT INTO `home_sider` (`id`, `url`, `uploaded_by`, `date`) VALUES
-(1, '/resoures/img/1.png', 'admin', '2015-06-12 10:33:01'),
-(2, '/resoures/img/2.png', 'admin', '2015-06-12 10:33:01'),
-(3, '/resoures/img/3.png', 'admin', '2015-06-12 10:33:01'),
-(4, '/resoures/img/4.png', 'admin', '2015-06-12 10:33:01');
+(1, '/resoures/img/1.png', '', '2015-06-12 10:33:01'),
+(2, '/resoures/img/2.png', '', '2015-06-12 10:33:01'),
+(3, '/resoures/img/3.png', '', '2015-06-12 10:33:01'),
+(4, '/resoures/img/4.png', '', '2015-06-12 10:33:01');
 
 -- --------------------------------------------------------
 
@@ -108,7 +106,22 @@ CREATE TABLE IF NOT EXISTS `items` (
   `cost` double(10,2) NOT NULL,
   `price` double(10,2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `items`
+--
+
+INSERT INTO `items` (`id`, `cat_id`, `name`, `discription`, `cost`, `price`) VALUES
+(1, 1, 'SAINT CECILIA ASHTRAY', 'Porcelain Saint Cecilia ashtray.', 4000.00, 4500.00),
+(2, 1, 'DOG COLLAR', 'Deep blue leather dog collar made exclusively for the Hotel Saint Cecilia by New York leather designer Andrew McAteer.', 8000.00, 8500.00),
+(3, 1, 'HOTEL SAINT CECILIA COMB', 'Custom HSC pocket comb.\r\nColors may vary.', 1250.00, 1500.00),
+(4, 1, 'HOTEL SAINT CECILIA KIMONO ROBE', 'The Hotel Saint Cecilia indigo robe is custom made of soft 100% cotton indigo-dyed batik fabric and is fashioned in the spirit of the Japanese yukata or summer robe. It is unlined and comes with a wide 3/4 length sleeve and sash belt. Unisex, one size fits all', 22500.00, 25000.00),
+(5, 1, 'LEATHER WALLET HANDMADE', 'Cambria Harkey created this custom men''s wallet for the Hotel Saint Cecilia with supple navy cowhide specially ordered from the historic Horween Tannery in Chicago. Since 1905, Horween has been producing some of the highest quality leather available in the world.  The "Elton" bifold card case is perfect for slimming down your back pocket.', 15000.00, 18000.00),
+(6, 1, 'ANVIL + AURA SPIKE NECKLACE', 'Four hands, two hearts, and endless hours of fun!  Local  designers Tiva Rose and Andrea Moore work to create one of a kind pieces using the finest materials.  \r\n<br>\r\n10k gold chain and beads with sterling silver spikes.', 80000.00, 99000.00),
+(7, 1, 'INKWELL SHARPENER', 'Classic glass inkwell pencil sharpener. Screw cap, steel blade. Made in Germany. Available in three colors.', 1800.00, 2200.00),
+(8, 1, 'HOTEL SAINT CECILIA SLIPPER', 'Cambria Harkey created slippers from scratch exclusively for the Hotel Saint Cecilia. With a slightly upturned toe, a soft leather upper, and a base of firm cowhide. These are the perfect slipper. Unisex sizing.\r\n<br>\r\nSmall is 9.5" in length 3.5" in width\r\n<br>\r\nMedium is 10" in length 3.25" in width\r\n<br>\r\nLarge is 11" in length 4" in width', 22000.00, 28000.00),
+(9, 1, 'LEATHER FOLIO', 'Leather folio custom made by Dean Accessories of Los Angeles. The cover is supple leather, hand stamped with the hotel logo, and the interior contains one whipstitched pocket.\r\n<br>\r\n12 X 9.5"', 12000.00, 15000.00);
 
 -- --------------------------------------------------------
 
@@ -121,6 +134,47 @@ CREATE TABLE IF NOT EXISTS `item_category` (
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_images`
+--
+
+CREATE TABLE IF NOT EXISTS `item_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_id` int(11) NOT NULL,
+  `img_type` varchar(50) NOT NULL,
+  `img_url` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+
+--
+-- Dumping data for table `item_images`
+--
+
+INSERT INTO `item_images` (`id`, `item_id`, `img_type`, `img_url`) VALUES
+(1, 1, '1', 'resoures/img/shop/ash1.jpg'),
+(2, 1, '2', 'resoures/img/shop/ash1.jpg'),
+(3, 2, '1', 'resoures/img/shop/belt.jpg'),
+(4, 3, '1', 'resoures/img/shop/comb1.jpg'),
+(5, 3, '2', 'resoures/img/shop/comb2.jpg'),
+(6, 3, '2', 'resoures/img/shop/comb3.jpg'),
+(7, 3, '2', 'resoures/img/shop/comb4.jpg'),
+(8, 4, '1', 'resoures/img/shop/kim1.jpg'),
+(9, 4, '2', 'resoures/img/shop/kim2.jpg'),
+(10, 5, '1', 'resoures/img/shop/lether1.jpg'),
+(11, 5, '2', 'resoures/img/shop/lether2.jpg'),
+(12, 5, '2', 'resoures/img/shop/lether3.jpg'),
+(13, 6, '1', 'resoures/img/shop/nakless1.jpg'),
+(14, 7, '1', 'resoures/img/shop/perfum1.jpg'),
+(15, 7, '2', 'resoures/img/shop/perfum2.jpg'),
+(16, 8, '1', 'resoures/img/shop/sho1.jpg'),
+(17, 8, '2', 'resoures/img/shop/sho2.jpg'),
+(18, 8, '2', 'resoures/img/shop/sho3.jpg'),
+(19, 8, '2', 'resoures/img/shop/sho4.jpg'),
+(20, 9, '1', 'resoures/img/shop/vol1.jpg'),
+(21, 9, '2', 'resoures/img/shop/vol2.jpg');
 
 -- --------------------------------------------------------
 
@@ -258,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `room_parameters` (
 --
 
 INSERT INTO `room_parameters` (`id`, `url`) VALUES
-(1, 'resoures\img\2.png');
+(1, 'resoures\\img\\2.png');
 
 -- --------------------------------------------------------
 
