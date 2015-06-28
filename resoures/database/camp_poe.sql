@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2015 at 05:18 AM
+-- Generation Time: Jun 28, 2015 at 12:49 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `camp_poe`
@@ -66,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `booking_linked` (
 --
 
 INSERT INTO `booking_linked` (`id`, `booking_id`, `room_id`, `check_in`, `check_out`) VALUES
-(1, 1, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 1, 2, '2015-06-22 00:00:00', '2015-06-28 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -217,18 +211,27 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 CREATE TABLE IF NOT EXISTS `registerd_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(20) NOT NULL,
   `f_name` varchar(100) NOT NULL,
   `l_name` varchar(100) NOT NULL,
   `id_type` varchar(50) NOT NULL,
   `id_number` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `country` varchar(100) NOT NULL,
-  `tel` int(11) NOT NULL,
+  `tel` varchar(20) NOT NULL,
   `user_name` varchar(100) NOT NULL,
   `password` varchar(200) NOT NULL,
   `registerd_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `registerd_users`
+--
+
+INSERT INTO `registerd_users` (`id`, `title`, `f_name`, `l_name`, `id_type`, `id_number`, `email`, `country`, `tel`, `user_name`, `password`, `registerd_date`) VALUES
+(3, 'MR.', 'Sasika', 'Ransilu', 'NIC', '9145789671V', 'sameera9th@outlook.com', 'SRI LANKA', '94758558596', 'rana091', '6e9454559ab0f65c702f78d553acab30', '2015-06-26 21:06:20'),
+(4, 'MR.', 'Sasika', 'Ransilu', 'NIC', '9145789671V', 'sameera9th@outlook.com', 'SRI LANKA', '94758558596', 'rana091', '6e9454559ab0f65c702f78d553acab30', '2015-06-27 09:41:01');
 
 -- --------------------------------------------------------
 
@@ -242,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `rm_comments` varchar(1000) NOT NULL,
   `rm_cover_img` varchar(500) NOT NULL,
   `rm_available` int(2) NOT NULL,
-  `rm_title` varchar(400) NOT NULL,
+  `max_no_of_guest` int(11) NOT NULL,
   `rm_detail` varchar(1000) NOT NULL,
   `rm_amount` double(10,2) NOT NULL,
   PRIMARY KEY (`rm_id`)
@@ -252,10 +255,10 @@ CREATE TABLE IF NOT EXISTS `rooms` (
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `rm_title`, `rm_detail`, `rm_amount`) VALUES
-(1, 'SUITE 1', '', 'resoures/img/rooms/6_small.png', 0, '', 'Suite Two offers a sitting room and large bedroom with King HÃ¤stens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suiteâ€™s amenities is available here.', 360.50),
-(2, 'SUITE 2', '', 'resoures/img/rooms/5_samll.png', 0, '', 'Suite Two offers a sitting room and large bedroom with King HÃ¤stens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suiteâ€™s amenities is available here.', 999.99),
-(3, 'BANKER ROOM', '', 'resoures/img/rooms/4_small.png', 0, '', 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King HÃ¤stens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', 500.00);
+INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `max_no_of_guest`, `rm_detail`, `rm_amount`) VALUES
+(1, 'SUITE 1', '', 'resoures/img/rooms/6_small.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', 360.50),
+(2, 'SUITE 2', '', 'resoures/img/rooms/5_samll.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', 999.99),
+(3, 'BANKER ROOM', '', 'resoures/img/rooms/4_small.png', 10, 10, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', 500.00);
 
 -- --------------------------------------------------------
 
@@ -317,6 +320,18 @@ INSERT INTO `room_parameters` (`id`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `room_types`
+--
+
+CREATE TABLE IF NOT EXISTS `room_types` (
+  `id` int(11) NOT NULL,
+  `type_name` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -338,8 +353,4 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `user_id`, `password`, `role`, `last_login`, `registerd_date`, `audit`, `name`, `img_url`) VALUES
-(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-06-25 04:09:04', '2015-06-12 00:00:00', '::1', 'Mark William', '');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-06-28 03:32:41', '2015-06-12 00:00:00', '::1', 'Mark William', '');
