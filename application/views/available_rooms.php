@@ -42,7 +42,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     type: 'post',
                     data: {'action': 'check_ava', 'check_in': check_in, 'check_out': check_out, 'adult': adult, 'child': child},
                     success: function (rowData) {
-                        alert("srs");
                         $("#preloader").hide();
                         $("#hotel_details").empty();
                         $("#hotel_details").append(rowData);

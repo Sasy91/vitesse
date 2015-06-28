@@ -57,7 +57,7 @@
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-3 well">
                                             <legend>Upload New Images</legend>
-                                            <?php echo form_open_multipart('index.php/image/upload'); ?>
+                                            <?php echo form_open_multipart('index.php/admin/upload'); ?>
 
                                             <fieldset>
                                                 <div class="form-group">

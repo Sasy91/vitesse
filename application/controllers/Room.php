@@ -18,16 +18,17 @@ class Room extends CI_Controller {
         $room['details'] = $this->imagemodel->getRoomDetails($id);
         $this->load->view('room_one', $room);
     }
-    
 
     public function check_availablilty() {
         $booking_data = array(
-            'check_in' => date("Y-m-d", strtotime($this->input->post("arrive"))),
-            'check_out' => date("Y-m-d", strtotime($this->input->post("depart"))),
+            'check_in' => date("Y-m-d", strtotime($this->input->post("check_in"))),
+            'check_out' => date("Y-m-d", strtotime($this->input->post("check_out"))),
             'adult' => $this->input->post("adult"),
-            'child' => $this->input->post("child"));
-        $room = $this->roommodel->availableRooms();
+            'child' => $this->input->post("child"),
+            'no_of_guest' => $this->input->post("child") + $this->input->post("adult"));
 
+        $room = $this->roommodel->availableRooms($booking_data);
+        //echo $room;
         // $this->load->view('available_rooms', $room);
         $output = "";
         if (!empty($room)) {
@@ -47,8 +48,10 @@ class Room extends CI_Controller {
             'check_in' => $this->input->post("arrive"),
             'check_out' => $this->input->post("depart"),
             'adult' => $this->input->post("adult"),
-            'child' => $this->input->post("child"));
-        $room['avi_details'] = $this->roommodel->availableRooms();
+            'child' => $this->input->post("child"),
+            'no_of_guest' => $this->input->post("child") + $this->input->post("adult"));
+        $room['avi_details'] = $this->roommodel->availableRooms($booking_data);
+        $room['avi_details'] = $this->roommodel->availableRooms($booking_data);
 
         $this->load->view('available_rooms', $room);
     }

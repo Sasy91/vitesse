@@ -15,10 +15,14 @@ class roommodel extends CI_Model {
 //        $query = $this->db->get('SELECT rooms.* FROM booking,rooms where booking.b_id = 1');
 //        return $query->result();
 //    }
-    
-    function availableRooms() {
-        $query = $this->db->get('rooms');
-        return $query->result();
+
+    function availableRooms($booking_data) {
+        //$query = $this->db->query('SELECT rooms.* FROM booking,rooms WHERE DATE(booking.b_check_in) < DATE_SUB('.$booking_data['check_in'].') AND DATE(booking.b_check_out) > DATE_SUB('.$booking_data['check_out'].')');
+        $query = "SELECT rs.* FROM booking_linked as bl, rooms as rs WHERE ('" . $booking_data['check_in'] . "' NOT BETWEEN DATE(bl.check_in) AND DATE(bl.check_out)) OR ('" . $booking_data['check_out'] . "' NOT BETWEEN DATE(bl.check_in) AND DATE(bl.check_out)) AND rs.max_no_of_guest >= '". $booking_data['no_of_guest'] . "' AND rs.rm_id != bl.room_id";
+        $result_query = $this->db->query($query);
+        return $result_query->result();
+        //return $query;
+        
     }
 
     //put your code here
