@@ -43,16 +43,9 @@ class UserRegistation extends CI_Controller {
     }
 
     function validate_user() {
-        //echo $this->input->post("email");
         $this->load->model('registrationmodel');
         $user_exist = $this->registrationmodel->validateUser($this->input->post("email"));
         echo $user_exist;
-//        if ($user_exist == 1) {
-//            echo "1";
-//        } else {
-//            echo "0";
-//        }
-        //$this->load->view('admin_upload_img', $data);
     }
 
     function check_member_login() {

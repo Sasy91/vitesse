@@ -32,15 +32,15 @@ class registrationmodel extends CI_Model {
 
     function validateUser($email) {
         // $query = $this->db->get($this->table);
-        //$query = $this->db->get_where('registerd_users', array('email' => $email));
-//        if ($query->num_rows > 0) {
-//            return "1";
-//        } else {
-//            return "0";
-//        }
-        $query = $this->db->query('SELECT * FROM registerd_users WHERE email = ' . $email);
-        $result = $this->db->get($query);
-        return $email;
+        $query = $this->db->get_where('registerd_users', array('email' => $email));
+        if (!empty($query->result())) {
+            return "1";
+        } else {
+            return "0";
+        }
+        //$query = $this->db->query('SELECT * FROM registerd_users WHERE email = ' . $email);
+        //$result = $this->db->get($query);
+        //return $email;
     }
 
 }

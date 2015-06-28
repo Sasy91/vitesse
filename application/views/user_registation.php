@@ -36,15 +36,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     type: 'post',
                     data: {'action': 'check_user', 'email': email},
                     success: function (rowData) {
-                        alert("srs" + rowData);
                         if (rowData == "1") {
-                            $('.DimensionList').text("Email is Already exsist our database. please use different");
+                            $('#val_email').text("Email is Already Taken!");
+                        } else {
+                            $('#val_email').text("");
                         }
-
-//                        $("#preloader").hide();
-//                        $("#hotel_details").empty();
-//                        $("#hotel_details").append(rowData);
-//                        $("#hotel_details").show();
+                        $("#preloader").hide();
+                        $("#hotel_details").empty();
+                        $("#hotel_details").append(rowData);
+                        $("#hotel_details").show();
                     },
                     error: function (xhr, desc, err) {
                         console.log(xhr);
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div id="registration">
             <div class="container">
-                <h3>Registration Now</h3>
+                <h3>Registration Now<span class="pull-right" style="margin-right: 100px;"><button type="button" class="btn btn-default" style="width: 150px; font-size: 20px;"><i class="fa fa-lock fa-lg"></i>&nbsp; Log In</button></span></h3>
                 <div class="row">
                     <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="<?php echo base_url(); ?>index.php/UserRegistation/register_user">
 
@@ -113,9 +113,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input type="text" class="form-control" id="l_name" name="l_name" placeholder="Enter Last Name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Email *</label>
+                                    <label>Email *</label>&nbsp;&nbsp;&nbsp;<span id="val_email" style="color: red;"></span>
                                     <input type="text" class="form-control" id="email" name="email" onchange="validateEmail();" placeholder="Enter Email" required>
-                                    <span id="val_email" style="color: red;"></span>
                                 </div>  
                                 <div class="form-group">
                                     <label>Telephone *</label>
@@ -334,11 +333,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
 
         <script>
-            wow = new WOW({
-                animateClass: 'animated',
-                offset: 120
-            });
-            wow.init();
+                                        wow = new WOW({
+                                            animateClass: 'animated',
+                                            offset: 120
+                                        });
+                                        wow.init();
 
         </script>
 
