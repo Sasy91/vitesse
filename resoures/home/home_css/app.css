@@ -32,8 +32,20 @@ meta.foundation-mq-xlarge {
 meta.foundation-mq-xxlarge {
   font-family: "/only screen and (min-width:120.063em)/";
   width: 120.063em;
-}
+    
+    @import url(https://fonts.googleapis.com/css?family=Sniglet:400,800);
 
+    @import url(https://fonts.googleapis.com/css?family=Boogaloo);
+    
+    
+}
+body{
+    font-family: Sniglet;
+    }
+
+h1,h2,h3,h4,h5,a,p{
+font-family: Sniglet;
+}
 /* line 289, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-data-attribute-namespace {
   font-family: false;
@@ -65,7 +77,7 @@ body {
   color: #231f20;
   padding: 0;
   margin: 0;
-  font-family: HelveticaNeueLTPro-Cn;
+  font-family: Sniglet;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -3147,7 +3159,7 @@ th.hide-for-touch {
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLTPro-LtCn';
+  font-family: 'Sniglet';
   src: url("../fonts/2B8216_1_0.eot");
   src: url("../fonts/2B8216_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2B8216_1_0.woff") format("woff"), url("../fonts/2B8216_1_0.ttf") format("truetype");
 }
@@ -4530,7 +4542,7 @@ h1, #grid h2, h2, h3, h4 {
 
 /* line 34, ../scss/_layout.scss */
 h1, #grid h2 {
-  font-family: HelveticaNeueLTPro-LtCn;
+  font-family: Sniglet;
   font-weight: normal;
   font-style: normal;
   letter-spacing: 0.075em;
@@ -4556,7 +4568,7 @@ a:focus {
 
 /* line 49, ../scss/_layout.scss */
 blockquote p {
-  font-family: HelveticaNeueLTPro-LtCn;
+  font-family: Sniglet;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -6060,7 +6072,7 @@ div.mc-image {
 }
 /* line 1006, ../scss/_layout.scss */
 #bottom-wrapper h1 span, #bottom-wrapper #grid h2 span, #grid #bottom-wrapper h2 span {
-  font-family: HelveticaNeueLTPro-LtCn;
+  font-family: Sniglet;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -6910,7 +6922,7 @@ div.mc-image {
 }
 /* line 1593, ../scss/_layout.scss */
 #announcements .content h2 {
-  font-family: HelveticaNeueLTPro-LtCn;
+  font-family: Sniglet;
   font-weight: normal;
   font-style: normal;
   font-size: 22px;
@@ -7330,7 +7342,7 @@ div.mc-image {
 }
 /* line 1904, ../scss/_layout.scss */
 .left-off-canvas-menu ul:not(.social) a {
-  font-family: HelveticaNeueLTPro-LtCn;
+  font-family: Sniglet;
   font-weight: normal;
   font-style: normal;
   font-size: 22px;
@@ -7651,4 +7663,11 @@ width:36px; height:36px;background:url(../images/shotify.png) no-repeat; float:l
 {
 width:36px; height:36px;
 background:url(../images/shotify1.png) no-repeat; 
+}
+body{
+    font-family: Sniglet;
+    }
+
+h1,h2,h3,h4,h5,a,p{
+font-family: Sniglet;
 }

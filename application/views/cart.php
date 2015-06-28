@@ -6,6 +6,8 @@
         <meta name="description" content="CAMP POE SRI LANKA HOTELS ">
 
         <meta name="author" content="CAMP POE SRI LANKA">
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <title>CAMP POE</title>
 
@@ -48,7 +50,21 @@
             <div  id="Shop_content">
                 <div class="cart_baner ">
                     <img src="<?php echo base_url(); ?>/resoures/img/covers/cart_baner.png" alt="...">
-                </div>    
+                </div> 
+               
+                    <div class="addcollect">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                
+                            </div>
+                            <div class="col-sm-5">
+<!--                                <h3 style="display:block"><p>Cart</p><span>5</span> <p>Tolat</p></h3>-->
+                                       <h3 class="cart-total"><i class = "fa fa-shopping-cart fa-lg"> </i>  Cart<span> 2</span>&nbsp&nbsp Totala<span> $4000</span>&nbsp <button type="submit" class="btn btn-default">heckout!</button></h3>
+                              </div>
+                        </div>
+                    </div>
+                </div><!--addcollect-->   
 
                 <div class="search">
                     <div class="container">
@@ -71,7 +87,10 @@
                             </div><!--left-->
                         </div>
                     </div><!--container-->
+                    
                 </div><!--search-->
+              
+           
 
                 <div class="items">
                     <div class="container">
@@ -150,20 +169,14 @@ fotter
 <!-- allscript-->
 <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
 <!-- per loader-->
+
 <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
 
 <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
 
 <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>
 
-<script>
-    wow = new WOW({
-        animateClass: 'animated',
-        offset: 120
-    });
-    wow.init();
 
-</script>
 
 
 <!----==============================
