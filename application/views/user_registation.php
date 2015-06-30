@@ -65,9 +65,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div id="registration">
             <div class="container">
-                <h3>Registration Now<span class="pull-right" style="margin-right: 100px;"><button type="button" class="btn btn-default" style="width: 150px; font-size: 20px;"><i class="fa fa-lock fa-lg"></i>&nbsp; Log In</button></span></h3>
+                <h3>Register Now<span class="pull-right" style="margin-right: 100px;"><button type="button" data-toggle='modal' data-target='#login_form' class="btn btn-default" style="width: 150px; font-size: 20px;"><i class="fa fa-lock fa-lg"></i>&nbsp; Log In</button></span></h3>
                 <div class="row">
-                    <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="<?php echo base_url(); ?>index.php/UserRegistation/register_user">
+                    <form id="main-contact-form" style="margin-top: 20px;" class="contact-form" name="contact-form" method="post" action="<?php echo base_url(); ?>index.php/UserRegistation/register_user">
 
                         <div id="genaral">
                             <h4><i class="fa fa-user-plus fa-lg"></i> Personal Information</h4>  
@@ -149,169 +149,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </form> 
                 </div>
             </div>
-        </div> <!--registation-> 
-      
-       
-        
-         
-          
-           
-            
-             
-              
-               
-                
-                 
-                  
-                   
-                    
-                     
-    <div class="container" style=" height: 1000px; border: 1px #e4e4e4 solid; border-radius: 10px; background-color: white;">
-       <div class="row">
-           <form role="form" style="font-family: sans-serif; margin: 20px;" >
-               <div class="col-lg-6">
-                   <hr style="margin: 10px;">
-                   <div class="well well-sm"><strong>User Registration</strong></div>
-                   <div class="navbar navbar-inverse navbar-static-top" style="height: 10px; border-radius: 20px;">
-                       <p class="navbar-brand" style="color: white"><span class="fa fa-user"></span>&nbsp;&nbsp;Personal Information</p>
-                   </div>
-                   <div class="form-group" >
-                       <label for="InputEmail">Title</label>
-                       <div class="input-group">
-                           <select id="suffix_type" class="form-control" name="suffix_type">
-                               <option>Not Available</option>
-                               <option>Sr</option>
-                               <option>Jr</option>
-                               <option>II</option>
-                               <option>III</option>                                            
-                           </select>
-                       </div>
-                   </div>
-        <!--
-        <div class="form-group">
-            <label for="InputMessage">First Name</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-            </div>
-        </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">Last Name</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">ID Type</label>
-                                    <div class="input-group">
-                                        <select id="suffix_type" class="form-control" name="suffix_type">
-                                            <option>NIC</option>
-                                            <option>Passport</option>
-                                            <option>Driver's License</option>                                            
-                                        </select>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">ID Number</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">Email</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">Country</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">Telephone</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="navbar navbar-inverse navbar-static-top" style="height: 10px; border-radius: 20px;">
-                                    <p class="navbar-brand" style="color: white"><span class="fa fa-lock"></span>&nbsp;&nbsp;Login Information</p>
-                                </div>
-                                <div class="form-group">
-                                    <label for="InputMessage">User Name</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">Password</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <div class="form-group">
-                                    <label for="InputMessage">Confirm Password</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                                    </div>
-                                </div>
-        -->
-        <!--
-                                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-left">
-                            </div>
-                        </form>
-        -------------------------------------------------------------------------------------------------------------------------------------->
+        </div> 
+        <style>
+            .modal.fade .modal-dialog {
+                -webkit-transform: scale(0.1);
+                -moz-transform: scale(0.1);
+                -ms-transform: scale(0.1);
+                transform: scale(0.1);
+                top: 300px;
+                opacity: 0;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+            }
 
-
-
-        <!--
-                                    <form class="form-inline col-lg-5" role="form" style="font-family: sans-serif;">
-                            <hr style="margin: 10px;">
-                            <div class="well well-sm"><strong>Registered User Information Retrieval</strong></div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input style="margin-left: 32px;" type="email" class="form-control" id="email" placeholder="Enter email">
-                            </div>
-                            <div class="form-group" style="margin-top: 5px;">
-                                <label for="pwd">Password:</label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                            </div><br><br>
-                            <button type="submit" class="btn btn-default">Submit</button>&nbsp;&nbsp;
-                            <div class="checkbox">
-                                <label><input type="checkbox"> Remember me</label>
-                            </div>
-                        </form>
-                        <div class="col-lg-5 col-md-push-1" style="font-family: sans-serif;">
-                            <div class="col-md-12">
-                                <div class="alert alert-success">
-                                    <strong><span class="glyphicon glyphicon-ok"></span> Success! Message sent.</strong>
-                                </div>
-                                <div class="alert alert-danger">
-                                    <span class="glyphicon glyphicon-remove"></span><strong> Error! Please check all page inputs.</strong>
-                                </div>
-                            </div>
+            .modal.fade.in .modal-dialog {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform: translate3d(0, -300px, 0);
+                transform: translate3d(0, -300px, 0);
+                opacity: 1;
+            }
+        </style>
+        <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="color: #000000; font-family: sans-serif; font-weight: bold">CAMP POE Registered Users Login</span></center></h4>                   
+                    </div>
+                    <form class="col-md-12" style="margin-top: 10px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email">
                         </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control col-lg-1" placeholder="Password">
+                        </div><br><br><br>
+                        <div class="form-group"><center>
+                                <button class="btn btn-primary">Sign In</button>
+                            </center></div>
+                    </form>
+                    <div class="modal-footer">
                     </div>
                 </div>
-        -->
+            </div>
+        </div>
 
         <?php include_once './resoures/imports/temp_footer.php'; ?>
 

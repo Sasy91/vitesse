@@ -42,4 +42,26 @@ class registrationmodel extends CI_Model {
         return $return_value;
     }
 
+    function check_login($email, $password) {
+        $password1 = md5($password);
+        $query = $this->db->get_where('registerd_users', array('user_name' => $email));
+        if ($query->num_rows() > 0) {
+            $query = $query->row_array();
+            if (($email === $query["user_name"]) && ($password1 === $query["password"])) {
+                $userdata = array(
+                    'email' => $query['email'],
+                    'username' => $query['user_name'],
+                    'f_name' => $query['f_name'],
+                    'l_name' => $query['l_name']
+                );
+                $this->session->set_userdata('loginData', $userdata);
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        } else {
+            return FALSE;
+        }
+    }
+
 }

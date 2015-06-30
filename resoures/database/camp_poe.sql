@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2015 at 12:49 PM
+-- Generation Time: Jun 30, 2015 at 01:10 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -53,14 +53,15 @@ CREATE TABLE IF NOT EXISTS `booking_linked` (
   `check_in` datetime NOT NULL,
   `check_out` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `booking_linked`
 --
 
 INSERT INTO `booking_linked` (`id`, `booking_id`, `room_id`, `check_in`, `check_out`) VALUES
-(1, 1, 2, '2015-06-22 00:00:00', '2015-06-28 00:00:00');
+(1, 1, 2, '2015-06-22 00:00:00', '2015-06-28 00:00:00'),
+(2, 2, 2, '2015-06-29 00:00:00', '2015-07-02 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -110,7 +111,7 @@ INSERT INTO `items` (`id`, `cat_id`, `name`, `discription`, `cost`, `price`) VAL
 (1, 1, 'SAINT CECILIA ASHTRAY', 'Porcelain Saint Cecilia ashtray.', 4000.00, 4500.00),
 (2, 1, 'DOG COLLAR', 'Deep blue leather dog collar made exclusively for the Hotel Saint Cecilia by New York leather designer Andrew McAteer.', 8000.00, 8500.00),
 (3, 1, 'HOTEL SAINT CECILIA COMB', 'Custom HSC pocket comb.\r\nColors may vary.', 1250.00, 1500.00),
-(4, 1, 'HOTEL SAINT CECILIA KIMONO ROBE', 'The Hotel Saint Cecilia indigo robe is custom made of soft 100% cotton indigo-dyed batik fabric and is fashioned in the spirit of the Japanese yukata or summer robe. It is unlined and comes with a wide 3/4 length sleeve and sash belt. Unisex, one size fits all', 22500.00, 25000.00),
+(4, 1, 'HOTEL SAINT KIMONO ROBE', 'The Hotel Saint Cecilia indigo robe is custom made of soft 100% cotton indigo-dyed batik fabric and is fashioned in the spirit of the Japanese yukata or summer robe. It is unlined and comes with a wide 3/4 length sleeve and sash belt. Unisex, one size fits all', 22500.00, 25000.00),
 (5, 1, 'LEATHER WALLET HANDMADE', 'Cambria Harkey created this custom men''s wallet for the Hotel Saint Cecilia with supple navy cowhide specially ordered from the historic Horween Tannery in Chicago. Since 1905, Horween has been producing some of the highest quality leather available in the world.  The "Elton" bifold card case is perfect for slimming down your back pocket.', 15000.00, 18000.00),
 (6, 1, 'ANVIL + AURA SPIKE NECKLACE', 'Four hands, two hearts, and endless hours of fun!  Local  designers Tiva Rose and Andrea Moore work to create one of a kind pieces using the finest materials.  \r\n<br>\r\n10k gold chain and beads with sterling silver spikes.', 80000.00, 99000.00),
 (7, 1, 'INKWELL SHARPENER', 'Classic glass inkwell pencil sharpener. Screw cap, steel blade. Made in Germany. Available in three colors.', 1800.00, 2200.00),
@@ -223,15 +224,16 @@ CREATE TABLE IF NOT EXISTS `registerd_users` (
   `password` varchar(200) NOT NULL,
   `registerd_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `registerd_users`
 --
 
 INSERT INTO `registerd_users` (`id`, `title`, `f_name`, `l_name`, `id_type`, `id_number`, `email`, `country`, `tel`, `user_name`, `password`, `registerd_date`) VALUES
-(3, 'MR.', 'Sasika', 'Ransilu', 'NIC', '9145789671V', 'sameera9th@outlook.com', 'SRI LANKA', '94758558596', 'rana091', '6e9454559ab0f65c702f78d553acab30', '2015-06-26 21:06:20'),
-(4, 'MR.', 'Sasika', 'Ransilu', 'NIC', '9145789671V', 'sameera9th@outlook.com', 'SRI LANKA', '94758558596', 'rana091', '6e9454559ab0f65c702f78d553acab30', '2015-06-27 09:41:01');
+(3, 'MR.', 'Sasika', 'Ransilu', 'NIC', '9145789671V', 'sameera7@outlook.com', 'SRI LANKA', '94758558596', 'rana0913', '6e9454559ab0f65c702f78d553acab30', '2015-06-26 21:06:20'),
+(4, 'MR.', 'Sasika', 'Ransilu', 'NIC', '9145789671V', 'sameera9th@outlook.com', 'SRI LANKA', '94758558596', 'rana091', '56fafa8964024efa410773781a5f9e93', '2015-06-27 09:41:01'),
+(5, 'MR.', 'Ruchika ', 'Gamage', 'NIC', 'N58985885', 'ruchika.newonline@gmail.com', 'SRI LANKA', '895874585', 'ruchi089', '9f1abb6c236af0b767f84a1adf905127', '2015-06-30 11:44:46');
 
 -- --------------------------------------------------------
 
@@ -247,6 +249,7 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `rm_available` int(2) NOT NULL,
   `max_no_of_guest` int(11) NOT NULL,
   `rm_detail` varchar(1000) NOT NULL,
+  `rm_addtional_details` varchar(1000) NOT NULL,
   `rm_amount` double(10,2) NOT NULL,
   PRIMARY KEY (`rm_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
@@ -255,10 +258,10 @@ CREATE TABLE IF NOT EXISTS `rooms` (
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `max_no_of_guest`, `rm_detail`, `rm_amount`) VALUES
-(1, 'SUITE 1', '', 'resoures/img/rooms/6_small.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', 360.50),
-(2, 'SUITE 2', '', 'resoures/img/rooms/5_samll.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', 999.99),
-(3, 'BANKER ROOM', '', 'resoures/img/rooms/4_small.png', 10, 10, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', 500.00);
+INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `max_no_of_guest`, `rm_detail`, `rm_addtional_details`, `rm_amount`) VALUES
+(1, 'SUITE 1', '', 'resoures/img/rooms/6_small.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 360.50),
+(2, 'SUITE 2', '', 'resoures/img/rooms/5_samll.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 999.99),
+(3, 'SUITE 3', '', 'resoures/img/rooms/4_small.png', 10, 10, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 500.00);
 
 -- --------------------------------------------------------
 
@@ -274,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `room_img_urls` (
   `style_col` varchar(11) NOT NULL,
   `class` varchar(50) NOT NULL,
   PRIMARY KEY (`ril_id`,`rm_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `room_img_urls`
@@ -296,7 +299,15 @@ INSERT INTO `room_img_urls` (`ril_id`, `rm_id`, `img_type`, `ril_img_url`, `styl
 (13, 2, 'front', '/resoures/img/room_two/pic6.jpg', '3D', 'item'),
 (14, 2, 'front', '/resoures/img/room_two/pic5.png', '3E', 'item'),
 (15, 2, 'front', '/resoures/img/room_two/pic7.jpg', '4F', 'item'),
-(16, 2, 'front', '/resoures/img/room_two/pic3.jpg', '8G', 'item');
+(16, 2, 'front', '/resoures/img/room_two/pic3.jpg', '8G', 'item'),
+(17, 3, 'cover', 'resoures/img/room_three/cover.jpg', 'N/A', 'item active'),
+(18, 3, 'front', 'resoures/img/room_three/1.jpg', '3A', 'item'),
+(19, 3, 'front', 'resoures/img/room_three/2.png', '3B', 'item'),
+(20, 3, 'front', 'resoures/img/room_three/3.jpg', '6C', 'item'),
+(21, 3, 'front', 'resoures/img/room_three/4.jpg', '3D', 'item'),
+(22, 3, 'front', 'resoures/img/room_three/5.jpg', '3E', 'Item'),
+(23, 3, 'front', 'resoures/img/room_three/6.jpg', '4F', 'Item'),
+(24, 3, 'front', 'resoures/img/room_three/7.jpg', '8G', 'Item');
 
 -- --------------------------------------------------------
 

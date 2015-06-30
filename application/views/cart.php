@@ -6,7 +6,7 @@
         <meta name="description" content="CAMP POE SRI LANKA HOTELS ">
 
         <meta name="author" content="CAMP POE SRI LANKA">
-        
+
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <title>CAMP POE</title>
@@ -22,6 +22,15 @@
         <!--all css--->
         <?php include_once './resoures/imports/baseimports.php'; ?>
         <!--all css end--->
+        <script type="text/javascript">
+            $(function () {
+                $(document).on('click', 'button.add_to_cart', function () {
+                    alert("aa");
+                });
+            });
+
+        </script>
+
     </head>
 
     <body>
@@ -51,17 +60,17 @@
                 <div class="cart_baner ">
                     <img src="<?php echo base_url(); ?>/resoures/img/covers/cart_baner.png" alt="...">
                 </div> 
-               
-                    <div class="addcollect">
+
+                <div class="addcollect">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-7">
-                                
+
                             </div>
                             <div class="col-sm-5">
 <!--                                <h3 style="display:block"><p>Cart</p><span>5</span> <p>Tolat</p></h3>-->
-                                       <h3 class="cart-total"><i class = "fa fa-shopping-cart fa-lg"> </i>  Cart<span> 2</span>&nbsp&nbsp Totala<span> $4000</span>&nbsp <button type="submit" class="btn btn-default">heckout!</button></h3>
-                              </div>
+                                <h3 class="cart-total"><i class = "fa fa-shopping-cart fa-lg"> </i>  Cart<span> 2</span>&nbsp&nbsp Totala<span> $4000</span>&nbsp <button type="submit" class="btn btn-default">Checkout&nbsp;<i class="fa fa-paypal"></i></button>&nbsp <button type="submit" class="btn btn-default">View Cart</button></h3>
+                            </div>
                         </div>
                     </div>
                 </div><!--addcollect-->   
@@ -87,10 +96,28 @@
                             </div><!--left-->
                         </div>
                     </div><!--container-->
-                    
+
                 </div><!--search-->
-              
-           
+
+                <style>
+
+                    ::-webkit-input-placeholder {
+                        text-align: center;
+                    }
+
+                    :-moz-placeholder { /* Firefox 18- */
+                        text-align: center;  
+                    }
+
+                    ::-moz-placeholder {  /* Firefox 19+ */
+                        text-align: center;  
+                    }
+
+                    :-ms-input-placeholder {  
+                        text-align: center; 
+                    }
+
+                </style>
 
                 <div class="items">
                     <div class="container">
@@ -113,7 +140,8 @@
                                                             <h3><?php echo $item_details->name; ?></h3>
                                                             <p>LKR <?php echo $item_details->price; ?></p>
                                                             <p><a href="<?php echo base_url() . "index.php/shop/item_details/" . $item_details->id; ?>"><button type = "button" class = "btn btn-labeled btn-primary"><span class = "btn-label"><i class = "fa fa-eye"></i></span>View</button></a>
-                                                                <button type = "button" class = "btn btn-labeled btn-primary"><span class = "btn-label"><i class = "fa fa-shopping-cart"></i></span>Add to Cart</button></p>
+                                                                <button type = "button" class = "btn btn-labeled btn-primary"><span class = "btn-label"><i class = "fa fa-shopping-cart"></i></span>Add to Cart</button>
+                                                            <center><input class="qty" type="text" placeholder="Qty" id="<?php echo "item" . $item_details->id ?>"></center></p>
                                                         </div>
                                                     </div>
                                                 </div>

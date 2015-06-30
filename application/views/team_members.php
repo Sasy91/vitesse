@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <article class="team-mate" style="border-left-color: white;">
                                     <div class="member-photo">
                                         <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/member-1.jpg" alt="">
+                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_new.jpg" alt="">
                                         <!-- /member photo -->
 
                                         <!-- member social profile -->
@@ -156,7 +156,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                     <!-- about member -->
                                     <div class="member-info">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+                                        <p style="color: white;">I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
+                                            the locals being some of the most welcoming people you will meet.We set up Camp Poe with a
+                                        view to share the wonders..<a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
                                     </div>
                                     <!-- /about member -->
                                 </article>
@@ -235,7 +237,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         break, Chicama, as well as learning how sustainable tourism can 
                                         work in Lobiitos through Waves for Development. My passion in 
                                         surfing has lead me into a faith in sustainable tourism and 
-                                        sustainable living, something that I hope our camp will achieve.</p>
+                                        sustainable living, something that I hope our camp will achieve.<br>
+                                        I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
+                                        the locals being some of the most welcoming people you will meet. We set up Camp Poe with a
+                                        view to share the wonders of Sri Lanka with like­minded people. People who want to experience a
+                                        lifestyle based around healthy, sustainable living. People who want to learn or improve their
+                                        surfing as well as experience yoga and meditation in a beautiful setting. Looking forward to
+                                        catching some waves and rays with you in Madiha!</p>
                                     <hr style="margin: 20px; color: peru">
                                 </div>
                             </div>
@@ -251,42 +259,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!----=====================================================
                    camp poe info end
            =================================================--------->
-               </div><!--ip-container-->
-            <!----=====================================================
-                    fotter
-            =================================================--------->
-            <?php include_once './resoures/imports/temp_footer.php'; ?>
+        </div><!--ip-container-->
+        <!----=====================================================
+                fotter
+        =================================================--------->
+        <?php include_once './resoures/imports/temp_footer.php'; ?>
 
 
 
-            <!-- jquery-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
-            <!-- bootstrap-->
-            <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
-            <!-- jquery ui-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
-            <!-- allscript-->
-            <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
-            <!-- home script-->
+        <!-- jquery-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
+        <!-- bootstrap-->
+        <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
+        <!-- jquery ui-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <!-- allscript-->
+        <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
+        <!-- home script-->
 
-            <script>
-                wow = new WOW({
-                    animateClass: 'animated',
-                    offset: 120
-                });
-                wow.init();
+        <script>
+            wow = new WOW({
+                animateClass: 'animated',
+                offset: 120
+            });
+            wow.init();
 
-            </script>
+        </script>
 
-        
+
         <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>

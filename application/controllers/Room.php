@@ -19,6 +19,41 @@ class Room extends CI_Controller {
         $this->load->view('room_one', $room);
     }
 
+    public function room_img_by_id() {
+        $this->load->model('imagemodel');
+        //$room = $this->imagemodel->getRoomImages($this->input->post("id"));
+        //$roomDetails = $this->imagemodel->getRoomDetails($this->input->post("id"));
+        $room = $this->imagemodel->getRoomImages($this->input->post("id"));
+        $roomDetails = $this->imagemodel->getRoomDetails($this->input->post("id"));
+        $output = "";
+        $output.= "<ol class='carousel-indicators hidden-xs'>";
+        if (!empty($room)) {
+            $status = "active";
+            $count = 0;
+            foreach ($room as $room_imgs) {
+                $output.= "<li data-target='#myCarousel' data-slide-to='" . $count . "' class='" . $status . "'></li>";
+                $count++;
+                $status = "";
+            }
+        }
+        $output.= "</ol><div class = 'carousel-inner'>";
+        if (!empty($room)) {
+            foreach ($room as $room_imgs) {
+                $output.= "<div class = '" . $room_imgs->class . "' > <img src = '" . base_url() . $room_imgs->ril_img_url . "' class = 'properties' alt = 'properties' style='width: 600px; height: 376px; top: 22px; left: 15px;'/></div>";
+            }
+        }
+        $output.= "</div>";
+        $room_detail = "";
+        $room_name = "";
+        foreach ($roomDetails as $roomdel) {
+            $room_detail = $roomdel->rm_detail;
+            $room_detail .= $roomdel->rm_addtional_details;
+            $room_name = $roomdel->rm_name;
+        }
+        echo $output . "*" . $room_detail . "*" . $room_name;
+        //$this->load->view('room_one', $room);
+    }
+
     public function check_availablilty() {
         $booking_data = array(
             'check_in' => date("Y-m-d", strtotime($this->input->post("check_in"))),
@@ -29,13 +64,13 @@ class Room extends CI_Controller {
 
         $room = $this->roommodel->availableRooms($booking_data);
         //echo $room;
-        // $this->load->view('available_rooms', $room);
+
         $output = "";
         if (!empty($room)) {
             foreach ($room as $rooms) {
                 $output .= "<div class='media'><a class='pull-left' href='#' data-toggle='modal' data-target='#sigiriya'><img class='media-object' src='" . base_url() . $rooms->rm_cover_img . "' alt='Media Object'>";
-                $output .= "</a><div class='media-body'><h4 class='media-heading'><span style='font-size: 24px;'>" . $rooms->rm_name . "</span></h4><span style='font-size: 28px;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $rooms->rm_amount . "/<span style='font-size: 20px;'>Night</span></span><br>";
-                $output .= $rooms->rm_detail . "<br><button type='button' class='btn btn-success'><i class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;<button type='button' class='btn btn-success'><i class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button></div></div></br>";
+                $output .= "</a><div class='media-body'><h4 class='media-heading'><span style='font-size: 24px; color: black;'>" . $rooms->rm_name . "</span></h4><span style='font-size: 28px;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $rooms->rm_amount . "/<span style='font-size: 20px;'>Night</span></span><br>";
+                $output .= $rooms->rm_detail . "<br><button type='button' class='btn btn-success'><i class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;<button type='button' class='btn btn-success view' id='" . $rooms->rm_id . "' data-toggle='modal' data-target='#sigiriya'><i class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button></div></div></br>";
             }
         } else {
             $output = "<div class='alert alert-danger' role='alert'>We apologize. There is no online availability for what you've requested. Please contact the hotel at 0777777717 for other possible options.</div>";
@@ -51,7 +86,7 @@ class Room extends CI_Controller {
             'child' => $this->input->post("child"),
             'no_of_guest' => $this->input->post("child") + $this->input->post("adult"));
         $room['avi_details'] = $this->roommodel->availableRooms($booking_data);
-        $room['avi_details'] = $this->roommodel->availableRooms($booking_data);
+        //$room['avi_details'] = $this->roommodel->availableRooms($booking_data);
 
         $this->load->view('available_rooms', $room);
     }

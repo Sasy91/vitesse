@@ -15,21 +15,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php include_once './resoures/imports/baseimports.php'; ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>resoures/css/booking_guide.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>resoures/css/preloader.css">
+        <style>
+            .modal.fade .modal-dialog {
+                -webkit-transform: scale(0.1);
+                -moz-transform: scale(0.1);
+                -ms-transform: scale(0.1);
+                transform: scale(0.1);
+                top: 300px;
+                opacity: 0;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+
+            .modal.fade.in .modal-dialog {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform: translate3d(0, -300px, 0);
+                transform: translate3d(0, -300px, 0);
+                opacity: 1;
+            }
+        </style>
         <script>
             $(function () {
+
                 $("#preloader").hide();
                 $("#checkin,#checkout").datepicker({
-                    yearRange: '-120:+0',
+                    yearRange: '-120:+120',
                     changeMonth: true,
                     changeYear: true,
                     showAnim: 'slideDown',
+                    minDate: 0, // 0 days offset = today
+                    //maxDate: '2070-10-10', 
                     onChangeMonthYear: function (y, m, i) {
                         var d = i.selectedDay;
                         $(this).datepicker('setDate', new Date(y, m - 1, d));
                     }
                 });
-            });
 
+
+            });
+            function validate(isField) {
+                var check_in = $('#checkin').val().split("/");
+                var check_out = $('#checkout').val().split("/");
+                if (check_out != "") {
+                    if (check_in > check_out) {
+                        $("#wrongDate").modal('show');
+                        isField.value = "";
+                    }
+                }
+
+            }
             function AddExeData() {
                 $("#hotel_details").hide();
                 $("#preloader").show();
@@ -53,16 +91,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     }
                 });
             }
+
+
+            $(document).on('click', 'button.view', function () {
+                var id = $(this).attr("id");
+                //alert(id);
+                //$("#loadgif").show();
+                $.ajax({
+                    url: 'http://localhost/duwa/vitesse/index.php/room/room_img_by_id',
+                    type: 'post',
+                    data: {'action': 'get', 'id': id},
+                    success: function (rowData) {
+                        $("#myCarousel").empty();
+                        $("#myCarousel").html(rowData.split("*")[0]);
+                        $("#details").html(rowData.split("*")[1]);
+                        $("#room_name").html(rowData.split("*")[2]);
+                    },
+                    error: function (xhr, desc, err) {
+                        console.log(xhr);
+                        console.log("Details: " + desc + "\nError:" + err);
+                    }
+                });
+            });
         </script>
     </head>
 
-    <body id="body">
+    <body id="body" style="background-color: rgb(146, 222, 255);">
         <!--Header Import-->
         <?php include_once './resoures/imports/temp_header.php'; ?>
 
         <div id="availability">
             <div class="container">
-                <div style="margin-top: 50px;">
+                <div style="margin-top: 140px;">
                     <div class="row bs-wizard" style="border-bottom:0;">
                         <div class="col-xs-3 bs-wizard-step complete">
                             <div class="text-center bs-wizard-stepnum">Step 1</div>
@@ -99,12 +159,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <form id="checkinform" style="margin-top: 10px;" method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
                             <div class="form-group" >
                                 <label style="font-family: sans-serif; color: white; font-size: 14px;">Arrival</label>
-                                <input type="text"  id="checkin" class="form-control" placeholder="Check in" name="arrive" class="required" />
+                                <input type="text"  id="checkin" onchange="validate(this);" class="form-control" placeholder="Check in" name="arrive" class="required" />
                             </div>
 
                             <div class="form-group">
                                 <label style="font-family: sans-serif; color: white; font-size: 14px;">Departure</label>
-                                <input type="text" id="checkout"  class="form-control" placeholder="Check out" name="depart" class="required" />
+                                <input type="text" id="checkout" onchange="validate(this);" class="form-control" placeholder="Check out" name="depart" class="required" />
                             </div>
 
                             <div class="form-group">
@@ -141,6 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <button type="button" class="btn btn-warning" onclick="AddExeData();">Modify</button>
+                                <button type="button" class="btn btn-warning" data-toggle='modal' data-target='#login_form'>Login</button>
                             </div>
                         </form>
                         <div class="divider" style="margin-top: 20px;">
@@ -174,11 +235,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 echo "<img class='media-object' src='" . base_url() . $room->rm_cover_img . "' alt='Media Object'>";
                                 echo "</a>";
                                 echo "<div class='media-body'>";
-                                echo "<h4 class='media-heading'><span style='font-size: 24px;'>" . $room->rm_name . "</span></h4>";
+                                echo "<h4 class='media-heading'><span style='font-size: 24px; color: black;'>" . $room->rm_name . "</span></h4>";
                                 echo "<span style='font-size: 28px;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $room->rm_amount . "/<span style='font-size: 20px;'>Night</span></span><br>";
                                 echo $room->rm_detail;
-                                echo "<br><button type='button' class='btn btn-success'><i class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;";
-                                echo "<button type='button' class='btn btn-success'><i class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button>";
+                                echo "<br><a href='" . base_url() . "index.php/userregistation'><button type='button' class='btn btn-success'><i class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button></a>&nbsp;&nbsp;";
+                                echo "<button type='button' class='btn btn-success view' id='" . $room->rm_id . "' data-toggle='modal' data-target='#sigiriya'><i class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button>";
                                 echo "</div>";
                                 echo "</div><br>";
                             }
@@ -196,39 +257,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel"><center>Beautiful Sigiriya</center></h4>                   
+                        <h4 class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="color: #000000;"></span></center></h4>                   
                     </div>
                     <div class="modal-body">
                         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 500px; margin: 0 auto">
                             <!-- Indicators -->
-                            <ol class="carousel-indicators hidden-xs">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target = "#myCarousel" data-slide-to = "1" class = ""></li>
-                                <li data-target = "#myCarousel" data-slide-to = "2" class = ""></li>
-                                <li data-target = "#myCarousel" data-slide-to = "3" class = ""></li>
-                                <li data-target = "#myCarousel" data-slide-to = "4" class = ""></li>
-                                <li data-target = "#myCarousel" data-slide-to = "5" class = ""></li>
-                                <li data-target = "#myCarousel" data-slide-to = "6" class = ""></li>
-                                <li data-target = "#myCarousel" data-slide-to = "7" class = ""></li>
-                            </ol>
-                            <div class = "carousel-inner">
-                                <!--Item 1 -->
-                                <?php
-                                if (!empty($images)) {
-                                    foreach ($images as $room_imgs) {
-                                        echo "<div class = '" . $room_imgs->class . "' > ";
-                                        echo "<img src = '" . base_url() . $room_imgs->ril_img_url . "' class = 'properties' alt = 'properties' style='width: 600px; height: 376px; top: 22px; left: 15px;'/>";
-                                        echo "</div>";
-                                    }
-                                }
-                                ?>
 
-                            </div>
                             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" ></span></a>
                             <a class = "right carousel-control" href = "#myCarousel" data-slide = "next"><span class = "glyphicon glyphicon-chevron-right"></span></a>
                         </div><br><br>
-                        <p>Sigiriya the ruins of an ancient palace complex built during the reign of King Kasyapa (477 – 495 AD). The most distinctive landmark within the ancient palace grounds is the amazing Sigiriya Rock, also called Lion Rock, a hardened magma plug from a long extinct and eroded volcano. It looms out over the plains.<br>
-                            Standing tall over the surrounding plains, Sigiriya Rock offers splended views for miles in all directions. Sigiriya Rock lies on a steep mound that rises over the otherwise flat plains, and is itself a further 370 meters tall. The rock is sheer on all sides, and in many parts even overhangs the base. From the top, it is elliptical in plan. Its top is flat, and slopes gradually along the elliptical axis.</p>
+                        <p id="details"></p>
                     </div><br>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default"  data-dismiss="modal">Close</button>
@@ -237,87 +275,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
-        <div class="container" style=" border: 1px #e4e4e4 solid; border-radius: 10px;">
-            <div class="row">
-                <form class="form-inline col-lg-5" role="form" style="font-family: sans-serif; margin: 20px;">
-                    <hr style="margin: 10px;">
-                    <div class="well well-sm"><strong>Registered User Information Retrieval</strong></div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input style="margin-left: 32px;" type="email" class="form-control" id="email" placeholder="Enter email">
+        <div id="wrongDate" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <center><h4 class="modal-title" style="color: #000;">WARNING &nbsp;<i class="fa fa-warning"></i></h4></center>
                     </div>
-                    <div class="form-group" style="margin-top: 5px;">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                    </div><br><br>
-                    <button type="submit" class="btn btn-default">Submit</button>&nbsp;&nbsp;
-                    <div class="checkbox">
-                        <label><input type="checkbox"> Remember me</label>
+                    <div class="modal-body">
+                        <center><p>Please put a correct date!</p></center>                               
                     </div>
-                </form>
-
-                <form role="form" style="font-family: sans-serif; margin: 20px;" >
-                    <div class="col-lg-6">
-                        <hr style="margin: 10px;">
-                        <div class="well well-sm"><strong>User Registration</strong></div>
-                        <div class="navbar navbar-inverse navbar-static-top" style="height: 10px;">
-                            <p class="navbar-brand" style="color: white"><span class="fa fa-user"></span>&nbsp;&nbsp;Personal Information</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputEmail">Title</label>
-                            <div class="input-group">
-                                <select id="suffix_type" class="form-control" name="suffix_type">
-                                    <option>Not Available</option>
-                                    <option>Sr</option>
-                                    <option>Jr</option>
-                                    <option>II</option>
-                                    <option>III</option>                                            
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputMessage">First Name</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputMessage">Last Name</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputMessage">Email Address</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputMessage">Confirm Email</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="f_name" name="f_name" placeholder="Enter First Name" required>
-                            </div>
-                        </div>
-                        <div class="navbar navbar-inverse navbar-static-top" style="height: 10px;">
-                            <p class="navbar-brand" style="color: white"><span class="fa fa-dollar"></span>&nbsp;&nbsp;Payment Information</p>
-                        </div>
-                        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-                    </div>
-                </form>
-                <div class="col-lg-5 col-md-push-1" style="font-family: sans-serif;">
-                    <div class="col-md-12">
-                        <div class="alert alert-success">
-                            <strong><span class="glyphicon glyphicon-ok"></span> Success! Message sent.</strong>
-                        </div>
-                        <div class="alert alert-danger">
-                            <span class="glyphicon glyphicon-remove"></span><strong> Error! Please check all page inputs.</strong>
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        
         <?php include_once './resoures/imports/temp_footer.php'; ?>
 
         <!-- jquery-->

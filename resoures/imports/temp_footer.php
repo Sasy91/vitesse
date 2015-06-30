@@ -1,4 +1,27 @@
 <footer>
+    <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="color: #000000; font-family: sans-serif; font-weight: bold">CAMP POE Registered Users Login</span></center></h4>                   
+                </div>
+                <div class="col-md-12" style="margin-top: 20px;">
+                    <div class="form-group">
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                    </div><br><center><span id="login_result" style="color: black;"></span></center><br><br>
+                    <div class="form-group"><center>
+                            <button class="btn btn-primary" onclick="LoginUser();">Sign In</button>
+                        </center></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="footer">
         <div class="container">
             <div class="row">

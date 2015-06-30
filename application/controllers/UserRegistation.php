@@ -49,25 +49,28 @@ class UserRegistation extends CI_Controller {
     }
 
     function check_member_login() {
-        $email = $this->input->post("email");
+        $email = $this->input->post("username");
         $password = $this->input->post("password");
         if ((isset($email)) && (isset($password))) {
             $result = $this->registrationmodel->check_login($email, $password);
             if ($result) {
-                $msg["wrong_login"] = "Registration Complete. We sent an email to you please follow the instuctions in the email!";
-                $this->load->view('user_registation', $msg);
+                $output = "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['loginData']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
             } else {
-                $msg["wrong_login"] = "Invalid Login!";
-                $this->load->view('user_registation', $msg);
+                $output = "Invalid";
             }
         } else {
             $this->load->view('user_registation');
         }
+        echo $output;
     }
 
     public function logoutuser() {
-        $this->session->sess_destroy();
-        $this->load->view('index');
+        if (!empty($this->input->post("action")) && ($this->input->post("action") == "logout")) {
+            $this->session->sess_destroy();
+            echo "<a href='#' data-toggle='modal' data-target='#login_form' style='color: white;'>Login</a>";
+        } else {
+            echo "0";
+        }
     }
 
     private function currentDateTime() {
