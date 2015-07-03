@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2015 at 01:10 PM
+-- Generation Time: Jul 03, 2015 at 06:20 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `booking` (
 --
 
 INSERT INTO `booking` (`b_id`, `customer_id`, `booked_date`, `no_of_guests`, `childrens`, `adult`, `payment_type`, `paid_amount`, `audit`) VALUES
-(1, 0, '2015-06-21 00:00:00', '1', 2, 2, '', 25000.00, '');
+(1, 0, '2015-06-21 00:00:00', '4', 2, 2, 'paypal', 25000.00, '');
 
 -- --------------------------------------------------------
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `home_sider` (
   `uploaded_by` varchar(100) NOT NULL,
   `date` timestamp NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `home_sider`
@@ -201,6 +201,47 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `orderd_date` datetime NOT NULL,
   `audit` varchar(50) NOT NULL,
   `payment_type` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packagers`
+--
+
+CREATE TABLE IF NOT EXISTS `packagers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) NOT NULL,
+  `short_detail` varchar(500) NOT NULL,
+  `discription` varchar(1000) NOT NULL,
+  `instructor` varchar(200) NOT NULL,
+  `availability` varchar(10) NOT NULL,
+  `amount` double(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `packagers`
+--
+
+INSERT INTO `packagers` (`id`, `name`, `short_detail`, `discription`, `instructor`, `availability`, `amount`) VALUES
+(1, 'Surf Level One (Beginners)', '10 hours of surf lessons, free hire of equipment, 2 theory lessons and video analysis.', '5 x 2 hour beginner lessons with an internationally qualified surf instructor and beach lifeguard, free hire of surf equipment, 2 x theory lessons, video analysis.\r\nThis package is perfect if you are completely new to surfing. Over the course of the week, our experienced instructors will break down the basis of surfing to ensure you learn how to stand in a comfortable and safe environment. You will learn how the surfboard works, vital ocean and surfing safety, how to catch waves and tailored techniques to get to your feet. At Camp Poe we believe everyone is capable of catching and surfing on a wave, and we will be there to coach and encourage you all the way!', 'Till Rohrmann', '0', 150.00),
+(2, 'Surf Level Two (Advance)', '10 hours of surf lessons, free hire of equipment, 2 theory lessons and video analysis. ', '5 x 2 hour improver lessons with an internationally qualified surf instructor and beach lifeguard, free hire of surf equipment, 2 x theory lessons, video analysis.\r\nIf you have already had several beginner lessons, and feel comfortable popping up and catching green, or unbroken waves, then this package is a great opportunity for you to take your surfing to the next level. You will have access to Camp Poe’s quiver of surf boards and a two hour session each day with a qualified surf coach who will be offering you invaluable tips as well as taking photos and video footage of your progress. ', 'Till Rohrmann', '0', 150.00),
+(3, 'Surf and Yoga Week', '10 hours of surf lessons, free hire of equipment, 2 theory lessons and video analysis. 6 Yoga sessions.', 'N/A', 'N/A', '0', 190.00),
+(4, 'Yoga Week', '6 yoga sessions.', 'N/A', 'N/A', '0', 50.00);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `package_linked`
+--
+
+CREATE TABLE IF NOT EXISTS `package_linked` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `booking_id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `package_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -364,4 +405,4 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `user_id`, `password`, `role`, `last_login`, `registerd_date`, `audit`, `name`, `img_url`) VALUES
-(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-06-28 03:32:41', '2015-06-12 00:00:00', '::1', 'Mark William', '');
+(1, 'sameera@vitessesoft.com', '56fafa8964024efa410773781a5f9e93', 'admin', '2015-07-01 06:08:58', '2015-06-12 00:00:00', '::1', 'Mark William', '');

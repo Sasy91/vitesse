@@ -37,8 +37,8 @@ class loginmodel extends CI_Model {
         $this->db->update('users', $data);
     }
 
-    function currentDateTime() {
-        date_default_timezone_set("America/Los_Angeles");
+    private function currentDateTime() {
+        date_default_timezone_set("Asia/Colombo");
         $date = date_create();
         $current_time = date_format($date, 'Y-m-d H:i:s');
         return $current_time;
