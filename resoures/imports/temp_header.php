@@ -61,7 +61,7 @@
 
             <!-- logo -->
             <span class="navbar-brand">
-                <a href="#body">
+                <a href="<?php echo base_url(); ?>">
                     <img src="<?php echo base_url(); ?>resoures/img/logo_head.png" alt="camp poe logo">
                 </a>
             </span>
@@ -72,7 +72,7 @@
         <!-- main nav -->
         <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url(); ?>">HOME</a></li>
+<!--                <li><a href="<?php echo base_url(); ?>">HOME</a></li>-->
                 <li class="dropdown">
                     <a href="<?php echo base_url(); ?>index.php/room/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -93,7 +93,7 @@
                 <li><a href="#">PHOTOS</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/contact">CONTACT</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/room/availabe_rooms">BOOK NOW</a></li>
-                <li style="border: 2px solid white; margin-top: 25px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php
+                <li style="border: 2px solid white; margin-top: 15px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php
                         if (!empty($this->session->userdata['loginData']['username'])) {
                             echo "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['loginData']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
                         } else {

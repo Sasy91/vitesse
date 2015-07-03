@@ -62,14 +62,14 @@
                 </div> 
 
                 <div class="addcollect">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-7">
+                            <div class="col-sm-6">
 
                             </div>
-                            <div class="col-sm-5">
+                            <div class="col-sm-6">
 <!--                                <h3 style="display:block"><p>Cart</p><span>5</span> <p>Tolat</p></h3>-->
-                                <h3 class="cart-total"><i class = "fa fa-shopping-cart fa-lg"> </i>  Cart<span> 2</span>&nbsp&nbsp Totala<span> $4000</span>&nbsp <button type="submit" class="btn btn-default">Checkout&nbsp;<i class="fa fa-paypal"></i></button>&nbsp <button type="submit" class="btn btn-default">View Cart</button></h3>
+                                <h3 class="cart-total"><i class = "fa fa-shopping-cart fa-lg"> </i>  Cart<span> 2</span>&nbsp Totala<span> $4000</span>&nbsp <button type="submit" class="btn btn-default">&nbsp;<i class="fa fa-paypal"></i></button>&nbsp <button type="submit" class="btn btn-default">&nbsp <i class="fa fa-list"></i></button></h3>
                             </div>
                         </div>
                     </div>

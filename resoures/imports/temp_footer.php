@@ -4,9 +4,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="color: #000000; font-family: sans-serif; font-weight: bold">CAMP POE Registered Users Login</span></center></h4>                   
+                    <p class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="">CAMP POE Registered Users Login</span></center></p>                   
                 </div>
-                <div class="col-md-12" style="margin-top: 20px;">
+                <div class="col-md-12" style="margin-top: 50px;">
                     <div class="form-group">
                         <input type="text" name="username" id="username" class="form-control" placeholder="Username">
                     </div>
@@ -27,10 +27,10 @@
             <div class="row">
                 <div class="footer-content">
                     <div class="col-sm-4">
-                        <h4>Contact Number</h4>
-                        <h5>+94 77 64 68 841</h5>
-                        <h5>+94 77 64 68 841</h5>
-                        <h5>+94 77 64 68 841</h5>
+                        <p>Contact Number</p>
+                        <p>+94 77 64 68 841</p>
+                        <p>+94 77 64 68 841</p>
+                        <p>+94 77 64 68 841</p>
                     </div>
                     <div class="col-sm-4">
                         <section class="icon">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-sm-4">
                         <form class="form-inline">
-                            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illo, soluta, pariatur id blanditiis voluptates architecto, consectetur sapiente amet deserunt ratione! Esse dolore non aliquam, veritatis dolorem. Debitis iste, dolorem.</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illo, soluta, pariatur id blanditiis voluptates architecto, consectetur sapiente amet deserunt ratione! Esse dolore non aliquam, veritatis dolorem. Debitis iste, dolorem.</p>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Your Email">
                             </div>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <section id="sign">
-            <h4>Design And Developed by <i class="fa fa-heart" style="color: red;"></i> with <a href="http://vitessesoft.com/">Vitessesoft</a> Team</h4>
+            <p>Design And Developed by <i class="fa fa-heart" style="color: red;"></i> with <a href="http://vitessesoft.com/">Vitessesoft</a> Team</p>
         </section>
     </section>
 

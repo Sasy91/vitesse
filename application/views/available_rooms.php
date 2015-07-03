@@ -174,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h2>Find Available Rooms</h2>
                         <div class="row">
                             <?php
-                            if (!empty($check_in && $check_out)) {
+                            if (!empty($check_in)) {
                                 ?>
                                 <div class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
                                     <form id="checkinform" style="margin-top: 10px;" method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
@@ -268,7 +268,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h2>Available Packagers </h2>
                         <div class="row">
                             <?php
-                            if (!empty($check_in && $check_out)) {
+                            if (!empty($check_in)) {
                                 ?>
                                 <div class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
                                     <form id="checkinform" style="margin-top: 10px;" method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">

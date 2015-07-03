@@ -42,15 +42,16 @@
 
                 <section id="main_info"> 
                     <div class="container">
+                       <h1>Camp Poe</h1>
                         <div class="row">
                             <div id="intro">
                                 <!--                            <div class="col-sm-6">-->
                                 <div class="discrip">
-                                    <h3>Inspired by the arts of surfing and yoga,
+                                    <h3 class="wow fadeIn" data-wow-duration="800ms" data-wow-delay="700ms">Inspired by the arts of surfing and yoga,
                                         our unique Sri Lankan retreat aims to capture
-                                        this poetry of movement in a single word <span>"Poe"</span></h3>
+                                        this poetry of movement in a single word <span class="wow fadeIn" data-wow-duration="800ms" data-wow-delay="800ms">"Poe"</span></h3>
 
-                                    <p>Located on the Southern Coast of the island with consistent swells running 
+                                    <p class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="700ms">Located on the Southern Coast of the island with consistent swells running 
                                         throughout the year, Poe resides in the sleepy village of Madiha, 
                                         a surfing haven with a perfect left and a long mellow right hander 
                                         peeling on your doorstep. As well as this, there are several long 
@@ -59,7 +60,7 @@
                                         Lefts, Rams Right and Sticks, giving you options to surf 
                                         a different break each day. </p>
 
-                                    <p>Located on the Southern Coast of the island with consistent swells running 
+                                    <p class="wow fadeInDown" data-wow-duration="800ms" data-wow-delay="700ms">Located on the Southern Coast of the island with consistent swells running 
                                         throughout the year, Poe resides in the sleepy village of Madiha, 
                                         a surfing haven with a perfect left and a long mellow right hander 
                                         peeling on your doorstep. As well as this, there are several long 
@@ -68,7 +69,7 @@
                                         Lefts, Rams Right and Sticks, giving you options to surf 
                                         a different break each day. </p>
 
-                                    <h2>so surf and live life free, 
+                                    <h2 class="wow fadeIn" data-wow-duration="1500ms" data-wow-delay="1o00ms">so surf and live life free, 
                                         smile and be happy, 
                                         let nature be, 
                                         <span>poe</span> is the key...............
@@ -90,7 +91,7 @@
                 <section id="ground">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6 ">
+                            <div class="col-sm-6  wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-info">
 
                                     <h3>GROUNDS</h3>
@@ -98,15 +99,17 @@
                                         Each of the five suites, six poolside bungalows,
                                         and three studios embodies an equal love for the
                                         elegance of old world luxury and the irreverence
-                                        of our muses – The Stones, Bill Burroughs, Anne Sexton,
+                                        of our muses – The Stones, Bill Burroughsp <span class="hidden-xs">
+                                            , Anne Sexton,
                                         Hunter S. Thompson among them. The secluded property 
                                         and lush grounds are open only to hotel guests, thereby
                                         offering a unique sense of privacy situated steps
                                         away from the heart of South Austin.
+                                        </span>
                                     </p>
                                 </div><!--ground-info-->
                             </div>
-                            <div class="col-sm-6 hidden-xs">
+                            <div class="col-sm-6 hidden-xs wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-img ">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-ground.jpg" alt="">
                                 </div>
@@ -121,13 +124,13 @@
                 <section id="hotel-map">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 wow fadeInLeft" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-logo">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-logo.jpg" alt="">
 
                                 </div>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-8 wow fadeInRight" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-map">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-map.jpg" alt="">
                                 </div>
@@ -140,12 +143,12 @@
                 <section id="lobby">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="lobby-img ">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-lobby.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-lobby">
                                     <h3>LOBBY</h3>
                                     <p>
@@ -161,6 +164,7 @@
                                         store, like our limited edition Roux St. James 
                                         fragrances made with flowers culled from the 
                                         hotel garden. 
+                                        
                                     </p>
                                 </div><!--ground-info-->
 
@@ -172,12 +176,12 @@
                 <section id="lobby-2">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-8">
+                            <div class="col-sm-8 wow fadeInRight" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-logo">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-lobby-2.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 wow fadeInLeft" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-map">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-lobby-3.jpg" alt="">
                                 </div>
@@ -189,7 +193,7 @@
                 <div id="pool-and-arbor">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="fool-info">
                                     <h3>POOL & ARBOR</h3>
                                     <p>
@@ -202,7 +206,7 @@
                                 </div><!--ground-info-->
 
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="fool-img ">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-map-pool.jpg" alt="">
                                 </div>
@@ -215,12 +219,12 @@
                 <section id="pool-and-arbor-two">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 wow fadeInRight" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-logo">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-map-pool-two.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-8 wow fadeInLeft" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="ground-map">
                                     <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/hotel/camp-poe-map-pool-three.jpg" alt="">
                                 </div>

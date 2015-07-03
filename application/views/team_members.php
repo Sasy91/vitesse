@@ -164,6 +164,126 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </article>
                             </div>
                             <!-- end team member -->
+                            
+
+                            <!-- team member -->
+                            
+                             <!-- team member -->
+                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms">
+                                <article class="team-mate" style="border-left-color: white;">
+                                    <div class="member-photo">
+                                        <!-- member photo -->
+                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/till_picture.jpg" alt="">
+                                        <!-- /member photo -->
+
+                                        <!-- member social profile -->
+                                        <div class="mask">
+                                            <ul class="clearfix">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- /member social profile -->
+                                    </div>
+
+                                    <!-- member name & designation -->
+                                    <div class="member-title"><center>
+                                            <h3>Til</h3>
+                                            <span>Trainer</span></center>
+                                    </div>
+                                    <!-- /member name & designation -->
+
+                                    <!-- about member -->
+                                    <div class="member-info">
+                                        <p style="color: white;">when there was the time I didn't have facial hair I went off to live in Brazil for a year to study and
+                                            discover the new. As a young fella I loved to be away from home and be my own man; even my
+                                            dad payed.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_til'>Read More</a></p>
+                                    </div>
+                                    <!-- /about member -->
+
+                                </article>
+                            </div>
+                            <!-- end team member -->
+
+                            <!-- team member -->
+                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+                                <article class="team-mate" style="border-left-color: white;">
+                                    <div class="member-photo">
+                                        <!-- member photo -->
+                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_picture.jpg" alt="">
+                                        <!-- /member photo -->
+
+                                        <!-- member social profile -->
+                                        <div class="mask">
+                                            <ul class="clearfix">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- /member social profile -->
+                                    </div>
+
+                                    <!-- member name & designation -->
+                                    <div class="member-title"><center>
+                                            <h3>Ben</h3>
+                                            <span>Trainer</span></center>
+                                    </div>
+                                    <!-- /member name & designation -->
+
+                                    <!-- about member -->
+                                    <div class="member-info">
+                                        <p style="color: white;">Being from the West Midlands, I got into surfing from studying 
+                                            history and tourism at Exeter University in the UK. My passion for 
+                                            surfing led me to running the University Surf Club in my final year,
+                                            where a few friends and.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
+                                    </div>
+                                    <!-- /about member -->
+                                </article>
+                            </div>
+                            <!-- end team member -->
+
+                            <!-- team member -->
+                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+                                <article class="team-mate" style="border-left-color: white;">
+                                    <div class="member-photo">
+                                        <!-- member photo -->
+                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_new.jpg" alt="">
+                                        <!-- /member photo -->
+
+                                        <!-- member social profile -->
+                                        <div class="mask">
+                                            <ul class="clearfix">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- /member social profile -->
+                                    </div>
+
+                                    <!-- member name & designation -->
+                                    <div class="member-title">
+                                        <h3>N/A</h3>
+                                        <span>N/A</span>
+                                    </div>
+                                    <!-- /member name & designation -->
+
+                                    <!-- about member -->
+                                    <div class="member-info">
+                                        <p style="color: white;">I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
+                                            the locals being some of the most welcoming people you will meet.We set up Camp Poe with a
+                                        view to share the wonders..<a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
+                                    </div>
+                                    <!-- /about member -->
+                                </article>
+                            </div>
+                            <!-- end team member -->
+                            
 
                             <!-- team member -->
 
