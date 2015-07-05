@@ -1328,21 +1328,21 @@ body {
 }
 #footer {
   margin-top: 40px;
-  background: url(../img/camp_poe_footer_2.png) no-repeat center center;
+  background: url(../img/camp_poe_footer_2.jpg) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
   height: 100%;
 }
-#footer h3 {
-  font-size: 1.3em;
+#footer p {
+  font-size: .9em;
 }
 #footer .footer-content {
   text-align: center;
   color: #fff;
   padding-top: 5% ;
-  padding-bottom: 18% ;
+  padding-bottom: 15% ;
   /* Social Icons */
 }
 #footer .footer-content .hide-text {

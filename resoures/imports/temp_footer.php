@@ -39,7 +39,7 @@
                                 <li><a class="ease-all" href="#"><i class="fa fa-twitter"></i><span class="hide-text">Twitter</span></a></li>
                                 <li><a class="ease-all" href="#"><i class="fa fa-google-plus"></i><span class="hide-text">Google Plus</span></a></li>
                                 <li><a class="ease-all" href="#"><i class="fa fa-youtube-play"></i><span class="hide-text">Google Plus</span></a></li>
-                                <li><a class="ease-all" href="#"><i class="fa fa-linkedin"></i><span class="hide-text">LinkdIn</span></a></li>
+                    
 
                             </ul>
                         </section>
