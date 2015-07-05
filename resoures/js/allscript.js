@@ -231,28 +231,28 @@ jQuery(function ($) {
 	/*	data picker home page
 	/* =========================================================================  */
     //jQueryUI - Datepicker
-    if (jQuery().datepicker) {
-        jQuery('#checkin').datepicker({
-            showAnim: "drop",
-            dateFormat: "dd/mm/yy",
-            minDate: "-0D",
-        });
-
-        jQuery('#checkout').datepicker({
-            showAnim: "drop",
-            dateFormat: "dd/mm/yy",
-            minDate: "-0D",
-            beforeShow: function () {
-                var a = jQuery("#checkin").datepicker('getDate');
-                if (a) return {
-                    minDate: a
-                }
-            }
-        });
-        jQuery('#checkin, #checkout').on('focus', function () {
-            jQuery(this).blur();
-        }); // Remove virtual keyboard on touch devices
-    }
+//    if (jQuery().datepicker) {
+//        jQuery('#checkin').datepicker({
+//            showAnim: "drop",
+//            dateFormat: "dd/mm/yy",
+//            minDate: "-0D",
+//        });
+//
+//        jQuery('#checkout').datepicker({
+//            showAnim: "drop",
+//            dateFormat: "dd/mm/yy",
+//            minDate: "-0D",
+//            beforeShow: function () {
+//                var a = jQuery("#checkin").datepicker('getDate');
+//                if (a) return {
+//                    minDate: a
+//                }
+//            }
+//        });
+//        jQuery('#checkin, #checkout').on('focus', function () {
+//            jQuery(this).blur();
+//        }); // Remove virtual keyboard on touch devices
+//    }
 
 /* ========================================================================= */
 /*	data picker home page

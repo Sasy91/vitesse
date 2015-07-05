@@ -68,10 +68,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     if (check_in > check_out) {
                         $("#wrongDate").modal('show');
                         isField.value = "";
-                    } else {
-                        AddExeData();
                     }
                 }
+            }
+            function book_another_room() {
+                resetActive(event, 60, 'step-1');
+                $("#div1").addClass("activestep");
             }
             function AddExeData() {
                 $("#hotel_details").hide();
@@ -290,9 +292,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="row">
                             <?php
                             if (!empty($check_in && $check_out)) {
+                                echo $check_out;
+                                echo $check_in;
                                 ?>
                                 <div class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
-                                    <form id="checkinform" style="margin-top: 10px;" method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
+                                    <form id="checkinform" style="margin-top: 10px;" method="POST" action="">
                                         <div class="form-group" >
                                             <label style="font-family: sans-serif; color: white; font-size: 14px;">Arrival</label>
                                             <input type="hidden" id="session" value="<?php echo $this->session->userdata('uniqueId'); ?>">
@@ -576,11 +580,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="panel-heading">Billing Details</div>
                                             <div class="panel-body">
                                                 <strong><?php
-                        if (!empty($this->session->userdata['registerd_users_data']['username'])) {
-                        echo $this->session->userdata['registerd_users_data']['title']." ".$this->session->userdata['registerd_users_data']['f_name']." ".$this->session->userdata['registerd_users_data']['l_name'];} ?></strong><br>
+                                                    if (!empty($this->session->userdata['registerd_users_data']['username'])) {
+                                                        echo $this->session->userdata['registerd_users_data']['title'] . " " . $this->session->userdata['registerd_users_data']['f_name'] . " " . $this->session->userdata['registerd_users_data']['l_name'];
+                                                    }
+                                                    ?></strong><br>
                                                 <strong><?php
-                        if (!empty($this->session->userdata['registerd_users_data']['username'])) {
-                        echo $this->session->userdata['registerd_users_data']['country'];  }?></strong><br>
+                                                    if (!empty($this->session->userdata['registerd_users_data']['username'])) {
+                                                        echo $this->session->userdata['registerd_users_data']['country'];
+                                                    }
+                                                    ?></strong><br>
                                             </div>
                                         </div>
                                     </div>
@@ -841,7 +849,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
 
-        <?php include_once './resoures/imports/temp_footer.php'; ?>
+<?php include_once './resoures/imports/temp_footer.php'; ?>
 
         <!-- jquery-->
         <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>

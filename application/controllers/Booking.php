@@ -98,7 +98,7 @@ class Booking extends CI_Controller {
             $output .= "<br><div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div></form>";
             $i++;
         }
-        $output .="<div class='form-group'><button type='button' class='btn btn-warning' onclick='javascript: resetActive(event, 20, 'step-1'); $('#div1').addClass('activestep');'>Book Another Room</button></div>";
+        $output .="<div class='form-group'><button type='button' class='btn btn-warning' onclick='book_another_room();'>Book Another Room</button></div>";
         return $output;
     }
 
