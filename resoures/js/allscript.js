@@ -28,6 +28,7 @@ jQuery(function ($) {
      var wheight = $(window).height(); //get the height of the window
       
         $('.fullheight').css('height', wheight); //set to window tallness  
+        $('.fullheight').css('width', wheight);
          //adjust height of .fullheight elements on window resize
     
         //replace IMG inside carousels with a background image
@@ -63,9 +64,16 @@ jQuery(function ($) {
    
     $(window).resize(function() {
      wheight = $(window).height(); //get the height of the window
-     $('.fullheight').css('height', wheight); //set to window tallness  
+     $('.fullheight').css('height', wheight); //set to window tallness
+        
+  });
+       $(window).resize(function() {
+     wheight = $(window).width(); //get the height of the window
+     $('.fullheight').css('width', wheight); //set to window tallness
+        
   });
 });
+
 
   
 /* ========================================================================= */
