@@ -74,7 +74,7 @@
             <ul class="nav navbar-nav navbar-right">
 <!--                <li><a href="<?php echo base_url(); ?>">HOME</a></li>-->
                 <li class="dropdown">
-                    <a href="<?php echo base_url(); ?>index.php/room/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
+                    <a href="<?php echo base_url(); ?>index.php/room/" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?php echo base_url(); ?>index.php/room/room_id/1">Suite 1</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/room/room_id/2">Suite 2</a></li>
@@ -90,7 +90,7 @@
                 <li><a href="<?php echo base_url(); ?>index.php/camppoe">THE CAMP</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/teampoe">TEAM POE</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/shop">SHOP</a></li>
-                <li><a href="#">PHOTOS</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Gallery">PHOTOS</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/contact">CONTACT</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/room/availabe_rooms">BOOK NOW</a></li>
                 <li style="border: 2px solid white; margin-top: 15px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php

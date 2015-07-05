@@ -140,8 +140,8 @@
                                                             <h3><?php echo $item_details->name; ?></h3>
                                                             <p>LKR <?php echo $item_details->price; ?></p>
                                                             <p><a href="<?php echo base_url() . "index.php/shop/item_details/" . $item_details->id; ?>"><button type = "button" class = "btn btn-labeled btn-primary"><span class = "btn-label"><i class = "fa fa-eye"></i></span>View</button></a>
-                                                                <button type = "button" class = "btn btn-labeled btn-primary"><span class = "btn-label"><i class = "fa fa-shopping-cart"></i></span>Add to Cart</button>
-                                                            <center><input class="qty" type="text" placeholder="Qty" id="<?php echo "item" . $item_details->id ?>"></center></p>
+                                                               <!--  <button type = "button" class = "btn btn-labeled btn-primary"><span class = "btn-label"><i class = "fa fa-shopping-cart"></i></span>Add to Cart</button>>--->
+                                                           <!-- <center><input class="qty" type="text" placeholder="Qty" id="<?php echo "item" . $item_details->id ?>"></center></p>--->
                                                         </div>
                                                     </div>
                                                 </div>

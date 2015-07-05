@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div id="room_one_first">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="first-img">
                                     <?php
                                     if (!empty($images)) {
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     ?>
                                 </div>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="second-img">
                                     <?php
                                     if (!empty($images)) {
@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     ?>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                 <div class="booking">
 
                                     <div class="room-info">
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <hr style="margin: 50px;">
                                         <div class="row">
                                             <form action="" class="form_start">
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control" id="datepicker_1" style="color:white;" placeholder="CHECK IN">
                                                     </div>
@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <option value="3">10 adults</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control" id="datepicker_2" style="color:white;" placeholder="CHECK IN">
                                                     </div>

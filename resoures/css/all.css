@@ -12,27 +12,36 @@ h5,
 h6 {
   font-family: Sniglet ;
   letter-spacing: 2px;
-  font-size: 3em;
+  font-size: 2.6em;
   color: #fff79d;
-  line-height: 160%;
+  line-height: 140%;
 }
 h2 {
   font-size: 3em;
   letter-spacing: 3px;
   padding-bottom: 15px;
   color: #fff79d;
-  line-height: 130%;
+  line-height: 120%;
 }
 h1 {
   font-size: 4em;
   letter-spacing: 3px;
   color: #fff79d;
-  line-height: 130%;
+  line-height: 120%;
 }
 p {
   font-family: Amaranth;
   text-transform: lowercase;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #efeee3;
+  text-align: center;
+  line-height: 130%;
+}
+span {
+  font-family: Amaranth;
+  text-transform: lowercase;
+  font-size: 1.2em;
   letter-spacing: 2px;
   color: #efeee3;
   text-align: center;
@@ -194,6 +203,258 @@ body {
 .navigation .navbar-nav > li > a:hover {
   background-color: #087f9f;
 }
+#home_poe {
+  /* Vertical */
+  /* Price */
+  /* Horizontal */
+  /* Icons */
+  /* Button */
+  /* Guests */
+  /* Datepicker*/
+  /* Error Message */
+}
+#home_poe .carousel-example-generic {
+  background-attachment: fixed;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+#home_poe .carousel-inner .item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+#home_poe #reservation-form {
+  background-color: transparent;
+}
+#home_poe #reservation-form select,
+#home_poe input {
+  border: 1px solid #2a7b72;
+  border-radius: 0px;
+  background-color: transparent;
+  color: #fff;
+}
+#home_poe #reservation-form select option,
+#home_poe input option {
+  background-color: #333;
+}
+#home_poe #reservation-form select i,
+#home_poe input i {
+  color: #2a7b72;
+}
+#home_poe #reservation-form button {
+  background-color: #2a7b72;
+  border: 1px solid #2a7b72;
+  border-radius: 0px;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#home_poe button:hover {
+  background-color: #19554e;
+  opacity: .5;
+}
+#home_poe button:focus {
+  background-color: #1c5a53;
+  opacity: .5;
+}
+#home_poe #reservation-form .reservation-horizontal,
+#home_poe #reservation-form .reservation-vertical,
+#home_poe #contact-form .contact-vertical {
+  padding: 20px 20px;
+  z-index: 9999;
+  background-color: transparent;
+}
+#home_poe #reservation-form .reservation-vertical h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+#home_poe #reservation-form .reservation-vertical h4 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#home_poe #reservation-form .price {
+  padding: 10px 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 18px;
+  display: block;
+  border: 1px dashed #ebebeb;
+}
+#home_poe #reservation-form .price h4 {
+  color: #333;
+  padding-right: 5px;
+}
+#home_poe #reservation-form .price span {
+  color: #979797;
+  font-weight: normal;
+  padding-left: 5px;
+  font-size: 11px;
+}
+#home_poe .form-inline .form-control {
+  width: 100%;
+  margin-top: 24px;
+}
+#home_poe .form-inline .form-control select {
+  width: 100%;
+  margin-top: 10px;
+  font-size: .5em;
+  border: 0px;
+}
+#home_poe #reservation-form .reservation-horizontal .col-sm-1,
+#home_poe #reservation-form .reservation-horizontal .col-sm-2,
+#home_poe #reservation-form .reservation-horizontal .col-sm-3 {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+#home_poe #reservation-form .form-inline select.form-control {
+  width: 100% !important;
+  padding: 0;
+}
+#home_poe #reservation-form .form-inline .form-group {
+  width: 100%;
+}
+#home_poe #reservation-form .popover-icon i {
+  color: #9f9f9f;
+  font-size: 18px;
+}
+#home_poe #reservation-form .fa.infield {
+  position: absolute;
+  float: right;
+  right: 57px;
+  margin-top: 35px;
+  font-size: 14px;
+}
+#home_poe #reservation-form .form-inline .fa.infield {
+  position: absolute;
+  float: right;
+  right: 18.84px;
+  font-size: 14px;
+  top: 0;
+  width: 15px;
+}
+#home_poe #reservation-form .col-sm-2 button {
+  margin-top: 25px;
+}
+#home_poe #reservation-form .guests-select {
+  z-index: 100;
+  cursor: pointer;
+}
+#home_poe #reservation-form .guests-select .guests {
+  margin-top: -251px;
+  width: 200px;
+  height: auto;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #ebebeb;
+  -webkit-box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.12);
+  z-index: 500;
+  background-color: #fff;
+  position: absolute;
+  padding: 20px;
+  cursor: default !important;
+  display: none;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-name: fadeIn;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+}
+#home_poe #reservation-form .form-inline .guests-select .form-group {
+  padding-bottom: 15px;
+}
+#home_poe #reservation-form .hasDatepicker {
+  cursor: pointer;
+}
+#home_poe .error_message {
+  color: #F00;
+}
+#home_poe #error {
+  display: none;
+}
+#home_poe #cnt1 {
+  background-color: #363636;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  text-align: center;
+}
+#home_poe .feature {
+  text-align: center;
+}
+#home_poe #pakages {
+  background-color: #363636;
+}
+#home_poe .img-circle {
+  border: 3px solid #2a7b72;
+}
+#home_poe .pakag {
+  background-color: #363636;
+  margin-bottom: 20px;
+  padding: 5% 0;
+}
+#home_poe .pakag h6 {
+  color: #2a7b72;
+}
+#home_poe .pakag .lower {
+  background-color: #2a7b72;
+  border: 1px solid #2a7b72;
+  border-radius: 0px;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#home_poe .pakag .lower:hover {
+  background-color: #1c5a53;
+  opacity: .5;
+}
+#home_poe .pakag .lower:focous {
+  background-color: #1c5a53;
+  opacity: .5;
+}
+#home_poe .feature > div > div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  transition: 0.2s;
+}
+#home_poe .feature > div:hover > div {
+  margin-top: -10px;
+  border: 1px solid #2a7b72;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 5px;
+  background: rgba(232, 215, 215, 0.1);
+  transition: 0.3s;
+}
+#home_poe #dalailama {
+  background: url(../img/home/dalai_lama.png) no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 70%;
+  padding: 22% 0;
+}
+.main span {
+  font-size: 1em;
+}
 .main .hotel_baner {
   background-size: cover;
   background-repeat: no-repeat;
@@ -299,7 +560,7 @@ body {
   position: absolute;
   width: 100px;
   height: 100px;
-  background: #1dc3f7;
+  background: #2a7b72;
   padding: 40px 20px 0 20px;
   font-size: 1em;
 }
@@ -312,10 +573,10 @@ body {
 .main #room-7 .info {
   display: none;
   border: 1px solid #1dc3f7;
-  margin-top: 220px;
+  margin-top: 200px;
   margin-left: 50px;
   width: 230px;
-  height: 200px;
+  height: auto;
   padding: 1% 12px;
 }
 .main #room-1 .info h5,
@@ -398,7 +659,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #363636;
-  padding: 50px 0;
+  padding: 30px 0;
   margin-bottom: 30px;
 }
 #camp_poe #intro {
@@ -407,7 +668,7 @@ body {
   padding-bottom: 50px;
 }
 #camp_poe #intro .discrip p {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 #camp_poe #intro .discrip h3 {
   margin-bottom: 30px;
@@ -618,15 +879,27 @@ body {
   width: 100%;
   height: 100%;
 }
-#team_poe #our-team {
-  padding: 70px 0;
+#team_poe #main_info {
+  background: url(../img/hotel/Untitled-2.png) no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #363636;
+  padding: 30px 0;
+  margin-bottom: 30px;
 }
-#team_poe #our-team h2 {
-  margin-bottom: 50px;
-  color: #056382;
+#team_poe #main_info h1 {
+  margin-bottom: 4%;
 }
-#team_poe #our-team h2 span {
-  text-transform: uppercase;
+#team_poe #main_info p {
+  padding: 25px;
+}
+#team_poe #team-row {
+  padding: 6% 5%;
+  text-align: center;
 }
 #team_poe .about-team {
   color: #fff;
@@ -636,8 +909,7 @@ body {
   color: #fff;
 }
 #team_poe .team-mate {
-  background-color: #177A9B;
-  border-left: 2px solid #056382;
+  background-color: #363636;
 }
 #team_poe .member-photo {
   overflow: hidden;
@@ -657,12 +929,12 @@ body {
   transform: scale(1.2);
 }
 #team_poe .member-title {
-  border-bottom: 1px solid #00C7FC;
+  border-bottom: 1px solid #2a7b72;
   padding: 10px 15px;
 }
 #team_poe .member-photo .mask {
-  border: 1px solid #00C7FC;
-  background-color: rgba(23, 122, 155, 0.51);
+  border: 1px solid #2a7b72;
+  background-color: rgba(42, 123, 114, 0.67);
   position: absolute;
   text-align: center;
   height: 100%;
@@ -721,6 +993,9 @@ body {
 #team_poe .mask ul li a:hover {
   background-color: #00C7FC;
   border: 1px solid transparent;
+}
+#team_poe #modal-dialog {
+  background-color: #363636;
 }
 #team_member .container-fluid {
   margin: 0;
@@ -981,14 +1256,31 @@ body {
   border: 1px solid #fff;
   color: #0E2E3F;
 }
-#contact_info .contact-wrap {
-  padding: 60px 0;
-  -webkit-box-shadow: 19px 16px 0px 3px #126676;
-  -moz-box-shadow: 19px 16px 0px 3px #126676;
-  box-shadow: 19px 16px 0px 3px #126676;
-  background-color: #0A769A;
+#contact_info #main_info {
+  background: url(../img/hotel/Untitled-2.png) no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #363636;
+  padding: 30px 0;
+}
+#contact_info #main_info h1 {
+  margin-bottom: 4%;
+}
+#contact_info #main_info p {
+  padding: 25px;
 }
 #contact_info #contact-page {
+  background: url(../img/hotel/contact.png) no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
   padding: 100px 0;
 }
 #contact_info #contact-page .form-on input,
@@ -998,11 +1290,13 @@ body {
   border: 1px solid #fff;
   background-color: transparent;
   font-weight: 400;
+  color: #ffffff;
 }
 #contact_info #contact-page button {
   border-radius: 0px;
   color: #fff;
   background-color: #2d2d2d;
+  border: 1px solid #fff;
 }
 #contact_info #contact-page button:hover {
   background-color: #1c1818;
@@ -1018,11 +1312,19 @@ body {
 }
 #contact_info #contact-page .form-group .form-control {
   border: 1px solid #fff;
-  color: #0E2E3F;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: Amaranth;
 }
-#contact_info #map #map-canvas {
-  height: 500px;
-  width: 100%;
+#contact_info .address {
+  text-align: center;
+  margin-top: 100px;
+}
+#contact_info #map {
+  position: relative;
+}
+#contact_info #gmap {
+  height: 450px;
 }
 #footer {
   margin-top: 40px;
@@ -1118,14 +1420,14 @@ body {
   position: relative;
   background-color: rgba(62, 202, 255, 0.4);
 }
-#sign h4 {
+#sign p {
   text-align: center;
   padding: 10px;
   margin: 0;
   letter-spacing: 1px;
   color: #fff;
 }
-#sign h4 a {
+#sign p a {
   color: #1dc3f7;
 }
 footer .modal-content {

@@ -44,41 +44,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            
             <div id="contact_info">
                 <div class="cart_baner">
-                    <img src="<?php echo base_url(); ?>/resoures/img/covers/cart_baner.png" alt="...">
+                    <img src="<?php echo base_url(); ?>/resoures/img/covers/contact.png" alt="...">
                 </div> 
-                
+                          <div id="main_info">
+                       <div class="container">
+                       <h1 class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">Contact Camp Poe</h1>
+                        <div class="row">
+                                 <div class="discrp wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                      Earum, temporibus, delectus! Quia repellendus quod impedit 
+                                      ea ex natus quidem pariatur nulla iusto! Animi ullam quasi 
+                                      esse odit asperiores tempora eligendi.</p>
+                                 </div>
+                           </div><!--row-->
+                       </div><!--container-->
+                   </div><!--main_info-->
                 
                
                 <section id="contact-page">
         <div class="container">
-            <div class="center">        
-            </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
                 <div class="form-on">
                 <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
                     <div class="col-sm-6 col-sm-offset-1">
-                        <div class="form-group">
+                        <div class="form-group wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                             <label>Name *</label>
                             <input type="text" name="name" class="form-control" required="required">
                         </div>
-                        <div class="form-group">
+                             <div class="form-group wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                             <label>Email *</label>
                             <input type="email" name="email" class="form-control" required="required">
                         </div>
-                        <div class="form-group">
+                             <div class="form-group wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                             <label>Phone</label>
                             <input type="number" class="form-control">
                         </div>
-                         <div class="form-group">
+                              <div class="form-group wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                             <label>Subject *</label>
                             <input type="text" name="subject" class="form-control" required="required">
                         </div>
-                        <div class="form-group">
+                             <div class="form-group wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                             <label>Message *</label>
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
                         </div>                        
-                        <div class="form-group">
+                             <div class="form-group wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                             <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
                         </div>
                       
@@ -86,10 +96,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     
                     </form>
                     </div>/<!--form-on-->
-                    <div class="col-sm-3 col-sm-offset-1">
+                    <div class="col-sm-4 ">
                        <ul class="row">
-                            <li class="col-sm-6">
-                                <address>
+                            <li class="col-sm-12 address">
+                                <address class="wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                     <h5>Head Office</h5>
                                     <p>1537 Flint Street <br>
                                     Tumon, MP 96911</p>
@@ -97,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     Email Address:info@domain.com</p>
                                 </address>
 
-                                <address>
+                                  <address class="wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                     <h5>Zonal Office</h5>
                                     <p>1537 Flint Street <br>
                                     Tumon, MP 96911</p>                                
@@ -117,13 +127,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!--=========================================
                       map
                 =======================================---->
-                    <section id="map">
-                        <!-- Google Map -->
-                    <div class="google-map wow fadeInDown" data-wow-duration="500ms">
-                        <div id="map-canvas"></div>
-                    </div>	
-			         <!-- /Google Map -->
-                    </section><!--map-->
+                  <div id="map" class="wow  fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
+			            <div id="gmap-wrap">
+	 			           <div id="gmap"> 				
+	 			       </div>	 			
+	    	        </div>
+		         </div><!--/#map-->
                 
                 <!--=========================================
                       end map
@@ -156,7 +165,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- jquery ui-->
             <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
             <!-- allscript-->
-		    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+		    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+            <!-- Google Map API -->
+           <script type="text/javascript" src="<?php echo base_url(); ?>/resoures/js/gmaps.js"></script>
             <!-- Google Map API -->
             <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
 
@@ -166,6 +177,85 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     offset: 120
                 });
                 wow.init();
+                
+    // Google Map Customization
+(function(){
+
+	var map;
+
+	map = new GMaps({
+		el: '#gmap',
+		lat: 43.04446,
+		lng: -76.130791,
+		scrollwheel:false,
+		zoom: 16,
+		zoomControl : true,
+		panControl : false,
+		streetViewControl : false,
+		mapTypeControl: false,
+		overviewMapControl: false,
+		clickable: false
+	});
+
+	var image = '<?php echo base_url(); ?>/resoures/img/logo_head.png';
+	map.addMarker({
+		lat: 43.04446,
+		lng: -76.130791,
+		icon: image,
+		animation: google.maps.Animation.DROP,
+		verticalAlign: 'bottom',
+		horizontalAlign: 'center',
+		backgroundColor: '#3e8bff',
+	});
+
+
+	var styles = [ 
+
+	{
+		"featureType": "road",
+		"stylers": [
+		{ "color": "#2a7b72" }
+		]
+	},{
+		"featureType": "water",
+		"stylers": [
+		{ "color": "#4d9cd6" }
+		]
+	},{
+		"featureType": "landscape",
+		"stylers": [
+		{ "color": "#6f6f6f" }
+		]
+	},{
+		"elementType": "labels.text.fill",
+		"stylers": [
+		{ "color": "#fff" }
+		]
+	},{
+		"featureType": "poi",
+		"stylers": [
+		{ "color": "#363636" }
+		]
+	},{
+		"elementType": "labels.text",
+		"stylers": [
+		{ "saturation": 1 },
+		{ "weight": 0.1 },
+		{ "color": "#000000" }
+		]
+	}
+
+	];
+
+	map.addStyle({
+		styledMapName:"Styled Map",
+		styles: styles,
+		mapTypeId: "map_style"  
+	});
+
+	map.setStyle("map_style");
+}());
+
 
             </script>
 

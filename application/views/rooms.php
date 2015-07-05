@@ -42,14 +42,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="col-sm-6" >
                                 <a href="">
                                     <div id="room-1">   
-                                        <h4>SUITE 1</h4>
+                                        <h4>SUITE&nbsp1</h4>
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 1</h5>
                                                 <span class=" wow fadeInLeft" data-wow-duration="500ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     non doloribus doloremque,<a href="">See More</a>
                                                 </span>
                                             </div> 
@@ -61,13 +61,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="">
                                     <div id="room-2">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
-                                            <h4>SUITE 2</h4> 
+                                            <h4>SUITE&nbsp2</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 2</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     non doloribus doloremque,<a href="">See More</a>
                                                 </span>
                                             </div>  
@@ -86,13 +86,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="">
                                     <div id="room-3">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
-                                            <h4>SUITE 2</h4> 
+                                            <h4>SUITE&nbsp2</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 2</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     non doloribus doloremque,<a href="">See More</a>
                                                 </span>
                                             </div>  
@@ -111,13 +111,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="">
                                     <div id="room-4">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
-                                            <h4>SUITE 4</h4> 
+                                            <h4>SUITE&nbsp4</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 4</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     ,<a href="">See More</a>
                                                 </span>
                                             </div> 
@@ -130,13 +130,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="">
                                     <div id="room-5">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
-                                            <h4>SUITE 5</h4> 
+                                            <h4>SUITE&nbsp5</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 5</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     non doloribus doloremque,<a href="">See More</a>
                                                 </span>
                                             </div>  
@@ -155,13 +155,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="">
                                     <div id="room-6">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
-                                            <h4>SUITE 6</h4> 
+                                            <h4>SUITE&nbsp6</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 6</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     non doloribus doloremque,<a href="">See More</a>
                                                 </span>
                                             </div>  
@@ -173,13 +173,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="">
                                     <div id="room-7">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
-                                            <h4>SUITE 7</h4> 
+                                            <h4>SUITE&nbsp7</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
                                                 <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 7</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
-                                                    Lorem ipsum dolor sit amet,</br>
-                                                    consectetur adipisicing elit. </br>
-                                                    Tenetur officia soluta veniam</br>
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit. 
+                                                    Tenetur officia soluta veniam
                                                     non doloribus doloremque,<a href="">See More</a>
                                                 </span>
                                             </div>  

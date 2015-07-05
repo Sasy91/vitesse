@@ -8,4 +8,6 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>resoures/css/media-queries.css">		
 <link rel="stylesheet" href="<?php echo base_url(); ?>resoures/css/all.css">
 <script src="<?php echo base_url(); ?>resoures/js/modernizr-2.6.2.min.js"></script>
+<script src="<?php echo base_url(); ?>resoures/jsbootstrap-hover-dropdown.min"></script>
+
 

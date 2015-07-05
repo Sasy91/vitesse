@@ -42,16 +42,16 @@
 
                 <section id="main_info"> 
                     <div class="container">
-                       <h1>Camp Poe</h1>
+                       <h1  class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="400ms">Camp Poe</h1>
                         <div class="row">
                             <div id="intro">
                                 <!--                            <div class="col-sm-6">-->
                                 <div class="discrip">
-                                    <h3 class="wow fadeIn" data-wow-duration="800ms" data-wow-delay="700ms">Inspired by the arts of surfing and yoga,
+                                    <h3 class="wow fadeIn" data-wow-duration="800ms" data-wow-delay="400ms">Inspired by the arts of surfing and yoga,
                                         our unique Sri Lankan retreat aims to capture
                                         this poetry of movement in a single word <span class="wow fadeIn" data-wow-duration="800ms" data-wow-delay="800ms">"Poe"</span></h3>
 
-                                    <p class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="700ms">Located on the Southern Coast of the island with consistent swells running 
+                                    <p class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="400ms">Located on the Southern Coast of the island with consistent swells running 
                                         throughout the year, Poe resides in the sleepy village of Madiha, 
                                         a surfing haven with a perfect left and a long mellow right hander 
                                         peeling on your doorstep. As well as this, there are several long 
@@ -60,7 +60,7 @@
                                         Lefts, Rams Right and Sticks, giving you options to surf 
                                         a different break each day. </p>
 
-                                    <p class="wow fadeInDown" data-wow-duration="800ms" data-wow-delay="700ms">Located on the Southern Coast of the island with consistent swells running 
+                                    <p class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="400ms">Located on the Southern Coast of the island with consistent swells running 
                                         throughout the year, Poe resides in the sleepy village of Madiha, 
                                         a surfing haven with a perfect left and a long mellow right hander 
                                         peeling on your doorstep. As well as this, there are several long 
@@ -69,7 +69,7 @@
                                         Lefts, Rams Right and Sticks, giving you options to surf 
                                         a different break each day. </p>
 
-                                    <h2 class="wow fadeIn" data-wow-duration="1500ms" data-wow-delay="1o00ms">so surf and live life free, 
+                                    <h2 class="wow fadeIn" data-wow-duration="1500ms" data-wow-delay="1000ms">so surf and live life free, 
                                         smile and be happy, 
                                         let nature be, 
                                         <span>poe</span> is the key...............
@@ -99,7 +99,7 @@
                                         Each of the five suites, six poolside bungalows,
                                         and three studios embodies an equal love for the
                                         elegance of old world luxury and the irreverence
-                                        of our muses – The Stones, Bill Burroughsp <span class="hidden-xs">
+                                        of our muses – The Stones, Bill Burroughsp <span class="">
                                             , Anne Sexton,
                                         Hunter S. Thompson among them. The secluded property 
                                         and lush grounds are open only to hotel guests, thereby
