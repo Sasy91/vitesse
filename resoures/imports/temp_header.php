@@ -93,9 +93,9 @@
                 <li><a href="<?php echo base_url(); ?>index.php/Gallery">PHOTOS</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/contact">CONTACT</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/room/availabe_rooms">BOOK NOW</a></li>
-                <li style="border: 2px solid white; margin-top: 15px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php
-                        if (!empty($this->session->userdata['loginData']['username'])) {
-                            echo "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['loginData']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
+                <li style="border: 2px solid white; margin-top: 25px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php
+                        if (!empty($this->session->userdata['registerd_users_data']['username'])) {
+                            echo "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['registerd_users_data']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
                         } else {
                             echo "<a href='#' data-toggle='modal' data-target='#login_form' style='color: white;'>Login</a>";
                         }

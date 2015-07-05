@@ -54,7 +54,7 @@ class UserRegistation extends CI_Controller {
         if ((isset($email)) && (isset($password))) {
             $result = $this->registrationmodel->check_login($email, $password);
             if ($result) {
-                $output = "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['loginData']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
+                $output = "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['registerd_users_data']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
             } else {
                 $output = "Invalid";
             }

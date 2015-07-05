@@ -14,10 +14,33 @@ if (!defined('BASEPATH'))
  * @author Sameera
  */
 class Packagemodel extends CI_Model {
-    
-    function getAvailabePackagers(){
+
+    function getAvailabePackagers() {
         $query = $this->db->get('packagers');
         return $query->result();
     }
+
+    function getPackagers($id) {
+        $query = $this->db->get_where('packagers', array('id' => $id));
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $packData) {
+                return $packData->amount;
+            }
+        }
+    }
     
+    function getPackagersName($id) {
+        $query = $this->db->get_where('packagers', array('id' => $id));
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $packData) {
+                return $packData->name;
+            }
+        }
+    }
+
+    function getTempPackagers($session_id) {
+        $query = $this->db->get_where('temp_package_data', array('unique_id' => $session_id));
+        return $query->result();
+    }
+
 }

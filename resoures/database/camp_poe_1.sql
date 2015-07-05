@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2015 at 06:20 AM
+-- Generation Time: Jul 05, 2015 at 12:22 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -60,8 +60,8 @@ CREATE TABLE IF NOT EXISTS `booking_linked` (
 --
 
 INSERT INTO `booking_linked` (`id`, `booking_id`, `room_id`, `check_in`, `check_out`) VALUES
-(1, 1, 2, '2015-06-22 00:00:00', '2015-06-28 00:00:00'),
-(2, 2, 2, '2015-06-29 00:00:00', '2015-07-02 00:00:00');
+(1, 1, 2, '2015-07-02 00:00:00', '2015-07-05 00:00:00'),
+(2, 2, 3, '2015-07-01 00:00:00', '2015-07-10 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -292,17 +292,23 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `rm_detail` varchar(1000) NOT NULL,
   `rm_addtional_details` varchar(1000) NOT NULL,
   `rm_amount` double(10,2) NOT NULL,
+  `rm_discount_amount` double(10,2) NOT NULL,
   PRIMARY KEY (`rm_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `max_no_of_guest`, `rm_detail`, `rm_addtional_details`, `rm_amount`) VALUES
-(1, 'SUITE 1', '', 'resoures/img/rooms/6_small.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 360.50),
-(2, 'SUITE 2', '', 'resoures/img/rooms/5_samll.png', 5, 5, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 999.99),
-(3, 'SUITE 3', '', 'resoures/img/rooms/4_small.png', 10, 10, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 500.00);
+INSERT INTO `rooms` (`rm_id`, `rm_name`, `rm_comments`, `rm_cover_img`, `rm_available`, `max_no_of_guest`, `rm_detail`, `rm_addtional_details`, `rm_amount`, `rm_discount_amount`) VALUES
+(1, 'SUITE 1', '', 'resoures/img/rooms/6_small.png', 5, 2, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 550.00, 950.00),
+(2, 'SUITE 2', '', 'resoures/img/rooms/5_samll.png', 5, 2, 'Suite Two offers a sitting room and large bedroom with King Hästens bed. The suite shares a porch and seating area overlooking the hotel grounds with Suite Three. An additional list of the suite’s amenities is available here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 550.00, 950.00),
+(3, 'SUITE 3', '', 'resoures/img/rooms/4_small.png', 10, 2, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\n<span style="font-weight: bold">Prices include:</span><br>\n7 x nights accommodation<br>\n7 x breakfast and<br>\n5x evening meal<br>\n1 x transfer to group evening meal<br> \nFree use of long-boards, snorkeling equipment<br>\nFree Wireless', 550.00, 950.00),
+(4, 'SUITE 4', '', 'resoures/img/rooms/4_small.png', 0, 2, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\r\n<span style="font-weight: bold">Prices include:</span><br>\r\n7 x nights accommodation<br>\r\n7 x breakfast and<br>\r\n5x evening meal<br>\r\n1 x transfer to group evening meal<br> \r\nFree use of long-boards, snorkeling equipment<br>\r\nFree Wireless', 550.00, 950.00),
+(5, 'SUITE 5', '', 'resoures/img/rooms/4_small.png', 0, 2, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\r\n<span style="font-weight: bold">Prices include:</span><br>\r\n7 x nights accommodation<br>\r\n7 x breakfast and<br>\r\n5x evening meal<br>\r\n1 x transfer to group evening meal<br> \r\nFree use of long-boards, snorkeling equipment<br>\r\nFree Wireless', 550.00, 950.00),
+(6, 'SUITE 6', '', 'resoures/img/rooms/5_samll.png', 0, 2, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\r\n<span style="font-weight: bold">Prices include:</span><br>\r\n7 x nights accommodation<br>\r\n7 x breakfast and<br>\r\n5x evening meal<br>\r\n1 x transfer to group evening meal<br> \r\nFree use of long-boards, snorkeling equipment<br>\r\nFree Wireless', 550.00, 950.00),
+(7, 'FLEXIBLE FAMILY SUITE', '', 'resoures/img/rooms/6_small.png', 0, 3, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\r\n<span style="font-weight: bold">Prices include:</span><br>\r\n7 x nights accommodation<br>\r\n7 x breakfast and<br>\r\n5x evening meal<br>\r\n1 x transfer to group evening meal<br> \r\nFree use of long-boards, snorkeling equipment<br>\r\nFree Wireless', 375.00, 375.00),
+(8, 'BUNK SUITE', '', 'resoures/img/rooms/4_small.png', 0, 4, 'Suite Three sits at the heart of the historic main guest house. The bedroom has a King Hästens bed and the bathroom offers both a large soaking tub and separate walk-in shower. The suite shares a porch and seating area overlooking the lounge and hotel grounds with Suite Two.  Additional amenities are listed here.', '<br><br>\r\n<span style="font-weight: bold">Prices include:</span><br>\r\n7 x nights accommodation<br>\r\n7 x breakfast and<br>\r\n5x evening meal<br>\r\n1 x transfer to group evening meal<br> \r\nFree use of long-boards, snorkeling equipment<br>\r\nFree Wireless', 350.00, 350.00);
 
 -- --------------------------------------------------------
 
@@ -380,6 +386,70 @@ CREATE TABLE IF NOT EXISTS `room_types` (
   `type_name` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temp_booking_data`
+--
+
+CREATE TABLE IF NOT EXISTS `temp_booking_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `unique_id` varchar(100) NOT NULL,
+  `room_id` int(11) NOT NULL,
+  `tot_guest` int(11) NOT NULL,
+  `adult` int(11) NOT NULL,
+  `child` int(11) NOT NULL,
+  `price` double(10,2) NOT NULL,
+  `room_name` varchar(100) NOT NULL,
+  `room_price` double(10,2) NOT NULL,
+  `check_in` datetime NOT NULL,
+  `check_out` datetime NOT NULL,
+  `audit` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
+
+--
+-- Dumping data for table `temp_booking_data`
+--
+
+INSERT INTO `temp_booking_data` (`id`, `unique_id`, `room_id`, `tot_guest`, `adult`, `child`, `price`, `room_name`, `room_price`, `check_in`, `check_out`, `audit`) VALUES
+(32, '55977555cc779', 4, 2, 2, 0, 950.00, 'SUITE 4', 0.00, '2015-07-21 00:00:00', '2015-07-30 00:00:00', '::1'),
+(33, '55977555cc779', 8, 6, 6, 0, 2100.00, 'BUNK SUITE', 0.00, '2015-07-04 00:00:00', '2015-07-05 00:00:00', '::1'),
+(34, '5597c588cc092', 8, 4, 4, 0, 1400.00, 'BUNK SUITE', 0.00, '2015-07-27 00:00:00', '2015-07-30 00:00:00', '::1'),
+(46, '5598c4a7c7fdf', 1, 1, 1, 0, 1650.00, 'SUITE 1', 0.00, '2015-07-13 00:00:00', '2015-07-30 00:00:00', '::1'),
+(47, '5598e919d84ba', 2, 2, 2, 0, 950.00, 'SUITE 2', 550.00, '2015-07-27 00:00:00', '2015-07-30 00:00:00', '::1'),
+(49, '5598eb78c9b56', 1, 2, 2, 0, 950.00, 'SUITE 1', 550.00, '2015-07-05 00:00:00', '2015-07-06 00:00:00', '::1'),
+(50, '5598eb78c9b56', 7, 3, 2, 1, 937.50, 'FLEXIBLE FAMILY SUITE', 375.00, '2015-07-05 00:00:00', '2015-07-06 00:00:00', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temp_package_data`
+--
+
+CREATE TABLE IF NOT EXISTS `temp_package_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `unique_id` varchar(100) NOT NULL,
+  `package_name` varchar(200) NOT NULL,
+  `package_amount` double(10,2) NOT NULL,
+  `package` varchar(50) NOT NULL,
+  `no_of_guests` varchar(50) NOT NULL,
+  `amount` double(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+
+--
+-- Dumping data for table `temp_package_data`
+--
+
+INSERT INTO `temp_package_data` (`id`, `unique_id`, `package_name`, `package_amount`, `package`, `no_of_guests`, `amount`) VALUES
+(6, '55977555cc779', '', 0.00, '3', '2', 0.00),
+(7, '55977555cc779', '', 0.00, '4', '1', 0.00),
+(26, '5598c4a7c7fdf', 'Surf Level One (Beginners)', 150.00, '1', '1', 150.00),
+(27, '5598e919d84ba', 'Surf Level One (Beginners)', 150.00, '1', '2', 300.00),
+(28, '5598eb78c9b56', 'Surf Level One (Beginners)', 150.00, '1', '1', 150.00),
+(29, '5598eb78c9b56', 'Surf Level Two (Advance)', 150.00, '2', '2', 300.00);
 
 -- --------------------------------------------------------
 

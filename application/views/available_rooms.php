@@ -41,6 +41,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script>
             $(function () {
 
+                if ($("#session").val() && $("#session_reservation").val()) {
+                    resetActive(event, 40, 'step-2');
+                    $("#pack").addClass("activestep");
+                }
                 $("#preloader").hide();
                 $("#checkin,#checkout").datepicker({
                     yearRange: '-120:+120',
@@ -64,9 +68,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     if (check_in > check_out) {
                         $("#wrongDate").modal('show');
                         isField.value = "";
+                    } else {
+                        AddExeData();
                     }
                 }
-
             }
             function AddExeData() {
                 $("#hotel_details").hide();
@@ -115,10 +120,120 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     }
                 });
             });
+
+            $(document).on('click', 'span.del', function () {
+                var r = confirm("Are you sure you want to delete this Reservation ?");
+                if (r == true) {
+                    var room_id = $(this).attr("id");
+                    $.ajax({
+                        url: 'http://localhost/duwa/vitesse/index.php/booking/delete_booking',
+                        type: 'post',
+                        data: {'action': 'delete_booking', 'room_id': room_id},
+                        success: function (rowData) {
+                            if (rowData == "FALSE") {
+                                resetActive(event, 60, 'step-1');
+                                $("#div1").addClass("activestep");
+                            } else {
+                                $("#booked_rooms").empty();
+                                $("#booked_rooms").append(rowData);
+                            }
+                        },
+                        error: function (xhr, desc, err) {
+                            console.log(xhr);
+                            console.log("Details: " + desc + "\nError:" + err);
+                        }
+                    });
+                }
+            });
+            $(document).on('click', 'button.btn_proceed', function () {
+                if ($(this).attr("id") == "proceed_yes") {
+                    var packagers = [];
+                    var guest = [];
+                    $('input[name^="mailId"]').each(function () {
+                        if ($(this).is(":checked")) {
+                            packagers.push($(this).val());
+                        }
+                    });
+                    $('input[name^="noId"]').each(function () {
+                        if ($(this).val()) {
+                            guest.push($(this).val());
+                        }
+                    });
+
+                    $.ajax({
+                        url: 'http://localhost/duwa/vitesse/index.php/booking/add_package',
+                        type: 'post',
+                        data: {'action': 'add_packge', 'packagers': JSON.stringify(packagers), 'guest': JSON.stringify(guest)},
+                        success: function (rowData) {
+                            if (rowData != false) {
+                                $("#invoice_output").empty();
+                                $("#invoice_output").append(rowData);
+                                resetActive(event, 60, 'step-4');
+                                $("#invoice").addClass("activestep");
+                            } else {
+                                resetActive(event, 60, 'step-3');
+                                $("#invoice").addClass("activestep");
+                            }
+                        },
+                        error: function (xhr, desc, err) {
+                            alert("fail");
+                            console.log(xhr);
+                            console.log("Details: " + desc + "\nError:" + err);
+                        }
+                    });
+                } else {
+                    $.ajax({
+                        url: 'http://localhost/duwa/vitesse/index.php/booking/add_package',
+                        type: 'post',
+                        data: {'action': 'do_not_add_packge'},
+                        success: function (rowData) {
+                            if (rowData != false) {
+                                $("#invoice_output").empty();
+                                $("#invoice_output").append(rowData);
+                                resetActive(event, 60, 'step-4');
+                                $("#invoice").addClass("activestep");
+                            } else {
+                                resetActive(event, 60, 'step-3');
+                                $("#invoice").addClass("activestep");
+                            }
+                        },
+                        error: function (xhr, desc, err) {
+                            alert("fail");
+                            console.log(xhr);
+                            console.log("Details: " + desc + "\nError:" + err);
+                        }
+                    });
+                }
+
+            });
             $(document).on('click', 'button.order', function () {
-                var id = $(this).attr("id");
-                resetActive(event, 40, 'step-2');
-                $("#pack").addClass("activestep");
+                var room_id = $(this).attr("id");
+                var check_in = $("#checkin").val();
+                var check_out = $("#checkout").val();
+                var audlt = $("#adult").val() * 1;
+                var child = $("#child").val() * 1;
+
+                if (child == null) {
+                    child = 0;
+                }
+                var guests = audlt + child;
+                $.ajax({
+                    url: 'http://localhost/duwa/vitesse/index.php/booking/create_booking',
+                    type: 'post',
+                    data: {'action': 'create_session', 'check_in': check_in, 'check_out': check_out, 'room_id': room_id, 'guests': guests, 'adult': audlt, 'child': child},
+                    success: function (rowData) {
+                        $("#booked_rooms").empty();
+                        $("#booked_rooms").append(rowData);
+                        resetActive(event, 40, 'step-2');
+                        $("#pack").addClass("activestep");
+                    },
+                    error: function (xhr, desc, err) {
+                        alert("fail");
+                        console.log(xhr);
+                        console.log("Details: " + desc + "\nError:" + err);
+                    }
+                });
+
             });
         </script>
     </head>
@@ -142,7 +257,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="row">
                 <div class="row step">
-                    <div id="div1" class="col-md-2 activestep" onclick="javascript: resetActive(event, 20, 'step-1');">
+                    <div id="div1" class="col-md-2 activestep">
                         <span class="fa fa-home"></span>
                         <p>Availability</p>
                     </div>
@@ -150,11 +265,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span class="fa fa-binoculars"></span>
                         <p>Packagers</p>
                     </div>
-                    <div class="col-md-2" onclick="javascript: resetActive(event, 60, 'step-3');">
+                    <div id="register" class="col-md-2">
                         <span class="fa fa-pencil"></span>
                         <p>Registration</p>
                     </div>
-                    <div class="col-md-2" onclick="javascript: resetActive(event, 80, 'step-4');">
+                    <div id="invoice" class="col-md-2" onclick="javascript: resetActive(event, 40, 'step-4');">
                         <span class="fa fa-thumbs-up"></span>
                         <p>Confirmation</p>
                     </div>
@@ -174,12 +289,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h2>Find Available Rooms</h2>
                         <div class="row">
                             <?php
-                            if (!empty($check_in)) {
+                            if (!empty($check_in && $check_out)) {
                                 ?>
                                 <div class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
                                     <form id="checkinform" style="margin-top: 10px;" method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
                                         <div class="form-group" >
                                             <label style="font-family: sans-serif; color: white; font-size: 14px;">Arrival</label>
+                                            <input type="hidden" id="session" value="<?php echo $this->session->userdata('uniqueId'); ?>">
+                                            <input type="hidden" id="session_reservation" value="<?php echo $this->session->userdata('room_id') ?>">
                                             <input type="text"  id="checkin" value="<?php echo $check_in; ?>" onchange="validate(this);" class="form-control" placeholder="Check in" name="arrive" class="required" />
                                         </div>
 
@@ -190,9 +307,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                         <div class="form-group">
                                             <label style="font-family: sans-serif; color: white; font-size: 14px;">Adults</label>
-                                            <select id="adult" class="form-control" name="adult"  style=" font-size:14px;">
-                                                <option disabled selected>Adults </option>
-                                                <option value="1">1</option>
+                                            <select id="adult" class="form-control" name="adult" onchange="AddExeData();" style=" font-size:14px;">
+                                                <option selected value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>
@@ -205,9 +321,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Kids</label>
-                                            <select id="child" class="form-control" name="child"  style=" font-size:14px;">
-                                                <option disabled selected>Children</option>
+                                            <label style="font-family: sans-serif; color: white; font-size: 14px;" >Kids <br>(Select If Age Above 5)</label>
+                                            <select id="child" class="form-control" onchange="AddExeData();" name="child"  style=" font-size:14px;">
+                                                <option disabled selected value="0">Children</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -248,7 +364,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         echo "</a>";
                                         echo "<div class='media-body'>";
                                         echo "<h4 class='media-heading'><span style='font-size: 24px; color: black;'>" . $room->rm_name . "</span></h4>";
-                                        echo "<span style='font-size: 25px;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $room->rm_amount . "/<span style='font-size: 20px;'>Night</span></span><br>";
+                                        echo "<span style='font-size: 25px;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $room->rm_amount . "/<span style='font-size: 20px;'>Per Week and Person</span></span><br>";
                                         echo $room->rm_detail;
                                         echo "<br><br><button id='" . $room->rm_id . "' type='button' class='btn btn-success order'><i style='font-size: 12px;' class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;";
                                         echo "<button type='button' class='btn btn-success view' id='" . $room->rm_id . "' data-toggle='modal' data-target='#sigiriya'><i style='font-size: 12px;' class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button>";
@@ -267,54 +383,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-12 well text-center">
                         <h2>Available Packagers </h2>
                         <div class="row">
-                            <?php
-                            if (!empty($check_in)) {
-                                ?>
-                                <div class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
-                                    <form id="checkinform" style="margin-top: 10px;" method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
-                                        <div class="form-group" >
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Arrival</label>
-                                            <input type="text"  id="arriavle" value="<?php
-                                            $date = date_create_from_format('Ymd', date("Ymd", strtotime($check_in)));
-                                            echo $date->format('F d Y')
-                                            ?>" onchange="validate(this);" class="form-control" disabled />
-                                        </div>
+                            <div id="booked_rooms" class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
+                                <?php
+                                if (!empty($booking_data)) {
+                                    $i = 1;
+                                    foreach ($booking_data as $bd) {
+                                        ?>
+                                        <form id="checkinform" style='margin-top: 10px; font-family: sans-serif;' method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
+                                            <span class='label label-success pull-left'>Reservation <?php echo $i; ?></span><a href='#'><span class='label label-danger pull-right del' id='<?php echo $bd->room_id; ?>'>Delete</span></a><br>
+                                            <div class="form-group" >
+                                                <label style=" color: white; font-size: 14px;">Arrival</label>
+                                                <input type="text"  id="arriavle" value="<?php echo $bd->check_in ?>" class="form-control" disabled />
+                                            </div>
 
-                                        <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Departure</label>
-                                            <input type="text" id="departure" value="<?php
-                                            $date = date_create_from_format('Ymd', date("Ymd", strtotime($check_out)));
-                                            echo $date->format('F d Y')
-                                            ?>" onchange="validate(this);" class="form-control" disabled/>
-                                        </div>
+                                            <div class="form-group">
+                                                <label style=" color: white; font-size: 14px;">Departure</label>
+                                                <input type="text" id="departure" value="<?php echo $bd->check_out ?>" class="form-control" disabled/>
+                                            </div>
 
-                                        <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Guests&nbsp;<i style="font-size: 14px;" class="fa fa-user-plus"></i></label><br>
-                                            <label style="font-family: cursive; color: white; font-size: 12px;">2 Adults and 2 Children</label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Room Type&nbsp;<i style="font-size: 14px;" class="fa fa-glass"></i></label><br>
-                                            <label style="font-family: cursive; color: white; font-size: 12px;">Suite 01</label>
-                                        </div>
-                                        <!--                                        <div class="form-group">
-                                                                                    <label style="font-family: sans-serif; color: white; font-size: 14px;">Package&nbsp;<i style="font-size: 14px;" class="fa fa-binoculars"></i></label><br>
-                                                                                    <label style="font-family: cursive; color: white; font-size: 12px;">1 week Surf Lesson</label>
-                                                                                </div>-->
-                                        <div class="form-group">
-                                            <hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="pull-left" style="font-family: sans-serif; color: #e4e4e4; font-size: 16px;" >Total Rate</label><span style="font-family: sans-serif; color: #e4e4e4; font-size: 16px;" class="pull-right">USD 14250.00</span><br>
-                                        </div>
-                                        <div class="form-group">
-                                            <hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'>
-                                            <hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="button" class="btn btn-warning" data-toggle='modal' data-target='#login_form'>Book Another Room</button>
-                                        </div>
-                                    </form>
-                                    <?php
+                                            <div class="form-group">
+                                                <label style=" color: white; font-size: 14px;">Guests&nbsp;<i style="font-size: 14px;" class="fa fa-user-plus"></i></label><br>
+                                                <label style="font-family: cursive; color: white; font-size: 12px;"><span id="no_adult"><?php echo $bd->adult ?></span>  Adults and <span id="no_child"><?php echo $bd->child ?></span> Children</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label style=" color: white; font-size: 14px;">Room Type&nbsp;<i style="font-size: 14px;" class="fa fa-glass"></i></label><br>
+                                                <label style="font-family: cursive; color: white; font-size: 12px;"><span id="suite_name"><?php echo $bd->room_name ?></span></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="pull-left" style=" color: #e4e4e4; font-size: 16px;" >Total Rate</label><span style=" color: #e4e4e4; font-size: 16px;" class="pull-right">USD <samp id="amount"><?php echo $bd->price ?></samp></span><br>
+                                            </div>
+                                            <div class="form-group">
+                                                <hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'>
+                                                <hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-warning" onclick="javascript: resetActive(event, 20, 'step-1');
+                                                                $('#div1').addClass('activestep');">Book Another Room</button>
+                                            </div>
+                                        </form>
+                                        <?php
+                                        $i++;
+                                    }
                                 }
                                 ?>
 
@@ -339,7 +451,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         </div>
                                                         <p style="color: #000; font-family: sans-serif; text-align: left;">
                                                             <?php echo $pack->short_detail ?><br><span style="font-weight: bold;">Rate : USD<?php echo $pack->amount ?></span>                         
-                                                            <br><label><input type="checkbox" id="<?php echo $pack->id ?>" value="">&nbsp;&nbsp;Order This Package</label>
+                                                            <br><br><label><input class="form-control package" type="checkbox" name="mailId" id="<?php echo $pack->id ?>" value="<?php echo $pack->id ?>">&nbsp;&nbsp;Order This Package</label>
+                                                            <br><label>No of Peoples<input type="input" name="noId" class="form-control col-sm-3" id="<?php echo $pack->id ?>" value=""></label>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -351,6 +464,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
 
                             </div>
+                            <button class="btn btn-primary btn_proceed" id="proceed_no">Proceed Without Packagers</button><button class="btn btn-primary btn_proceed" id="proceed_yes">Proceed Next</button>
                         </div> 
                     </div>
                 </div>
@@ -448,9 +562,68 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="row setup-content step hiddenStepInfo" id="step-4">
                 <div class="col-xs-12">
-                    <div class="col-md-12 well text-center">
-                        <h1>STEP 4</h1>
+                    <div class="col-md-12 well text-center" style="font-family: sans-serif;">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="text-center">
+                                    <i class="fa fa-search-plus pull-left icon"></i>
+                                    <h2>Invoice for Reservation :#33221</h2>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3 col-lg-3 pull-left">
+                                        <div class="panel panel-default height">
+                                            <div class="panel-heading">Billing Details</div>
+                                            <div class="panel-body">
+                                                <strong><?php
+                        if (!empty($this->session->userdata['registerd_users_data']['username'])) {
+                        echo $this->session->userdata['registerd_users_data']['title']." ".$this->session->userdata['registerd_users_data']['f_name']." ".$this->session->userdata['registerd_users_data']['l_name'];} ?></strong><br>
+                                                <strong><?php
+                        if (!empty($this->session->userdata['registerd_users_data']['username'])) {
+                        echo $this->session->userdata['registerd_users_data']['country'];  }?></strong><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3 col-lg-3">
+                                        <div class="panel panel-default height">
+                                            <div class="panel-heading">Order Preferences</div>
+                                            <div class="panel-body">
+                                                <strong>Packages Selected</strong> No<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="text-center" style="font-family: sans-serif; color: #000;"><strong>Order Summary - Camp Poe</strong></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-condensed">
+                                                <thead>
+                                                    <tr>
+                                                        <td><strong>Reservations</strong></td>
+                                                        <td class="text-center"><strong>Arrive</strong></td>
+                                                        <td class="text-center"><strong>Depature</strong></td>
+                                                        <td class="text-center"><strong>Cost</strong></td>
+                                                        <td class="text-center"><strong>Guest</strong></td>
+                                                        <td class="text-right"><strong>Total</strong></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="invoice_output">
 
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn_proceed">Proceed Payment</button>&nbsp;<button type="button" class="btn btn_proceed">Cancel</button>
                     </div>
                 </div>
             </div>
