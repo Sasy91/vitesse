@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
-                                <div class="booking">
+                                <div class="booking" style="height: 660px;">
 
                                     <div class="room-info">
 
@@ -93,12 +93,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         ?>
                                         <hr style="margin: 50px;">
                                         <div class="row">
-                                            <form action="" class="form_start">
+                                            <form action="<?php echo base_url(); ?>index.php/camp/available-suites" class="form_start" method="post">
                                                 <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" id="datepicker_1" style="color:white;" placeholder="CHECK IN">
+                                                        <input type="hidden" name="room_home_id" value="<?php echo $this->uri->segment(3); ?>">
+                                                        <input type="text" class="form-control" name="arrive" id="datepicker_1" style="color:white; border: 2px solid #dadada; border-radius: 7px;" placeholder="CHECK IN">
                                                     </div>
-                                                    <select class="form-control" style="color:white;">
+                                                    <select name="adult" id="adult" class="form-control" style="color:white; border: 2px solid #dadada; border-radius: 7px;" >
                                                         <option value="0">ADULTS</option>
                                                         <option value="1">1 adult</option>
                                                         <option value="2">2 adults</option>
@@ -114,10 +115,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </div>
                                                 <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" id="datepicker_2" style="color:white;" placeholder="CHECK IN">
+                                                        <input type="text" name="depart" class="form-control" id="datepicker_2" style="color:white; border: 2px solid #dadada; border-radius: 7px;" placeholder="CHECK IN">
                                                     </div>
-                                                    <select class="form-control" style="color:white;">
-                                                        <option value="0"> CHILDREN</option>
+                                                    <select name="child" id="child" class="form-control" style="color:white; border: 2px solid #dadada; border-radius: 7px;">
+                                                        <option value="0">CHILDREN</option>
                                                         <option value="1">1 CHILD</option>
                                                         <option value="2">2  CHILDREN</option>
                                                         <option value="3">3  CHILDREN</option>
@@ -130,7 +131,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <option value="3">10  CHILDREN</option>
 
                                                     </select>                                     
-                                                </div>                                      
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-default">Check Availability</button>
+                                                </div>
                                             </form><!--form-->
                                         </div>
                                     </div>
@@ -238,35 +242,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div><!--room_one-->
         </div><!--ip container-->
 
-            <?php include_once './resoures/imports/temp_footer.php'; ?>
+        <?php include_once './resoures/imports/temp_footer.php'; ?>
 
-            <!-- jquery-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
-            <!-- bootstrap-->
-            <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
-            <!-- jquery sticky-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
-            <!-- jquery ui-->
-            <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
-            <!-- allscript-->
-            <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
+        <!-- jquery-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery-1.11.0.min.js"></script>
+        <!-- bootstrap-->
+        <script src="<?php echo base_url(); ?>/resoures/js/bootstrap.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.sticky.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/wow.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.nicescroll.min.js"></script>
+        <!-- jquery sticky-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery.parallax-1.1.3.js"></script>
+        <!-- jquery ui-->
+        <script src="<?php echo base_url(); ?>/resoures/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <!-- allscript-->
+        <script src="<?php echo base_url(); ?>/resoures/js/allscript.js"></script>
 
-            <script>
-                wow = new WOW({
-                    animateClass: 'animated',
-                    offset: 120
-                });
-                wow.init();
+        <script>
+            wow = new WOW({
+                animateClass: 'animated',
+                offset: 120
+            });
+            wow.init();
 
-            </script>
+        </script>
 
-        
+
         <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
         <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>

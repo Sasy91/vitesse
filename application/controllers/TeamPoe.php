@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Description of TeamPoe
  *
- * @author Sameera
+ * @author Sameera Danthanarayana
  */
 class TeamPoe extends CI_Controller {
     

@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Description of Item
  *
- * @author Sameera
+ * @author Sameera Danthanarayana 
  */
 class Item {
 

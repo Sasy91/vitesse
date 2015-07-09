@@ -23,8 +23,8 @@
         });
     }
     function LoginUser() {
-        var username = $("#username").val();
-        var password = $("#password").val();
+        var username = $("#user_id").val();
+        var password = $("#pw").val();
 
         $.ajax({
             url: 'http://localhost/duwa/vitesse/index.php/userregistation/check_member_login',
@@ -37,6 +37,7 @@
                     $("#user").empty();
                     $("#user").append(rowData);
                     $("#login_form").modal('hide');
+                    location.reload();
                 }
             },
             error: function (xhr, desc, err) {
@@ -76,23 +77,25 @@
                 <li class="dropdown">
                     <a href="<?php echo base_url(); ?>index.php/room/" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?php echo base_url(); ?>index.php/room/room_id/1">Suite 1</a></li>
-                        <li><a href="<?php echo base_url(); ?>index.php/room/room_id/2">Suite 2</a></li>
-                        <li><a href="<?php echo base_url(); ?>index.php/room/room_id/3">Suite 3</a></li>
-                        <li><a href="#">Suite 4</a></li>
-                        <li><a href="#">Suite 5</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/camp-poe-suites"><span class="fa fa-home"></span>&nbsp;&nbsp;All Suites</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Flexible Family Suite</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/camp/suite-no/1"><span class="fa fa-hotel"></span>&nbsp;&nbsp;</span>Suite 1</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/camp/suite-no/2"><span class="fa fa-hotel"></span>&nbsp;&nbsp;Suite 2</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/camp/suite-no/3"><span class="fa fa-hotel"></span>&nbsp;&nbsp;Suite 3</a></li>
+                        <li><a href="#"><span class="fa fa-hotel"></span>&nbsp;&nbsp;Suite 4</a></li>
+                        <li><a href="#"><span class="fa fa-hotel"></span>&nbsp;&nbsp;Suite 5</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Bank Suite</a></li>
+                        <li><a href="#"><span class="fa fa-home"></span>&nbsp;&nbsp;Flexible Family Suite</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><span class="fa fa-home"></span>&nbsp;&nbsp;Bank Suite</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo base_url(); ?>index.php/camppoe">THE CAMP</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/teampoe">TEAM POE</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/shop">SHOP</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/Gallery">PHOTOS</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/contact">CONTACT</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/room/availabe_rooms">BOOK NOW</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/camp-poe">THE CAMP</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/team-poe">TEAM POE</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/camp-shop">SHOP</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/camp-gallery">PHOTOS</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/contact-camp-poe">CONTACT</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/camp/available-suites">BOOK NOW</a></li>
                 <li style="border: 2px solid white; margin-top: 25px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php
                         if (!empty($this->session->userdata['registerd_users_data']['username'])) {
                             echo "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['registerd_users_data']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";

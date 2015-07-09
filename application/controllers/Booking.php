@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Description of Booking
  *
- * @author Sameera
+ * @author Sameera Danthanarayana
  */
 class Booking extends CI_Controller {
 
@@ -88,7 +88,7 @@ class Booking extends CI_Controller {
         $output = "";
         $i = 1;
         foreach ($results as $booking_data) {
-            $output .= "<form id='checkinform' style='margin-top: 10px; font-family: sans-serif;' method='POST' action=''><span class='label label-success pull-left'>Reservation " . $i . "</span><a href='#'><span class='label label-danger pull-right del' id='" . $booking_data->room_id . "'>Delete</span></a><br>";
+            $output .= "<form id='checkinform' style='margin-top: 10px; font-family: sans-serif;' method='POST' action=''><span class='label label-success pull-left'>Reservation " . $i . "</span><a href='#'><span class='label label-danger pull-right del' id='" . $booking_data->id . "'>Delete</span></a><br>";
             $output .= "<div class='form-group' ><label style=' color: white; font-size: 14px;'>Arrival</label><input type='text'  id='arriavle' value='" . $booking_data->check_in . "' class='form-control' disabled /></div>";
             $output .= "<div class='form-group'><label style=' color: white; font-size: 14px;'>Departure</label><input type='text' id='departure' value='" . $booking_data->check_out . "' class='form-control' disabled/></div>";
             $output .= "<div class='form-group'><label style=' color: white; font-size: 14px;'>Guests&nbsp;<i style='font-size: 14px;' class='fa fa-user-plus'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'> " . $booking_data->adult . "  Adults and " . $booking_data->child . " Children</label></div>";
@@ -103,7 +103,7 @@ class Booking extends CI_Controller {
     }
 
     function delete_booking() {
-        $this->bookingmodel->delete_temp_booking($this->input->post("room_id"), $this->session->userdata('uniqueId'));
+        $this->bookingmodel->delete_temp_booking($this->input->post("temp_booking_id"), $this->session->userdata('uniqueId'));
         $results = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
         $html_output = $this->create_html($results);
         $results_booking = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
@@ -121,16 +121,27 @@ class Booking extends CI_Controller {
         return floor($first->diff($second)->days / 7) + 1;
     }
 
+    function cancel_booking() {
+        if ($this->input->post("action") == "cancel_booking") {
+            $results_room = $this->bookingmodel->cancel_booking($this->session->userdata('uniqueId'));
+            $this->session->unset_userdata('room_id');
+            $this->session->unset_userdata('unique_id');
+            $this->session->unset_userdata('pack_id');
+            $this->session->unset_userdata('total_booking_amount');
+            echo $results_room;
+        }
+    }
+
     function add_package() {
         $this->load->model('packagemodel');
         $total = "";
         $invoice = "";
-        $room_total = "";
-        $package_amount = "";
+        $results_pack = "";
+        $billing_detail = "";
         if ($this->input->post("action") == "add_packge") {
             $packUList = json_decode($this->input->post("packagers"));
             $guestTList = json_decode($this->input->post("guest"));
-
+            $this->session->set_userdata('pack_id', TRUE);
             for ($i = 0; $i < count($packUList); $i++) {
                 $pro_data = array(
                     'unique_id' => $this->session->userdata('uniqueId'),
@@ -142,29 +153,59 @@ class Booking extends CI_Controller {
                 );
                 $lastAutoid = $this->bookingmodel->insert_package($pro_data);
             }
-            $results = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
-            foreach ($results as $room_data) {
-                $room_total += $room_data->price;
-            }
+            $results_room = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
             $results_pack = $this->packagemodel->getTempPackagers($this->session->userdata('uniqueId'));
-            foreach ($results_pack as $room_data) {
-                $package_amount += $room_data->amount;
-            }
-            $total = ($room_total + $package_amount);
-            $invoice = $this->create_html_invoice($results, $results_pack, $total);
+            $total = $this->calculate_total($results_room, $results_pack);
+            $invoice = $this->create_html_invoice($results_room, $results_pack, $total);
             $this->session->set_userdata('total_booking_amount', $total);
         } else if ($this->input->post("action") == "do_not_add_packge") {
-            $results = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
-            foreach ($results as $room_data) {
-                $total += $room_data->price;
-            }
-            $invoice = $this->create_html_invoice($results, $results_pack, $total);
+            $results_room = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
+            $total = $this->calculate_total($results_room);
+            $invoice = $this->create_html_invoice($results_room, $results_pack, $total);
             $this->session->set_userdata('total_booking_amount', $total);
         }
         if ($this->session->userdata('user_logged')) {
-            echo $invoice;
+            $billing_detail = "<strong>" . $this->session->userdata['registerd_users_data']['title'] . " " . $this->session->userdata['registerd_users_data']['f_name'] . " " . $this->session->userdata['registerd_users_data']['l_name'] . "<br>" . $this->session->userdata['registerd_users_data']['country'] . "</strong>";
+            echo $invoice . "*" . $billing_detail;
         } else {
             echo FALSE;
+        }
+    }
+
+    private function calculate_total($results_room = null, $results_pack = null) {
+        $room_total = "";
+        $package_amount = "";
+        $total = "";
+        if (!empty($results_room)) {
+            foreach ($results_room as $room_data) {
+                $room_total += $room_data->price;
+            }
+        }
+        if (!empty($results_pack)) {
+            foreach ($results_pack as $room_data) {
+                $package_amount += $room_data->amount;
+            }
+        }
+        $total = ($room_total + $package_amount);
+        return $total;
+    }
+
+    function get_invoice() {
+        $this->load->model('packagemodel');
+        $results_room = "";
+        $results_pack = "";
+        $total = "";
+        $invoice = "";
+        if ($this->input->post("action") == "get_invoice") {
+            $results_room = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
+            $results_pack = $this->packagemodel->getTempPackagers($this->session->userdata('uniqueId'));
+            $total = $this->calculate_total($results_room, $results_pack);
+            $invoice = $this->create_html_invoice($results_room, $results_pack, $total);
+            if ($this->session->userdata('user_logged')) {
+                echo $invoice;
+            } else {
+                echo FALSE;
+            }
         }
     }
 
@@ -187,51 +228,7 @@ class Booking extends CI_Controller {
 
         return $output;
     }
-
-//    function create_booking() {
-//        $this->load->library('cart');
-//        $room_amount = "";
-//        $room_name = "";
-//        $this->load->model('imagemodel');
-//        $roomDetails = $this->imagemodel->getRoomDetails($this->input->post("room_id"));
-//        if (!empty($roomDetails)) {
-//            foreach ($roomDetails as $rm_details) {
-//                $room_amount = $rm_details->rm_amount * $this->input->post("guests");
-//                $room_name = $rm_details->rm_name;
-//                $output = $room_name . "*" . $room_amount;
-//            }
-//        }
-//        if (!empty($this->input->post("room_id"))) {
-//            $data = array(
-//                'id' => $this->input->post("room_id"),
-//                'qty' => $this->input->post("guests"),
-//                'price' => $room_amount,
-//                'name' => $room_name,
-//                'options' => array('check_in' => $this->input->post("check_in"), 'check_out' => $this->input->post("check_out"))
-//            );
-//            $this->cart->insert($data);
-//        }
-//        //print_r($this->cart->contents());
-//        if ($this->cart->total_items() > 0) {
-//            $i = 1;
-//            foreach ($this->cart->contents() as $items) {
-//                $output = "<form id='checkinform' style='margin-top: 10px;' method='POST' action=''>";
-//                $output .= "<div class='form-group' ><label style='font-family: sans-serif; color: white; font-size: 14px;'>Arrival</label><input type='text'  id='arriavle' value='" . array('name' => $i [qty], 'value' => $items['qty'], 'maxlength' => '3', 'size' => '5') . "' class='form-control' disabled /></div>";
-//                $output .= "<div class='form-group'><label style='font-family: sans-serif; color: white; font-size: 14px;'>Departure</label><input type='text' id='departure' value='" . $items['price'] . "' class='form-control' disabled/></div>";
-//
-//                $output .= "<div class='form-group'><label style='font-family: sans-serif; color: white; font-size: 14px;'>Guests&nbsp;<i style='font-size: 14px;' class='fa fa-user-plus'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'><span id='no_adult'></span>  Adults and <span id='no_child'></span> Children</label></div>";
-//                $output .= "<div class='form-group'><label style='font-family: sans-serif; color: white; font-size: 14px;'>Room Type&nbsp;<i style='font-size: 14px;' class='fa fa-glass'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'><span id='suite_name'></span></label></div>";
-//
-//
-//                $output .= "<div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div>";
-//                $output .= "<div class='form-group'><label class='pull-left' style='font-family: sans-serif; color: #e4e4e4; font-size: 16px;' >Total Rate</label><span style='font-family: sans-serif; color: #e4e4e4; font-size: 16px;' class='pull-right'>USD <samp id='amount'></samp></span><br></div>";
-//                $output .= "<div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div></form>";
-//                $i++;
-//            }
-//        }
-//        //$this->session->set_userdata('bookingData', $booking_data);
-//        //echo $output;
-//    }
+    
     public function expire_session() {
         $this->session->sess_destroy();
         //$this->load->view('admin_login');

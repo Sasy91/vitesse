@@ -4,14 +4,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <p class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="">CAMP POE Registered Users Login</span></center></p>                   
+                    <p class="modal-title" id="exampleModalLabel"><center><span id="room_name" style="">CAMP POE Users Login</span></center></p>                   
                 </div>
                 <div class="col-md-12" style="margin-top: 50px;">
                     <div class="form-group">
-                        <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+                        <input type="text" name="user_id" id="user_id" class="form-control" placeholder="Username">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                        <input type="password" name="pw" id="pw" class="form-control" placeholder="Password">
                     </div><br><center><span id="login_result" style="color: black;"></span></center><br><br>
                     <div class="form-group"><center>
                             <button class="btn btn-primary" onclick="LoginUser();">Sign In</button>
@@ -39,7 +39,7 @@
                                 <li><a class="ease-all" href="#"><i class="fa fa-twitter"></i><span class="hide-text">Twitter</span></a></li>
                                 <li><a class="ease-all" href="#"><i class="fa fa-google-plus"></i><span class="hide-text">Google Plus</span></a></li>
                                 <li><a class="ease-all" href="#"><i class="fa fa-youtube-play"></i><span class="hide-text">Google Plus</span></a></li>
-                    
+
 
                             </ul>
                         </section>

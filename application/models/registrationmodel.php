@@ -49,6 +49,7 @@ class registrationmodel extends CI_Model {
             $query = $query->row_array();
             if (($email === $query["user_name"]) && ($password1 === $query["password"])) {
                 $userdata = array(
+                    'id' => $query['id'],
                     'title' => $query['title'],
                     'email' => $query['email'],
                     'username' => $query['user_name'],

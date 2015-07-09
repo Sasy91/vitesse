@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6" >
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/1">
                                     <div id="room-1">   
                                         <h4>SUITE&nbsp1</h4>
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    non doloribus doloremque,<a href="">See More</a>
+                                                    non doloribus doloremque,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/1">See More</a>
                                                 </span>
                                             </div> 
                                         </div>                       
@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                             </div>
                             <div class="col-sm-6">
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/2">
                                     <div id="room-2">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <h4>SUITE&nbsp2</h4> 
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    non doloribus doloremque,<a href="">See More</a>
+                                                    non doloribus doloremque,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/2">See More</a>
                                                 </span>
                                             </div>  
                                         </div>                          
@@ -83,17 +83,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12">
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/3">
                                     <div id="room-3">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <h4>SUITE&nbsp2</h4> 
                                             <div class="info wow fadeIn" data-wow-duration="1500ms">
-                                                <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 2</h5>
+                                                <h5 class=" wow  fadeInLeft" data-wow-duration="500ms">SUITE 3</h5>
                                                 <span class=" wow  fadeInLeft" data-wow-duration="700ms">
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    non doloribus doloremque,<a href="">See More</a>
+                                                    non doloribus doloremque,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/3">See More</a>
                                                 </span>
                                             </div>  
                                         </div>                          
@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-4" >
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/4">
                                     <div id="room-4">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <h4>SUITE&nbsp4</h4> 
@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    ,<a href="">See More</a>
+                                                    ,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/4">See More</a>
                                                 </span>
                                             </div> 
                                         </div>
@@ -127,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
 
                             <div class="col-sm-8">
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/5">
                                     <div id="room-5">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <h4>SUITE&nbsp5</h4> 
@@ -137,7 +137,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    non doloribus doloremque,<a href="">See More</a>
+                                                    non doloribus doloremque,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/5">See More</a>
                                                 </span>
                                             </div>  
                                         </div>   
@@ -152,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6" >
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/6">
                                     <div id="room-6">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <h4>SUITE&nbsp6</h4> 
@@ -162,7 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    non doloribus doloremque,<a href="">See More</a>
+                                                    non doloribus doloremque,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/6">See More</a>
                                                 </span>
                                             </div>  
                                         </div>                          
@@ -170,7 +170,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                             </div>
                             <div class="col-sm-6">
-                                <a href="">
+                                <a href="<?php echo base_url(); ?>index.php/camp/suite-no/7">
                                     <div id="room-7">
                                         <div class="mas wow fadeIn" data-wow-duration="1500ms">
                                             <h4>SUITE&nbsp7</h4> 
@@ -180,7 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipisicing elit. 
                                                     Tenetur officia soluta veniam
-                                                    non doloribus doloremque,<a href="">See More</a>
+                                                    non doloribus doloremque,<a href="<?php echo base_url(); ?>index.php/camp/suite-no/7">See More</a>
                                                 </span>
                                             </div>  
                                         </div>                              

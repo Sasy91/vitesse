@@ -37,288 +37,288 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="team_baner fullheight">
                     <img src="<?php echo base_url(); ?>/resoures/img/team/cover.jpg" alt="...">
                 </div>
-                
-                   <div id="main_info">
-                       <div class="container">
-                       <h1>Team Poe</h1>
+
+                <div id="main_info">
+                    <div class="container">
+                        <h1>Team Poe</h1>
                         <div class="row">
-                                 <div class="discrp">
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                      Earum, temporibus, delectus! Quia repellendus quod impedit 
-                                      ea ex natus quidem pariatur nulla iusto! Animi ullam quasi 
-                                      esse odit asperiores tempora eligendi.</p>
-                                 </div>
-                           </div><!--row-->
-                       </div><!--container-->
-                   </div><!--main_info-->
+                            <div class="discrp">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Earum, temporibus, delectus! Quia repellendus quod impedit 
+                                    ea ex natus quidem pariatur nulla iusto! Animi ullam quasi 
+                                    esse odit asperiores tempora eligendi.</p>
+                            </div>
+                        </div><!--row-->
+                    </div><!--container-->
+                </div><!--main_info-->
 
                 <section id="our-team">
                     <div class="container">
                         <div class="row">
-                          
-                           
-                           <div id="team-row">
-                          <!-- section title -->
-                            <!-- /section title -->
-                            <!-- team member -->
-                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms">
-                                <article class="team-mate" style="border-left-color: white;">
-                                    <div class="member-photo">
-                                        <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/till_picture.jpg" alt="">
-                                        <!-- /member photo -->
 
-                                        <!-- member social profile -->
-                                        <div class="mask">
-                                            <ul class="clearfix">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+
+                            <div id="team-row">
+                                <!-- section title -->
+                                <!-- /section title -->
+                                <!-- team member -->
+                                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms">
+                                    <article class="team-mate" style="border-left-color: white;">
+                                        <div class="member-photo">
+                                            <!-- member photo -->
+                                            <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/till_picture2.jpg" alt="">
+                                            <!-- /member photo -->
+
+                                            <!-- member social profile -->
+                                            <div class="mask">
+                                                <ul class="clearfix">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /member social profile -->
                                         </div>
-                                        <!-- /member social profile -->
-                                    </div>
 
-                                    <!-- member name & designation -->
-                                    <div class="member-title"><center>
-                                            <h3>Til</h3>
-                                            <span>Trainer</span></center>
-                                    </div>
-                                    <!-- /member name & designation -->
-
-                                    <!-- about member -->
-                                    <div class="member-info">
-                                        <p style="color: white;">when there was the time I didn't have facial hair I went off to live in Brazil for a year to study and
-                                            discover the new. As a young fella I loved to be away from home and be my own man; even my
-                                            dad payed.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_til'>Read More</a></p>
-                                    </div>
-                                    <!-- /about member -->
-
-                                </article>
-                            </div>
-                            <!-- end team member -->
-
-                            <!-- team member -->
-                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
-                                <article class="team-mate" style="border-left-color: white;">
-                                    <div class="member-photo">
-                                        <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_picture.jpg" alt="">
-                                        <!-- /member photo -->
-
-                                        <!-- member social profile -->
-                                        <div class="mask">
-                                            <ul class="clearfix">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+                                        <!-- member name & designation -->
+                                        <div class="member-title"><center>
+                                                <h3>Till Rohrmann</h3>
+                                                <span>Trainer</span></center>
                                         </div>
-                                        <!-- /member social profile -->
-                                    </div>
+                                        <!-- /member name & designation -->
 
-                                    <!-- member name & designation -->
-                                    <div class="member-title"><center>
-                                            <h3>Ben</h3>
-                                            <span>Trainer</span></center>
-                                    </div>
-                                    <!-- /member name & designation -->
-
-                                    <!-- about member -->
-                                    <div class="member-info">
-                                        <p style="color: white;">Being from the West Midlands, I got into surfing from studying 
-                                            history and tourism at Exeter University in the UK. My passion for 
-                                            surfing led me to running the University Surf Club in my final year,
-                                            where a few friends and.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
-                                    </div>
-                                    <!-- /about member -->
-                                </article>
-                            </div>
-                            <!-- end team member -->
-
-                            <!-- team member -->
-                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
-                                <article class="team-mate" style="border-left-color: white;">
-                                    <div class="member-photo">
-                                        <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_new.jpg" alt="">
-                                        <!-- /member photo -->
-
-                                        <!-- member social profile -->
-                                        <div class="mask">
-                                            <ul class="clearfix">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+                                        <!-- about member -->
+                                        <div class="member-info">
+                                            <p style="color: white;">when there was the time I didn't have facial hair I went off to live in Brazil for a year to study and
+                                                discover the new. As a young fella I loved to be away from home and be my own man; even my
+                                                dad payed.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_til'>Read More</a></p>
                                         </div>
-                                        <!-- /member social profile -->
-                                    </div>
+                                        <!-- /about member -->
 
-                                    <!-- member name & designation -->
-                                    <div class="member-title">
-                                        <h3>N/A</h3>
-                                        <span>N/A</span>
-                                    </div>
-                                    <!-- /member name & designation -->
+                                    </article>
+                                </div>
+                                <!-- end team member -->
 
-                                    <!-- about member -->
-                                    <div class="member-info">
-                                        <p style="color: white;">I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
-                                            the locals being some of the most welcoming people you will meet.We set up Camp Poe with a
-                                        view to share the wonders..<a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
-                                    </div>
-                                    <!-- /about member -->
-                                </article>
-                            </div>
-                            <!-- end team member -->
-                           </div><!--team-row-->
-                           
+                                <!-- team member -->
+                                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+                                    <article class="team-mate" style="border-left-color: white;">
+                                        <div class="member-photo">
+                                            <!-- member photo -->
+                                            <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_picture.jpg" alt="">
+                                            <!-- /member photo -->
+
+                                            <!-- member social profile -->
+                                            <div class="mask">
+                                                <ul class="clearfix">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /member social profile -->
+                                        </div>
+
+                                        <!-- member name & designation -->
+                                        <div class="member-title"><center>
+                                                <h3>Ben</h3>
+                                                <span>Trainer</span></center>
+                                        </div>
+                                        <!-- /member name & designation -->
+
+                                        <!-- about member -->
+                                        <div class="member-info">
+                                            <p style="color: white;">Being from the West Midlands, I got into surfing from studying 
+                                                history and tourism at Exeter University in the UK. My passion for 
+                                                surfing led me to running the University Surf Club in my final year,
+                                                where a few friends and.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
+                                        </div>
+                                        <!-- /about member -->
+                                    </article>
+                                </div>
+                                <!-- end team member -->
+
+                                <!-- team member -->
+                                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+                                    <article class="team-mate" style="border-left-color: white;">
+                                        <div class="member-photo">
+                                            <!-- member photo -->
+                                            <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_new.jpg" alt="">
+                                            <!-- /member photo -->
+
+                                            <!-- member social profile -->
+                                            <div class="mask">
+                                                <ul class="clearfix">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /member social profile -->
+                                        </div>
+
+                                        <!-- member name & designation -->
+                                        <div class="member-title">
+                                            <h3>N/A</h3>
+                                            <span>N/A</span>
+                                        </div>
+                                        <!-- /member name & designation -->
+
+                                        <!-- about member -->
+                                        <div class="member-info">
+                                            <p style="color: white;">I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
+                                                the locals being some of the most welcoming people you will meet.We set up Camp Poe with a
+                                                view to share the wonders..<a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
+                                        </div>
+                                        <!-- /about member -->
+                                    </article>
+                                </div>
+                                <!-- end team member -->
+                            </div><!--team-row-->
+
 
 
                         </div>  	<!-- End row -->
                     </div>   	<!-- End container -->
                 </section>   <!-- End section -->
-                
-                
-                 <section id="our-team">
+
+
+                <section id="our-team">
                     <div class="container">
                         <div class="row">
-                          
-                           
-                           <div id="team-row">
-                          <!-- section title -->
-                            <!-- /section title -->
-                            <!-- team member -->
-                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms">
-                                <article class="team-mate" style="border-left-color: white;">
-                                    <div class="member-photo">
-                                        <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/till_picture.jpg" alt="">
-                                        <!-- /member photo -->
 
-                                        <!-- member social profile -->
-                                        <div class="mask">
-                                            <ul class="clearfix">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+
+                            <div id="team-row">
+                                <!-- section title -->
+                                <!-- /section title -->
+                                <!-- team member -->
+                                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms">
+                                    <article class="team-mate" style="border-left-color: white;">
+                                        <div class="member-photo">
+                                            <!-- member photo -->
+                                            <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/till_picture.jpg" alt="">
+                                            <!-- /member photo -->
+
+                                            <!-- member social profile -->
+                                            <div class="mask">
+                                                <ul class="clearfix">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /member social profile -->
                                         </div>
-                                        <!-- /member social profile -->
-                                    </div>
 
-                                    <!-- member name & designation -->
-                                    <div class="member-title"><center>
-                                            <h3>Til</h3>
-                                            <span>Trainer</span></center>
-                                    </div>
-                                    <!-- /member name & designation -->
-
-                                    <!-- about member -->
-                                    <div class="member-info">
-                                        <p style="color: white;">when there was the time I didn't have facial hair I went off to live in Brazil for a year to study and
-                                            discover the new. As a young fella I loved to be away from home and be my own man; even my
-                                            dad payed.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_til'>Read More</a></p>
-                                    </div>
-                                    <!-- /about member -->
-
-                                </article>
-                            </div>
-                            <!-- end team member -->
-
-                            <!-- team member -->
-                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
-                                <article class="team-mate" style="border-left-color: white;">
-                                    <div class="member-photo">
-                                        <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_picture.jpg" alt="">
-                                        <!-- /member photo -->
-
-                                        <!-- member social profile -->
-                                        <div class="mask">
-                                            <ul class="clearfix">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+                                        <!-- member name & designation -->
+                                        <div class="member-title"><center>
+                                                <h3>Til</h3>
+                                                <span>Trainer</span></center>
                                         </div>
-                                        <!-- /member social profile -->
-                                    </div>
+                                        <!-- /member name & designation -->
 
-                                    <!-- member name & designation -->
-                                    <div class="member-title"><center>
-                                            <h3>Ben</h3>
-                                            <span>Trainer</span></center>
-                                    </div>
-                                    <!-- /member name & designation -->
-
-                                    <!-- about member -->
-                                    <div class="member-info">
-                                        <p style="color: white;">Being from the West Midlands, I got into surfing from studying 
-                                            history and tourism at Exeter University in the UK. My passion for 
-                                            surfing led me to running the University Surf Club in my final year,
-                                            where a few friends and.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
-                                    </div>
-                                    <!-- /about member -->
-                                </article>
-                            </div>
-                            <!-- end team member -->
-
-                            <!-- team member -->
-                            <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
-                                <article class="team-mate" style="border-left-color: white;">
-                                    <div class="member-photo">
-                                        <!-- member photo -->
-                                        <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_new.jpg" alt="">
-                                        <!-- /member photo -->
-
-                                        <!-- member social profile -->
-                                        <div class="mask">
-                                            <ul class="clearfix">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+                                        <!-- about member -->
+                                        <div class="member-info">
+                                            <p style="color: white;">when there was the time I didn't have facial hair I went off to live in Brazil for a year to study and
+                                                discover the new. As a young fella I loved to be away from home and be my own man; even my
+                                                dad payed.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_til'>Read More</a></p>
                                         </div>
-                                        <!-- /member social profile -->
-                                    </div>
+                                        <!-- /about member -->
 
-                                    <!-- member name & designation -->
-                                    <div class="member-title">
-                                        <h3>N/A</h3>
-                                        <span>N/A</span>
-                                    </div>
-                                    <!-- /member name & designation -->
+                                    </article>
+                                </div>
+                                <!-- end team member -->
 
-                                    <!-- about member -->
-                                    <div class="member-info">
-                                        <p style="color: white;">I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
-                                            the locals being some of the most welcoming people you will meet.We set up Camp Poe with a
-                                        view to share the wonders..<a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
-                                    </div>
-                                    <!-- /about member -->
-                                </article>
-                            </div>
-                            <!-- end team member -->
-                           </div><!--team-row-->
-                           
+                                <!-- team member -->
+                                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+                                    <article class="team-mate" style="border-left-color: white;">
+                                        <div class="member-photo">
+                                            <!-- member photo -->
+                                            <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_picture.jpg" alt="">
+                                            <!-- /member photo -->
+
+                                            <!-- member social profile -->
+                                            <div class="mask">
+                                                <ul class="clearfix">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /member social profile -->
+                                        </div>
+
+                                        <!-- member name & designation -->
+                                        <div class="member-title"><center>
+                                                <h3>Ben</h3>
+                                                <span>Trainer</span></center>
+                                        </div>
+                                        <!-- /member name & designation -->
+
+                                        <!-- about member -->
+                                        <div class="member-info">
+                                            <p style="color: white;">Being from the West Midlands, I got into surfing from studying 
+                                                history and tourism at Exeter University in the UK. My passion for 
+                                                surfing led me to running the University Surf Club in my final year,
+                                                where a few friends and.. <a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
+                                        </div>
+                                        <!-- /about member -->
+                                    </article>
+                                </div>
+                                <!-- end team member -->
+
+                                <!-- team member -->
+                                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+                                    <article class="team-mate" style="border-left-color: white;">
+                                        <div class="member-photo">
+                                            <!-- member photo -->
+                                            <img class="img-responsive" width="100%" height="100%" src="<?php echo base_url(); ?>/resoures/img/team/ben_new.jpg" alt="">
+                                            <!-- /member photo -->
+
+                                            <!-- member social profile -->
+                                            <div class="mask">
+                                                <ul class="clearfix">
+                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /member social profile -->
+                                        </div>
+
+                                        <!-- member name & designation -->
+                                        <div class="member-title">
+                                            <h3>N/A</h3>
+                                            <span>N/A</span>
+                                        </div>
+                                        <!-- /member name & designation -->
+
+                                        <!-- about member -->
+                                        <div class="member-info">
+                                            <p style="color: white;">I hope you will love Sri Lanka as much as I do. The waves, nature and food are amazing as well as
+                                                the locals being some of the most welcoming people you will meet.We set up Camp Poe with a
+                                                view to share the wonders..<a href="#" style="color: wheat" class="pull-right" data-toggle='modal' data-target='#profile_ben'>Read More</a></p>
+                                        </div>
+                                        <!-- /about member -->
+                                    </article>
+                                </div>
+                                <!-- end team member -->
+                            </div><!--team-row-->
+
 
 
                         </div>  	<!-- End row -->
                     </div>   	<!-- End container -->
                 </section>   <!-- End section -->
-                
-                
+
+
 
                 <div class="modal fade" id="profile_til" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="" >
-                    <div class="modal-dialog" style="width: 700px; style="background-color: #363636;" ">
+                    <div class="modal-dialog" style="width: 700px; background-color: #363636;">
                         <div class="modal-content" style="background-color: #363636;">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

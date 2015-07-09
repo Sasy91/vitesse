@@ -2,6 +2,17 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of Room
+ *
+ * @author Sameera Danthanarayana
+ */
 class Room extends CI_Controller {
 
     //private static $room_one = 1;
@@ -12,10 +23,10 @@ class Room extends CI_Controller {
         $this->load->view('rooms');
     }
 
-    public function room_id($id) {
+    public function room_id() {
         $this->load->model('imagemodel');
-        $room['images'] = $this->imagemodel->getRoomImages($id);
-        $room['details'] = $this->imagemodel->getRoomDetails($id);
+        $room['images'] = $this->imagemodel->getRoomImages($this->uri->segment(3));
+        $room['details'] = $this->imagemodel->getRoomDetails($this->uri->segment(3));
         $this->load->view('room_one', $room);
     }
 
@@ -121,8 +132,12 @@ class Room extends CI_Controller {
         $booking_data['avi_details'] = $this->roommodel->availableRooms($booking_data);
         $booking_data['check_in'] = date("m/d/Y", strtotime($checkin));
         $booking_data['check_out'] = date("m/d/Y", strtotime($checkout));
-        $booking_data['pack_details'] = $this->Packagemodel->getAvailabePackagers($booking_data);
-        
+        if (!empty($this->input->post("room_home_id"))) {
+            $booking_data['pack_details'] = $this->Packagemodel->getAvailabePackagers($booking_data, $this->input->post("room_id"));
+        } else {
+            $booking_data['pack_details'] = $this->Packagemodel->getAvailabePackagers($booking_data);
+        }
+
         if (!empty($this->session->userdata('uniqueId'))) {
             $booking_data['booking_data'] = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
         }
