@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div id="contact_info">
                 <div class="cart_baner">
-                    <img src="<?php echo base_url(); ?>/resoures/img/covers/contact.png" alt="...">
+                    <img style="min-width: 100%;" src="<?php echo base_url(); ?>/resoures/img/covers/contact.png" alt="...">
                 </div> 
                 <div id="main_info">
                     <div class="container">

@@ -40,25 +40,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- Wrapper for slides -->
               <div class="carousel-inner wow fadeIn" data-wow-duration="500ms" data-wow-delay="1500ms" role="listbox">
                 <div class="item active">
-                  <img src="<?php echo base_url(); ?>/resoures/img/home/1.png" alt="CAMP POE HOTEL">
+                  <img style="min-width: 100%;"  src="<?php echo base_url(); ?>/resoures/img/home/1.png" alt="CAMP POE HOTEL">
                   <div class="carousel-caption">
                     ...
                   </div>
                 </div>
                 <div class="item">
-                  <img src="<?php echo base_url(); ?>/resoures/img/home/2.png" alt="CAMP POE HOTEL">
+                  <img style="min-width: 100%;"  src="<?php echo base_url(); ?>/resoures/img/home/2.png" alt="CAMP POE HOTEL">
                   <div class="carousel-caption">
                     ...
                   </div>
                 </div>
                   <div class="item">
-                  <img src="<?php echo base_url(); ?>/resoures/img/home/3.png" alt="CAMP POE HOTEL">
+                  <img style="min-width: 100%;"  src="<?php echo base_url(); ?>/resoures/img/home/3.png" alt="CAMP POE HOTEL">
                   <div class="carousel-caption">
                     ...
                   </div>
                 </div>
                   <div class="item">
-                  <img src="<?php echo base_url(); ?>/resoures/img/home/4.png" alt="CAMP POE HOTEL">
+                  <img style="min-width: 100%;"  src="<?php echo base_url(); ?>/resoures/img/home/4.png" alt="CAMP POE HOTEL">
                   <div class="carousel-caption">
                     ...
                   </div>

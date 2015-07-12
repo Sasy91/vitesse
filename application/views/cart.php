@@ -57,8 +57,8 @@
 
 
             <div  id="Shop_content">
-                <div class="cart_baner ">
-                    <img src="<?php echo base_url(); ?>/resoures/img/covers/cart_baner.png" alt="...">
+                <div class="pakages_baner">
+                    <img style="min-width: 100%;" src="<?php echo base_url(); ?>/resoures/img/covers/cart_baner.png" alt="...">
                 </div> 
 
                 <div class="addcollect">

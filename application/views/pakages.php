@@ -41,7 +41,7 @@
 
 
                 <div class="pakages_baner fullheight">
-                    <img src="<?php echo base_url(); ?>/resoures/img/covers/camp.jpg" alt="...">
+                    <img style="min-width: 100%" src="<?php echo base_url(); ?>/resoures/img/covers/camp.jpg" alt="...">
                 </div>
 
                 <section id="main_info"> 

@@ -269,9 +269,9 @@ class Booking extends CI_Controller {
             $output .= "<td class='text-right'>" . $suite->tot_guest . "</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $suite->price . "</span></td></tr>";
         }
         if (!empty($package_results)) {
-            $output .= "<tr><td><span style='font-weight: bold'>Orderd Packagers</span></td><td></td><td></td><td></td><td></td><td></td></tr>";
+            $output .= "<tr><td><span style='color: #000000; font-size: 1.0em; font-weight: bold'>Orderd Packagers</span></td><td></td><td></td><td></td><td></td><td></td></tr>";
             foreach ($package_results as $package) {
-                $output .="<tr><td>" . $package->package_name . "</td><td>-</td><td>-</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $package->package_amount . "</span></td>";
+                $output .="<tr><td style='color: #000000;'>" . $package->package_name . "</td><td>-</td><td>-</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $package->package_amount . "</span></td>";
                 $output .= "<td class='text-right'>" . $package->no_of_guests . "</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $package->amount . "</span></td></tr>";
             }
         }

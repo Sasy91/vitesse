@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             function validateEmail() {
                 var email = $("#email").val();
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/UserRegistation/validate_user',
+                    url: BASE_URL + 'index.php/UserRegistation/validate_user',
                     type: 'post',
                     data: {'action': 'check_user', 'email': email},
                     success: function (rowData) {
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             $(function () {
                 $("#preloader_pack").hide();
-                
+
                 //$(".no_guest").prop('disabled', true);
                 $(".no_guest").change(function () {
                     if (!$(".package").is(":checked")) {
@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 });
                 if ($("#session").val() && $("#session_reservation").val() && $("#session_pack_id").val()) {
                     $.ajax({
-                        url: 'http://localhost/duwa/vitesse/index.php/booking/get_invoice',
+                        url: BASE_URL + 'index.php/booking/get_invoice',
                         type: 'post',
                         data: {'action': 'get_invoice'},
                         success: function (rowData) {
@@ -133,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             function cancel() {
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/booking/cancel_booking',
+                    url: BASE_URL + 'index.php/booking/cancel_booking',
                     type: 'post',
                     data: {'action': 'cancel_booking'},
                     success: function (rowData) {
@@ -149,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             function book_another_room() {
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/room/check_availablilty',
+                    url: BASE_URL + 'index.php/room/check_availablilty',
                     type: 'post',
                     data: {'action': 'check_ava'},
                     success: function (rowData) {
@@ -176,7 +176,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 var adult = $("#adult").val();
                 var child = $("#child").val();
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/room/check_availablilty',
+                    url: BASE_URL + 'index.php/room/check_availablilty',
                     type: 'post',
                     data: {'action': 'check_ava', 'check_in': check_in, 'check_out': check_out, 'adult': adult, 'child': child},
                     success: function (rowData) {
@@ -205,7 +205,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 var username = $('#username').val();
                 var password = $('#password').val();
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/UserRegistation/register_user',
+                    url: BASE_URL + 'index.php/UserRegistation/register_user',
                     type: 'post',
                     data: {'action': 'register_user', 'title': title, 'f_name': f_name, 'l_name': l_name, 'email': email, 'tel': tel, 'country': country, 'id_type': id_type, 'id_number': id_number, 'username': username, 'password': password},
                     success: function (rowData) {
@@ -227,7 +227,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 //alert(id);
                 //$("#loadgif").show();
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/room/room_img_by_id',
+                    url: BASE_URL + 'index.php/room/room_img_by_id',
                     type: 'post',
                     data: {'action': 'get', 'id': id},
                     success: function (rowData) {
@@ -248,7 +248,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 if (r == true) {
                     var room_id = $(this).attr("id");
                     $.ajax({
-                        url: 'http://localhost/duwa/vitesse/index.php/booking/delete_booking',
+                        url: BASE_URL + 'index.php/booking/delete_booking',
                         type: 'post',
                         data: {'action': 'delete_booking', 'temp_booking_id': room_id},
                         success: function (rowData) {
@@ -283,7 +283,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     });
 
                     $.ajax({
-                        url: 'http://localhost/duwa/vitesse/index.php/booking/add_package',
+                        url: BASE_URL + 'index.php/booking/add_package',
                         type: 'post',
                         data: {'action': 'add_packge', 'packagers': JSON.stringify(packagers), 'guest': JSON.stringify(guest)},
                         success: function (rowData) {
@@ -305,7 +305,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     });
                 } else {
                     $.ajax({
-                        url: 'http://localhost/duwa/vitesse/index.php/booking/add_package',
+                        url: BASE_URL + 'index.php/booking/add_package',
                         type: 'post',
                         data: {'action': 'do_not_add_packge'},
                         success: function (rowData) {
@@ -342,7 +342,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }
                 var guests = audlt + child;
                 $.ajax({
-                    url: 'http://localhost/duwa/vitesse/index.php/booking/create_booking',
+                    url: BASE_URL + 'index.php/booking/create_booking',
                     type: 'post',
                     data: {'action': 'create_session', 'check_in': check_in, 'check_out': check_out, 'room_id': room_id, 'guests': guests, 'adult': audlt, 'child': child},
                     success: function (rowData) {
@@ -415,11 +415,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body id="body">
         <!--Header Import-->
         <?php include_once './resoures/imports/temp_header.php'; ?>
-
-
-
-
-
         <div class="container" id="booking">
             <div class="row">
                 <div class="progress" id="progress1">
@@ -658,7 +653,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="panel-body">
                                                         <div class="col-lg-6 col-md-6">
                                                             <a href="#">
-                                                                <img class="img-responsive" alt="Bootstrap template" src="http://placehold.it/350x150" />
+                                                                <img class="img-responsive" style="width: 350px; height: 200px;" alt="Bootstrap template" src="<?php echo base_url().$pack->cover_url;  ?>" />
                                                             </a>
                                                         </div>
                                                         <div class="col-lg-6">
@@ -838,7 +833,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-condensed">
+                                            <table class="table table-condensed" style="font-family:  Amaranth; font-size: 1.2em; color: #000000; font-font-weight: bold">
                                                 <thead>
                                                     <tr>
                                                         <td><strong>Reservations</strong></td>
