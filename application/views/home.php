@@ -152,9 +152,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="container" id="cnt1">
                     <h1 class="wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms" style="margin-top:50px;">Camp Poe Pakages</h1>
     <div class="row feature">
-        <div class="col-md-3 col-sm-6 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
+        <div class="col-md-3 col-sm-4 col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-xs-0 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
             <div>
-                <img src="http://lorempixel.com/200/200/city/1/" alt="Texto Alternativo" class="img-circle">
+                <img src="http://lorempixel.com/200/200/city/1/" alt="Camp Poe Pakages" class="img-circle">
                 <h6>Pakage One</h6>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 
@@ -166,9 +166,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <div class="col-md-3 col-sm-6 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
+        <div class="col-md-3 col-sm-4 col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-xs-0 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
             <div>
-                <img src="http://lorempixel.com/200/200/city/2/" alt="Texto Alternativo" class="img-circle">
+                <img src="http://lorempixel.com/200/200/city/2/" alt="Camp Poe Pakages" class="img-circle">
                 <h6>Pakage Two</h6>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 
@@ -180,9 +180,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <div class="col-md-3 col-sm-6 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
+        <div class="col-md-3 col-sm-4 col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-xs-0 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
             <div>
-                <img src="http://lorempixel.com/200/200/city/3/" alt="Texto Alternativo" class="img-circle">
+                <img src="http://lorempixel.com/200/200/city/3/" alt="Camp Poe Pakages" class="img-circle">
                 <h6>Pakage Three</h6>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 
@@ -193,9 +193,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="#" class="btn btn-success lower">See Feature details</a>
             </div>
         </div>
-          <div class="col-md-3 col-sm-6 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
+          <div class="col-md-3 col-sm-4 col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-xs-0 pakag wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
             <div>
-                <img src="http://lorempixel.com/200/200/city/3/" alt="Texto Alternativo" class="img-circle">
+                <img src="http://lorempixel.com/200/200/city/3/" alt="Camp Poe Pakages" class="img-circle">
                 <h6>Pakage Four</h6>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 

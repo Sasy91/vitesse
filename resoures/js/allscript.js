@@ -1,4 +1,10 @@
 jQuery(function ($) { 
+
+
+
+});
+
+jQuery(function ($) { 
     
     "use strict";
     	/* ========================================================================= */
@@ -7,22 +13,27 @@ jQuery(function ($) {
 
 	var nice = $("html").niceScroll({
 		cursorborderradius: 0,
-		cursorwidth: "18px",
+		cursorwidth: "12px",
 		cursorfixedheight: 150,
-		cursorcolor: "rgba(62, 202, 255, 0.92)",
+		cursorcolor: "#2a7b72",
 		zindex: 9999,
-		cursorborder: 0,
+		cursorborder: 10,
 	});
-//    	var nice = $(".room-info").niceScroll({
-//		cursorborderradius: 0,
-//		cursorwidth: "18px",
-//		cursorfixedheight: 150,
-//		cursorcolor: "#000",
-//		zindex: 9999,
-//		cursorborder: 10,
-//	});
     
-    	/* ========================================================================= */
+   /* ========================================================================= */
+	/*	dropdown auto hover
+	/* ========================================================================= */
+
+
+    
+    $('ul.nav li.dropdown').hover(function(){
+      $('.dropdown-menu',this).fadeIn();
+    },function(){
+       $('.dropdown-menu',this).fadeOut('fast');
+    });
+
+    
+/* ========================================================================= */
 	/*	Page Preloader
 	/* ========================================================================= */
 	
@@ -227,8 +238,8 @@ jQuery(function ($) {
 /**	navigation hide background-color: rgba(62, 202, 255, 0.4);
 /* ========================================================================= */
   jQuery(window).scroll(function () {
-        if (jQuery(window).scrollTop() > 550) {
-            jQuery("#navigation").css("background-color","rgba(62, 202, 255, 0.94)");
+        if (jQuery(window).scrollTop() > 450) {
+            jQuery("#navigation").css("background-color","rgba(42, 123, 114, 0.78)");
             jQuery("#navigation").addClass("animated-nav");
         } else {
             jQuery("#navigation").css("background-color","transparent");
