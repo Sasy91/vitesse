@@ -8,29 +8,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta name="author" content="CAMP POE SRI LANKA">
         <title>CAMP POE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="<?php echo base_url(); ?>resoures/loader/js/modernizr.custom.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resoures/loader/css/effect2.css" />
-
-
         <?php include_once './resoures/imports/baseimports.php'; ?>
     </head>
 
-    <body>
-        <div id="ip-container" class="ip-container">
-            <!-- initial header -->
-            <header class="ip-header">
-                <div class="ip-loader">
-                    <div class="container">
-                        <div class="row " style=" text-align: center;">
-                            <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/logo.png" alt=""> 
-                        </div>
-                    </div>
-                    <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
-                    <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                    <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                    </svg>
-                </div>
-            </header>
+    <body id="body">
+           <!--
+	    Start Preloader
+	    ==================================== -->
+		<div id="loading-mask">
+			<div class="loading-img">
+				<img alt="Meghna Preloader" width="20%" height="20%" src="<?php echo base_url(); ?>/resoures/img/log_2.svg" />
+
+			</div>
+		</div>
+        <!--
+        End Preloader
+        ==================================== -->
+
             <?php include_once './resoures/imports/temp_header.php'; ?>
             <div  id="home_poe">
 
@@ -39,12 +33,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              =================================================--------->
              
                <div class="home-top ">
-                    <div id="carousel-example-generic " class="carousel slide" data-ride="carousel">
+                    <div id="carousel-example-generic " class="carousel slide " data-ride="carousel">
               <!-- Indicators -->
     
 
               <!-- Wrapper for slides -->
-              <div class="carousel-inner " role="listbox">
+              <div class="carousel-inner wow fadeIn" data-wow-duration="500ms" data-wow-delay="1500ms" role="listbox">
                 <div class="item active">
                   <img src="<?php echo base_url(); ?>/resoures/img/home/1.png" alt="CAMP POE HOTEL">
                   <div class="carousel-caption">
@@ -245,7 +239,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!----=====================================================
                    camp poe info end
            =================================================--------->
-        </div><!--ip-container-->
+
         <!----=====================================================
                 fotter
         =================================================--------->
@@ -279,11 +273,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             wow.init();
 
         </script>
-
-
-        <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
-        <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
-        <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>
         <!----==============================
               end      script
           ----------------------------------> 

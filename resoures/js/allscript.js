@@ -22,6 +22,25 @@ jQuery(function ($) {
 //		cursorborder: 10,
 //	});
     
+    	/* ========================================================================= */
+	/*	Page Preloader
+	/* ========================================================================= */
+	
+	window.onload = function () {
+		document.getElementById('loading-mask').style.display = 'none';
+	}
+    
+//        jQuery(document).ready(function ($) {
+//        $(window).load(function () {
+//            setTimeout(function(){
+//                $('#loading-mask').fadeOut('slow', function () {
+//                });
+//            },2000);
+//
+//        });  
+//    });
+      	
+    
    /* ========================================================================= */
 	/*	cover full size
 	/* ========================================================================= */

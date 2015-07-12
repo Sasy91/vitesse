@@ -8,8 +8,12 @@
     <head>
         <title>Strata by HTML5 UP</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        
         <meta name="description" content="" />
+        
         <meta name="keywords" content="" />
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
         <script src="<?php echo base_url(); ?>resoures/team/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>resoures/team/js/jquery.poptrox.min.js"></script>

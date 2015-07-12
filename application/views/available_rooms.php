@@ -360,7 +360,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </script>
     </head>
 
-    <body id="body" style="background-color: rgb(25, 63, 23);">
+    <body id="body">
         <!--Header Import-->
         <?php include_once './resoures/imports/temp_header.php'; ?>
 
@@ -368,7 +368,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-        <div class="container" style="margin-top: 120px; margin-bottom: 100px;">
+        <div class="container" id="booking">
             <div class="row">
                 <div class="progress" id="progress1">
                     <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
@@ -405,18 +405,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </div>
-            <div class="row setup-content step activeStepInfo" id="step-1">
+            <div class="row setup-content step activeStepInfo " id="step-1">
                 <div class="col-xs-12">
-                    <div class="col-md-12 well text-center">
+                    <div class="col-md-12 well text-center ">
                         <h2>Find Available Rooms</h2>
                         <div class="row">
                             <?php
                             if (!empty($check_in && $check_out)) {
                                 ?>
-                                <div class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
+                                <div class="col-sm-3 selection">
                                     <form id="checkinform" style="margin-top: 10px;" method="POST" action="">
                                         <div class="form-group" >
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Arrival</label>
+                                            <label style="font-family: sans-serif; color: white; ;">Arrival</label>
                                             <input type="hidden" id="session" value="<?php echo $this->session->userdata('uniqueId'); ?>">
                                             <input type="hidden" id="session_reservation" value="<?php echo $this->session->userdata('room_id') ?>">
                                             <input type="hidden" id="session_pack_id" value="<?php echo $this->session->userdata('pack_id') ?>">
@@ -424,12 +424,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
 
                                         <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Departure</label>
+                                            <label style="font-family: sans-serif; color: white; ;">Departure</label>
                                             <input type="text" id="checkout" value="<?php echo $check_out; ?>" onchange="validate(this);" class="form-control" placeholder="Check out" name="depart" class="required" />
                                         </div>
 
                                         <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;">Adults</label>
+                                            <label style="font-family: sans-serif; color: white; ;">Adults</label>
                                             <select id="adult" class="form-control" name="adult" onchange="check_availability();" style=" font-size:14px;">
                                                 <option selected value="1">1</option>
                                                 <option value="2">2</option>
@@ -444,7 +444,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label style="font-family: sans-serif; color: white; font-size: 14px;" >Kids <br>(Select If Age Above 5)</label>
+                                            <label style="font-family: sans-serif; color: white; ;" >Kids <br>(Select If Age Above 5)</label>
                                             <select id="child" class="form-control" onchange="check_availability();" name="child"  style=" font-size:14px;">
                                                 <option disabled selected value="0">Children</option>
                                                 <option value="1">1</option>
@@ -486,13 +486,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         echo "<img class='media-object' style='width: 250px; height: 220px;' width src='" . base_url() . $room->rm_cover_img . "' alt='Media Object'>";
                                         echo "</a>";
                                         echo "<div class='media-body'>";
-                                        echo "<h4 class='media-heading'><span style='font-size: 24px; color: black;'>" . $room->rm_name . "</span></h4>";
-                                        echo "<span style='font-size: 25px;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $room->rm_amount . "/<span style='font-size: 20px;'>Per Week and Person</span></span><br>";
-                                        echo $room->rm_detail;
-                                        echo "<br><br><button id='" . $room->rm_id . "' type='button' class='btn btn-success order'><i style='font-size: 12px;' class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;";
-                                        echo "<button type='button' class='btn btn-success view' id='" . $room->rm_id . "' data-toggle='modal' data-target='#sigiriya'><i style='font-size: 12px;' class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button>";
+                                        echo "<h4 class='media-heading'><span style='font-size: 35px; color:#2a7b72; padding:0px;'>" . $room->rm_name . "</span></h4>";
+                                        echo "<span style='font-size: 25px; color:#2a7b72;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $room->rm_amount . "/<span style='font-size: 20px;'>Per Week and Person</span></span><br>";
+                                        echo "<p style='color: #fff; margin-top: 20px; padding-left:15px;  padding-right:15px; padding-top:0;  padding-bottom:0;'>". $room->rm_detail ."</p>";
+                                        echo "<br><br><button id='" . $room->rm_id . "' type='button' class='btn btn-success order'><i  style='font-size: 10px;    padding-right:11px' class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;";
+                                        echo "<button type='button' class='btn btn-success view' id='" . $room->rm_id . "' data-toggle='modal' data-target='#sigiriya'><i style='font-size: 10px;' class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button>";
                                         echo "</div>";
-                                        echo "</div></br><hr style='isplay: block; height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; padding: 0;'><br>";
+                                        echo "</div></br><hr 'isplay: block; height: 1px; border: 0; border-top: 1px solid #2a7b72;; margin: 1em 0; padding: 0;'><br>";
                                     }
                                 }
                                 ?>
@@ -506,7 +506,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-12 well text-center">
                         <h2>Available Packagers </h2>
                         <div class="row">
-                            <div id="booked_rooms" class="col-sm-3" style=" border: 1px #e4e4e4 solid; border-radius: 10px; background-color: #000;" >
+                            <div id="booked_rooms" class="col-sm-3 selection" >
                                 <?php
                                 if (!empty($booking_data)) {
                                     $i = 1;
@@ -515,21 +515,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <form id="checkinform" style='margin-top: 10px; font-family: sans-serif;' method="POST" action="<?php echo base_url(); ?>index.php/room/check_availablilty">
                                             <span class='label label-success pull-left'>Reservation <?php echo $i; ?></span><a href='#'><span class='label label-danger pull-right del' id='<?php echo $bd->id; ?>'>Delete</span></a><br>
                                             <div class="form-group" >
-                                                <label style=" color: white; font-size: 14px;">Arrival</label>
+                                                <label style=" color: white; ;">Arrival</label>
                                                 <input type="text"  id="arriavle" value="<?php echo $bd->check_in ?>" class="form-control" disabled />
                                             </div>
 
                                             <div class="form-group">
-                                                <label style=" color: white; font-size: 14px;">Departure</label>
+                                                <label style=" color: white; ;">Departure</label>
                                                 <input type="text" id="departure" value="<?php echo $bd->check_out ?>" class="form-control" disabled/>
                                             </div>
 
                                             <div class="form-group">
-                                                <label style=" color: white; font-size: 14px;">Guests&nbsp;<i style="font-size: 14px;" class="fa fa-user-plus"></i></label><br>
+                                                <label style=" color: white; ;">Guests&nbsp;<i style=";" class="fa fa-user-plus"></i></label><br>
                                                 <label style="font-family: cursive; color: white; font-size: 12px;"><span id="no_adult"><?php echo $bd->adult ?></span>  Adults and <span id="no_child"><?php echo $bd->child ?></span> Children</label>
                                             </div>
                                             <div class="form-group">
-                                                <label style=" color: white; font-size: 14px;">Room Type&nbsp;<i style="font-size: 14px;" class="fa fa-glass"></i></label><br>
+                                                <label style=" color: white; ;">Room Type&nbsp;<i style=";" class="fa fa-glass"></i></label><br>
                                                 <label style="font-family: cursive; color: white; font-size: 12px;"><span id="suite_name"><?php echo $bd->room_name ?></span></label>
                                             </div>
                                             <div class="form-group">
@@ -564,7 +564,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <div class="col-lg-12 col-md-6">
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading">
-                                                        <h3 style="color: #000; font-family: sans-serif;" ><?php echo $pack->name ?></h3>
+                                                        <h3 style="color: #2a7b72;" ><?php echo $pack->name ?></h3>
                                                     </div>
                                                     <div class="panel-body">
                                                         <div class="col-lg-6 col-md-6">
@@ -572,10 +572,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                 <img class="img-responsive" alt="Bootstrap template" src="http://placehold.it/300x200" />
                                                             </a>
                                                         </div>
-                                                        <p style="color: #000; font-family: sans-serif; text-align: left;">
-                                                            <?php echo $pack->short_detail ?><br><span style="font-weight: bold;">Rate : USD<?php echo $pack->amount ?></span>                         
-                                                            <br><br><label><input class="form-control package" type="checkbox" name="mailId" id="<?php echo $pack->id ?>" value="<?php echo $pack->id ?>">&nbsp;&nbsp;Order This Package</label>
-                                                            <br><label>No of Peoples<input type="input" name="noId" class="form-control col-sm-3 no_guest" id="<?php echo $pack->id ?>" value=""></label>
+                                                        <p style="color: #fff ; text-align: left;">
+                                                            <?php echo $pack->short_detail ?><br><span style="font-weight: bold; width: 10%;">Rate : USD<?php echo $pack->amount ?></span>                         
+                                                            <br><br><label><input class=" package" style=" border: 1px solid  #2a7b72; color: #fff; font-weight: bold   width: 10%;" type="checkbox" name="mailId" id="<?php echo $pack->id ?>" value="<?php echo $pack->id ?>">&nbsp;&nbsp;Order This Package</label>
+                                                            <br><label>&nbsp;&nbsp;No of Peoples<input type="input" style="background: #000000;  border: 1px solid  #2a7b72; color: #ffffff;" name="noId" class=" col-sm-3 no_guest" id="<?php echo $pack->id ?>" value=""></label>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -587,7 +587,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
 
                             </div>
-                            <button type="button" onclick="cancel();" class="btn btn_proceed">Cancel Booking</button>&nbsp;<button class="btn btn-primary btn_proceed" id="proceed_no">Proceed Without Packagers</button>&nbsp;<button class="btn btn-primary btn_proceed" id="proceed_yes">Proceed Next</button>
+                           <div id="button" ><button type="button" onclick="cancel();" class="btn btn_proceed" style="background:#52292A; border:0px; color:#fff;">Cancel Booking</button>&nbsp;<button class="btn btn-primary btn_proceed" id="proceed_no">Proceed Without Packagers</button>&nbsp;<button class="btn btn-primary btn_proceed" id="proceed_yes">Proceed Next</button>
+                        </div>
                         </div> 
                     </div>
                 </div>

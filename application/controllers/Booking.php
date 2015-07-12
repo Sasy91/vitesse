@@ -94,7 +94,7 @@ class Booking extends CI_Controller {
             $output .= "<div class='form-group'><label style=' color: white; font-size: 14px;'>Guests&nbsp;<i style='font-size: 14px;' class='fa fa-user-plus'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'> " . $booking_data->adult . "  Adults and " . $booking_data->child . " Children</label></div>";
             $output .= "<div class='form-group'><label style=' color: white; font-size: 14px;'>Room Type&nbsp;<i style='font-size: 14px;' class='fa fa-glass'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'>" . $booking_data->room_name . "</label></div>";
             $output .= "<div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div>";
-            $output .= "<div class='form-group'><label class='pull-left' style=' color: #e4e4e4; font-size: 16px;' >Total Rate</label><span style=' color: #e4e4e4; font-size: 16px;' class='pull-right'>USD " . $booking_data->price . "<br></div>";
+            $output .= "<div class='form-group'><label class='pull-left' style=' color: #fff; font-size: 16px;' >Total Rate</label><span style=' color: #fff; font-size: 16px;' class='pull-right'>USD " . $booking_data->price . "<br></div>";
             $output .= "<br><div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div></form>";
             $i++;
         }
