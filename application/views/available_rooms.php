@@ -425,39 +425,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <div class="row">
-                <div class="row step">
-                    <div id="div1" class="col-md-2 activestep">
+                <div class=" step">
+                    <div id="div1" class="col-md-2 col-sm-10 col-xs-8 col-sm-offset-2 col-md-offset-0 col-xs-offset-2  col-lg-offset-0 activestep">
                         <span class="fa fa-home"></span>
                         <p>Availability</p>
                     </div>
-                    <div id="pack" class="col-md-2">
+                    <div id="pack" class="col-md-2 col-sm-10 col-xs-8 col-sm-offset-2 col-md-offset-0 col-xs-offset-2  col-lg-offset-0 ">
                         <span class="fa fa-binoculars"></span>
                         <p>Packagers</p>
                     </div>
-                    <div id="register" class="col-md-2">
+                    <div id="register" class="col-md-2 col-sm-10 col-xs-8 col-sm-offset-2 col-md-offset-0 col-xs-offset-2  col-lg-offset-0 ">
                         <span class="fa fa-pencil"></span>
                         <p>Registration</p>
                     </div>
-                    <div id="invoice" class="col-md-2">
+                    <div id="invoice" class="col-md-2 col-sm-10 col-xs-8 col-sm-offset-2 col-md-offset-0 col-xs-offset-2  col-lg-offset-0 " onclick="javascript: resetActive(event, 40, 'step-4');">
                         <span class="fa fa-thumbs-up"></span>
                         <p>Confirmation</p>
                     </div>
-                    <div class="col-md-2" onclick="javascript: resetActive(event, 80, 'step-5');">
+                    <div class="col-md-2 col-sm-10 col-xs-8 col-sm-offset-2 col-md-offset-0 col-xs-offset-2  col-lg-offset-0 " onclick="javascript: resetActive(event, 80, 'step-5');">
                         <span class="fa fa-paypal"></span>
                         <p>Payment </p>
                     </div>
-                    <div id="last" class="col-md-2" onclick="javascript: resetActive(event, 100, 'step-6');">
+                    <div id="last" class="col-md-2 col-sm-10 col-xs-8 col-sm-offset-2 col-md-offset-0 col-xs-offset-2  col-lg-offset-0 " onclick="javascript: resetActive(event, 100, 'step-6');">
                         <span class="fa fa-smile-o"></span>
                         <p>Review </p>
                     </div>
                 </div>
             </div>
-            <div class="row setup-content step activeStepInfo " id="step-1">
+              <div class="row setup-content step activeStepInfo" id="step-1">
                 <div class="col-xs-12">
-                    <div class="col-md-12 well text-center ">
-                        <h2>Find Available Rooms</h2>
-                        <span class="alert alert-success" style="color: red;">If you wish to stay an extra day or two this can be arranged, just contact us to sort out a deal!</span>
-                        <div class="row" style="margin-top: 30px;">
+                    <div class="col-sm-12 well text-center">
+                        <h1>Find Available Rooms</h1>
+                        <div class="row">
                             <?php
                             if (!empty($check_in && $check_out)) {
                                 ?>

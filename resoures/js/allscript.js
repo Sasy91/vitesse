@@ -1,10 +1,4 @@
 jQuery(function ($) { 
-
-
-
-});
-
-jQuery(function ($) { 
     
     "use strict";
     	/* ========================================================================= */
@@ -20,6 +14,17 @@ jQuery(function ($) {
 		cursorborder: 10,
 	});
     
+     /* ========================================================================= */
+	/*	menu item active
+	/* ========================================================================= */
+        $("#rooms a:contains('ROOMS')").parent().addClass('active');
+        $("#the_camp a:contains('THE CAMP')").parent().addClass('active');
+        $("#team_poe a:contains('TEAM POE')").parent().addClass('active');
+        $("#pakages a:contains('PAKAGES')").parent().addClass('active');
+        $("#shop a:contains('SHOP')").parent().addClass('active');
+        $("#photos a:contains('PHOTOS')").parent().addClass('active');
+        $("#contact a:contains('CONTACT')").parent().addClass('active');
+        $("#body a:contains('BOOK NOW')").parent().addClass('active');
    /* ========================================================================= */
 	/*	dropdown auto hover
 	/* ========================================================================= */

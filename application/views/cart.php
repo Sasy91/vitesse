@@ -33,7 +33,7 @@
 
     </head>
 
-    <body>
+    <body id="shop">
         <div id="ip-container" class="ip-container">
             <!-- initial header -->
             <header class="ip-header">

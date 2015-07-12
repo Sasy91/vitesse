@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 		<link rel="stylesheet" href="<?php echo base_url(); ?>resoures/css/all.css">
 	</head>
-	<body>
+	<body id="photos">
 	
 		<!-- .preloader -->
 		<div class="preloader">

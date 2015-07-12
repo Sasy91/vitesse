@@ -8,31 +8,11 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>The Camp Poe</title>
 
-        <script src="<?php echo base_url(); ?>resoures/loader/js/modernizr.custom.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resoures/loader/css/effect2.css" />
-
-
         <?php include_once './resoures/imports/baseimports.php'; ?>
     </head>
 
-    <body>
+    <body id="the_camp">
         <div id="ip-container" class="ip-container">
-            <!-- initial header -->
-            <header class="ip-header">
-                <div class="ip-loader">
-                    <div class="container">
-                        <div class="row " style=" text-align: center;">
-                            <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/logo.png" alt=""> 
-                        </div>
-                    </div>
-                    <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
-                    <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                    <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                    </svg>
-                </div>
-            </header>
-            <!-- top bar -->
-
             <!-- main content -->
             <?php include_once './resoures/imports/temp_header.php'; ?>
             <div  id="camp_poe">
@@ -285,13 +265,6 @@
                   end      script
               ----------------------------------> 
         </div><!-- /container -->
-        <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
-        <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
-        <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>
-        <!--
-                        <script src="js/classie.js"></script>
-                        <script src="js/pathLoader.js"></script>
-                        <script src="js/main.js"></script>
-        -->
+
     </body>
 </html>

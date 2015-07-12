@@ -15,7 +15,7 @@
         <?php include_once './resoures/imports/baseimports.php'; ?>
     </head>
 
-    <body>
+    <body id="pakages">
 <!--        <div id="ip-container" class="ip-container">-->
             <!-- initial header -->
 <!--
