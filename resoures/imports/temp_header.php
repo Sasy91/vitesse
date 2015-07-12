@@ -47,6 +47,10 @@
         });
     }
 </script>
+
+<script type="text/javascript">
+    var BASE_URL = '<?php echo base_url(); ?>';
+</script>
 <section id="navigation" class="navbar-fixed-top ">
     <div class="container">
 
@@ -92,14 +96,14 @@
                 </li>
                 <li><a href="<?php echo base_url(); ?>index.php/camp-poe">THE CAMP</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/team-poe">TEAM POE</a></li>
-                     <li class="dropdown">
+                <li class="dropdown">
                     <a href="<?php echo base_url(); ?>index.php/Pakages/" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-expanded="false">PAKAGES<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-one">pakage 1</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-two">pakage 2</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-three">pakage 3</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-four">pakage 4</a></li>
-                        
+
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url(); ?>index.php/camp-shop">SHOP</a></li>

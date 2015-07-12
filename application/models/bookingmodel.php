@@ -53,6 +53,9 @@ class bookingmodel extends CI_Model {
     function delete_temp_booking($id, $session_id) {
         $this->db->delete('temp_booking_data', array('unique_id' => $session_id, 'id' => $id));
     }
+    function delete_temp_package($id, $session_id) {
+        $this->db->delete('temp_package_data', array('unique_id' => $session_id, 'id' => $id));
+    }
 
     function insert_package($pro_data) {
         if ($this->db->insert('temp_package_data', $pro_data)) {

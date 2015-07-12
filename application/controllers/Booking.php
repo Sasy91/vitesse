@@ -94,11 +94,31 @@ class Booking extends CI_Controller {
             $output .= "<div class='form-group'><label style=' color: white; font-size: 14px;'>Guests&nbsp;<i style='font-size: 14px;' class='fa fa-user-plus'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'> " . $booking_data->adult . "  Adults and " . $booking_data->child . " Children</label></div>";
             $output .= "<div class='form-group'><label style=' color: white; font-size: 14px;'>Room Type&nbsp;<i style='font-size: 14px;' class='fa fa-glass'></i></label><br><label style='font-family: cursive; color: white; font-size: 12px;'>" . $booking_data->room_name . "</label></div>";
             $output .= "<div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div>";
-            $output .= "<div class='form-group'><label class='pull-left' style=' color: #fff; font-size: 16px;' >Total Rate</label><span style=' color: #fff; font-size: 16px;' class='pull-right'>USD " . $booking_data->price . "<br></div>";
+            $output .= "<div class='form-group'><label class='pull-left' style=' color: #e4e4e4; font-size: 16px;' >Total Rate</label><span style=' color: #e4e4e4; font-size: 16px;' class='pull-right'>USD " . $booking_data->price . "<br></div>";
             $output .= "<br><div class='form-group'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'><hr style='isplay: block; height: 1px; border: 0; border-top: 2px solid #fff; margin: 1em 0; padding: 0;'></div></form>";
             $i++;
         }
-        $output .="<div class='form-group'><button type='button' class='btn btn-warning' onclick='book_another_room();'>Book Another Room</button></div>";
+        //$output .="<div class='form-group'><button type='button' class='btn btn-warning' onclick='book_another_room();'>Book Another Room</button></div>";
+        return $output;
+    }
+
+    private function create_pack_html($results) {
+        $output = "";
+        $i = 1;
+        $output .="<label style='font-size: 14px;'>Selected Packages&nbsp;<i style='font-size: 14px;' class='fa fa-user-plus'></i></label><br>";
+        foreach ($results as $pack_data) {
+            $output .= "<div class='form-group'>";
+            $output .= "<span class='label label-warning pull-left' style='margin-left: 5px;'>Package " . $i . "</span><a href='#'><span class='label label-danger pull-right delpack' id='" . $pack_data->id . "' style='margin-right: 5px;'>Delete</span></a><br>";
+            $output .= "<hr style='isplay: block; height: 1px; border: 0; border-top: solid #fff; margin: 10px; padding: 0;'>";
+            $output .= "<label style='font-size: 14px;'>Package Name&nbsp;<i style='font-size: 14px;' class='fa fa-glass'></i></label><br>";
+            $output .= "<label style='font-size: 12px;'><span id='pack_name'>" . $pack_data->package_name . "</span></label><br>";
+            $output .= "<label style='font-size: 14px;'> Guests : <span id='tot_guest'>" . $pack_data->no_of_guests . "</span></label>";
+            $output .= "</div>";
+            $output .= "<div class='form-group'>";
+            $output .= "<label class='pull-left' style='margin-left: 10px; font-size: 16px;' >Total Rate</label><span style=' color: #e4e4e4; font-size: 16px;' class='pull-right'>USD <samp id='pack_amount'>" . $pack_data->amount . "</samp></span><br>";
+            $output .= "</div>";
+            $i++;
+        }
         return $output;
     }
 
@@ -106,9 +126,22 @@ class Booking extends CI_Controller {
         $this->bookingmodel->delete_temp_booking($this->input->post("temp_booking_id"), $this->session->userdata('uniqueId'));
         $results = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
         $html_output = $this->create_html($results);
-        $results_booking = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
-        if (empty($results_booking)) {
+        //$results_booking = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
+        if (empty($results)) {
             $this->session->unset_userdata('room_id');
+            echo "FALSE";
+        } else if (!empty($html_output)) {
+            echo $html_output;
+        }
+    }
+
+    function delete_package() {
+        $this->bookingmodel->delete_temp_package($this->input->post("temp_pack_id"), $this->session->userdata('uniqueId'));
+        $results = $this->Packagemodel->getTempPackagers($this->session->userdata('uniqueId'));
+        $html_output = $this->create_pack_html($results);
+        //$results_booking = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
+        if (empty($results)) {
+            //$this->session->unset_userdata('room_id');
             echo "FALSE";
         } else if (!empty($html_output)) {
             echo $html_output;
@@ -190,6 +223,26 @@ class Booking extends CI_Controller {
         return $total;
     }
 
+    public function add_pack() {
+        
+        $pro_data = array(
+            'unique_id' => $this->session->userdata('uniqueId'),
+            'package_name' => $this->Packagemodel->getPackagersName($this->input->post("pack_id")),
+            'package_amount' => $this->Packagemodel->getPackagers($this->input->post("pack_id")),
+            'package' => $this->input->post("pack_id"),
+            'no_of_guests' => $this->input->post("guests"),
+            'amount' => ($this->Packagemodel->getPackagers($this->input->post("pack_id")) * $this->input->post("guests"))
+        );
+        $lastAutoid = $this->bookingmodel->insert_package($pro_data);
+        $results = $this->Packagemodel->getTempPackagers($this->session->userdata('uniqueId'));
+        $html_output = $this->create_pack_html($results);
+         if (empty($results)) {
+            echo "FALSE";
+        } else if (!empty($html_output)) {
+            echo $html_output;
+        }
+    }
+
     function get_invoice() {
         $this->load->model('packagemodel');
         $results_room = "";
@@ -228,7 +281,7 @@ class Booking extends CI_Controller {
 
         return $output;
     }
-    
+
     public function expire_session() {
         $this->session->sess_destroy();
         //$this->load->view('admin_login');
