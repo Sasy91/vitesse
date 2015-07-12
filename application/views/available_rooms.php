@@ -488,7 +488,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         echo "<div class='media-body'>";
                                         echo "<h4 class='media-heading'><span style='font-size: 35px; color:#2a7b72; padding:0px;'>" . $room->rm_name . "</span></h4>";
                                         echo "<span style='font-size: 25px; color:#2a7b72;'><i class='fa fa-dollar'></i>&nbsp;&nbsp;" . $room->rm_amount . "/<span style='font-size: 20px;'>Per Week and Person</span></span><br>";
-                                        echo "<p style='color: #fff; margin-top: 20px; padding-left:15px;  padding-right:15px; padding-top:0;  padding-bottom:0;'>". $room->rm_detail ."</p>";
+                                        echo "<p style='color: #ffffff; margin-top: 20px; padding-left:15px;  padding-right:15px; padding-top:0;  padding-bottom:0;'>". $room->rm_detail ."</p>";
                                         echo "<br><br><button id='" . $room->rm_id . "' type='button' class='btn btn-success order'><i  style='font-size: 10px;    padding-right:11px' class='fa fa-key'></i>&nbsp;&nbsp;Order Now</button>&nbsp;&nbsp;";
                                         echo "<button type='button' class='btn btn-success view' id='" . $room->rm_id . "' data-toggle='modal' data-target='#sigiriya'><i style='font-size: 10px;' class='fa fa-list-alt'></i>&nbsp;&nbsp;View Details</button>";
                                         echo "</div>";
