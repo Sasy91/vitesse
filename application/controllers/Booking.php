@@ -141,8 +141,7 @@ class Booking extends CI_Controller {
         $html_output = $this->create_pack_html($results);
         //$results_booking = $this->bookingmodel->get_temp_data($this->session->userdata('uniqueId'));
         if (empty($results)) {
-            //$this->session->unset_userdata('room_id');
-            echo "FALSE";
+            echo "";
         } else if (!empty($html_output)) {
             echo $html_output;
         }
@@ -263,20 +262,20 @@ class Booking extends CI_Controller {
     }
 
     private function create_html_invoice($suite_results, $package_results, $total) {
-        $output = "";
+       $output = "";
         foreach ($suite_results as $suite) {
-            $output .="<tr><td>" . $suite->room_name . "</td><td>" . $suite->check_in . "</td><td>" . $suite->check_out . "</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $suite->room_price . "</span></td>";
-            $output .= "<td class='text-right'>" . $suite->tot_guest . "</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $suite->price . "</span></td></tr>";
+            $output .="<tr><td>" . $suite->room_name . "</td><td>" . $suite->check_in . "</td><td>" . $suite->check_out . "</td><td class='text-right'><span style='font-weight: bold; color: #000000;'>USD&nbsp;" . $suite->room_price . "</span></td>";
+            $output .= "<td class='text-right'>" . $suite->tot_guest . "</td><td class='text-right'><span style='font-weight: bold; color: #000000;'>USD&nbsp;" . $suite->price . "</span></td></tr>";
         }
         if (!empty($package_results)) {
             $output .= "<tr><td><span style='color: #000000; font-size: 1.0em; font-weight: bold'>Orderd Packagers</span></td><td></td><td></td><td></td><td></td><td></td></tr>";
             foreach ($package_results as $package) {
-                $output .="<tr><td style='color: #000000;'>" . $package->package_name . "</td><td>-</td><td>-</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $package->package_amount . "</span></td>";
-                $output .= "<td class='text-right'>" . $package->no_of_guests . "</td><td class='text-right'><span style='font-weight: bold'>USD&nbsp;" . $package->amount . "</span></td></tr>";
+                $output .="<tr><td style='color: #000000;'>" . $package->package_name . "</td><td>-</td><td>-</td><td class='text-right'><span style='font-weight: bold; color: #000000;'>USD&nbsp;" . $package->package_amount . "</span></td>";
+                $output .= "<td class='text-right'>" . $package->no_of_guests . "</td><td class='text-right'><span style='font-weight: bold; color: #000000;'>USD&nbsp;" . $package->amount . "</span></td></tr>";
             }
         }
         $output .= "<tr><td class='highrow'></td><td class='highrow'></td><td class='highrow'></td><td class='highrow'></td><td class='highrow text-center'><strong>Total</strong></td>";
-        $output .= "<td class='highrow text-right'><span style='font-weight: bold'>USD&nbsp;" . $total . "</span></td>";
+        $output .= "<td class='highrow text-right'><span style='font-weight: bold; color: #000000;'>USD&nbsp;" . $total . "</span></td>";
         $output .= "</tr>";
 
         return $output;
