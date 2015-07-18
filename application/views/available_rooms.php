@@ -412,7 +412,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </script>
     </head>
 
-    <body id="body">
+    <body id="body" class="body">
         <!--Header Import-->
         <?php include_once './resoures/imports/temp_header.php'; ?>
         <div class="container" id="booking">

@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php include_once './resoures/imports/baseimports.php'; ?>
     </head>
 
-    <body id="body">
+    <body id="home">
            <!--
 	    Start Preloader
 	    ==================================== -->

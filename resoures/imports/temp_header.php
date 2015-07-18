@@ -72,7 +72,9 @@
 
         <!-- main nav -->
         <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
+           
             <ul class="nav navbar-nav navbar-right">
+                 <li><a href="<?php echo base_url(); ?>index.php/home" class="">HOME</a></li>
 <!--                <li><a href="<?php echo base_url(); ?>">HOME</a></li>-->
                 <li class="dropdown">
                     <a href="<?php echo base_url(); ?>index.php/room" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-expanded="false">ROOMS<span class="caret"></span></a>
@@ -99,20 +101,21 @@
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-two">pakage 2</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-three">pakage 3</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/Pakages/#pakage-four">pakage 4</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/camp-shop">SHOP</a></li>
                         
                     </ul>
                 </li>
-                <li><a href="<?php echo base_url(); ?>index.php/camp-shop">SHOP</a></li>
+               
                 <li><a href="<?php echo base_url(); ?>index.php/camp-gallery">PHOTOS</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/contact-camp-poe">CONTACT</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/camp/available-suites">BOOK NOW</a></li>
-                <li style="border: 2px solid white; margin-top: 25px; font-size: 8px;"><p id="user" class="navbar-text" style="font-family: sans-serif; color: white; text-transform: uppercase;"><?php
+                <li class="login"><?php
                         if (!empty($this->session->userdata['registerd_users_data']['username'])) {
                             echo "<i class='fa fa-user'></i>&nbsp;" . $this->session->userdata['registerd_users_data']['username'] . " | <a href='#' id='logout' onclick='logout();' style= color: white;'><i class='fa fa-sign-out'></i></a>";
                         } else {
-                            echo "<a href='#' data-toggle='modal' data-target='#login_form' style='color: white;'>Login</a>";
+                            echo "<a href='#' data-toggle='modal' data-target='#login_form' style=''>Login</a>";
                         }
-                        ?></p></li>
+                        ?></li>
             </ul> 
         </nav>
         <!-- /main nav -->

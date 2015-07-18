@@ -19,5 +19,9 @@ class TeamPoe extends CI_Controller {
          $this->load->view('team_members');
     }
     
+      function team_two(){
+         $this->load->view('tema_profile_2');
+    }
+    
     
 }

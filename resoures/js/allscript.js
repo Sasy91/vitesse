@@ -17,6 +17,7 @@ jQuery(function ($) {
      /* ========================================================================= */
 	/*	menu item active
 	/* ========================================================================= */
+        $("#home a:contains('HOME')").parent().addClass('active');
         $("#rooms a:contains('ROOMS')").parent().addClass('active');
         $("#the_camp a:contains('THE CAMP')").parent().addClass('active');
         $("#team_poe a:contains('TEAM POE')").parent().addClass('active');
@@ -24,7 +25,8 @@ jQuery(function ($) {
         $("#shop a:contains('SHOP')").parent().addClass('active');
         $("#photos a:contains('PHOTOS')").parent().addClass('active');
         $("#contact a:contains('CONTACT')").parent().addClass('active');
-        $("#body a:contains('BOOK NOW')").parent().addClass('active');
+        $(".body a:contains('BOOK NOW')").parent().addClass('active');
+    
    /* ========================================================================= */
 	/*	dropdown auto hover
 	/* ========================================================================= */

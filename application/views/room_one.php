@@ -6,14 +6,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="description" content="CAMP POE SRI LANKA HOTELS ">
         <meta name="author" content="CAMP POE SRI LANKA">
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>CAMP POE | Room One</title>
 
         <!-- Mobile Specific Meta
         ================================================== -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <script src="<?php echo base_url(); ?>resoures/loader/js/modernizr.custom.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resoures/loader/css/effect2.css" />
 
 
         <?php include_once './resoures/imports/baseimports.php'; ?>
@@ -21,20 +20,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body>
         <div id="ip-container" class="ip-container">
-            <!-- initial header -->
-            <header class="ip-header">
-                <div class="ip-loader">
-                    <div class="container">
-                        <div class="row " style=" text-align: center;">
-                            <img  class="img-rounded" src="<?php echo base_url(); ?>/resoures/img/logo.png" alt=""> 
-                        </div>
-                    </div>
-                    <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
-                    <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                    <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                    </svg>
-                </div>
-            </header>
             <?php include_once './resoures/imports/temp_header.php'; ?>
             <div id="room_one">
                 <div class="room_baner fullheight" style="margin: 20px;">
@@ -79,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
-                                <div class="booking" style="height: 660px;">
+                                <div class="booking" style="background:#333333;">
 
                                     <div class="room-info">
 
@@ -91,15 +76,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             }
                                         }
                                         ?>
-                                        <hr style="margin: 50px;">
+                                     
                                         <div class="row">
                                             <form action="<?php echo base_url(); ?>index.php/camp/available-suites" class="form_start" method="post">
                                                 <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                                     <div class="form-group">
                                                         <input type="hidden" name="room_home_id" value="<?php echo $this->uri->segment(3); ?>">
-                                                        <input type="text" class="form-control" name="arrive" id="datepicker_1" style="color:white; border: 2px solid #dadada; border-radius: 7px;" placeholder="CHECK IN">
+                                                        <input type="text" class="form-control" name="arrive" id="datepicker_1" placeholder="CHECK IN">
                                                     </div>
-                                                    <select name="adult" id="adult" class="form-control" style="color:white; border: 2px solid #dadada; border-radius: 7px;" >
+                                                    <select name="adult" id="adult" class="form-control"  >
                                                         <option value="0">ADULTS</option>
                                                         <option value="1">1 adult</option>
                                                         <option value="2">2 adults</option>
@@ -115,9 +100,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </div>
                                                 <div class="col-sm-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="500ms">
                                                     <div class="form-group">
-                                                        <input type="text" name="depart" class="form-control" id="datepicker_2" style="color:white; border: 2px solid #dadada; border-radius: 7px;" placeholder="CHECK IN">
+                                                        <input type="text" name="depart" class="form-control" id="datepicker_2" placeholder="CHECK IN">
                                                     </div>
-                                                    <select name="child" id="child" class="form-control" style="color:white; border: 2px solid #dadada; border-radius: 7px;">
+                                                    <select name="child" id="child" class="form-control" style="">
                                                         <option value="0">CHILDREN</option>
                                                         <option value="1">1 CHILD</option>
                                                         <option value="2">2  CHILDREN</option>
@@ -269,11 +254,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             wow.init();
 
         </script>
-
-
-        <script src="<?php echo base_url(); ?>resoures/loader/js/classie.js"></script>
-        <script src="<?php echo base_url(); ?>resoures/loader/js/pathLoader.js"></script>
-        <script src="<?php echo base_url(); ?>resoures/loader/js/main.js"></script>
         <!----==============================
               end      script
           ----------------------------------> 

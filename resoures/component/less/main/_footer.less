@@ -117,7 +117,7 @@
 }
     #sign{
         position: relative;
-      background-color: rgba(62, 202, 255, 0.4);
+        border-radius: 0px;
         p{
         text-align: center;
             padding: 10px;
@@ -131,28 +131,37 @@
         
     }
 footer .modal-content{
-          -webkit-box-shadow: 19px 16px 0px 3px rgba(18,102,118,1);
--moz-box-shadow: 19px 16px 0px 3px rgba(18,102,118,1);
-box-shadow: 19px 16px 0px 3px rgba(18,102,118,1);
+  font-family: Amaranth;
         background-color: #0A769A;
- border-radius: 0px;
+        border-radius: 0px;
+        background: #333;
     
     
         
         input{
+            
             border-radius: 0px;
             border: 1px soilid #fff;
             background-color: transparent; 
             color: #fff;
     }
-     button {
-      
-      border-radius: 0px;
-          color: #fff;
-           background-color: #2d2d2d;
-     
-    }
-    button:hover{
-          background-color: #1c1818;
-    }
+     button{
+        background-color: #2a7b72;
+    border: 1px solid #2a7b72;
+    border-radius: 0px;
+      -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+      }
+ button:hover{
+         background-color: #19554e;
+            opacity: .5;
+        
+        }
+ button:focus{
+         background-color: #1c5a53;
+            opacity: .5;
+        
+        }
 }
